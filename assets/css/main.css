@@ -9,10 +9,10 @@
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #364d59; /* Default color used for the majority of the text content across the entire website */
+  --default-color: rgba(0, 0, 0, 0.87); /* Default color used for the majority of the text content across the entire website */
   --heading-color: #52565e; /* Color for headings, subheadings and title throughout the website */
   --accent-color: #cd8c5d; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --surface-color: #efeeee; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
@@ -35,7 +35,7 @@
 
 .dark-background {
   --background-color: #060606;
-  --default-color: #ffffff;
+  --default-color: rgb(255, 255, 255);
   --heading-color: #ffffff;
   --surface-color: #252525;
   --contrast-color: #ffffff;
@@ -53,6 +53,9 @@ body {
   color: var(--default-color);
   background-color: var(--background-color);
   font-family: var(--default-font);
+}
+h5{
+  font-weight: bold;
 }
 
 a {
@@ -133,7 +136,7 @@ h6 {
 --------------------------------------------------------------*/
 .header {
   --background-color: rgba(255, 255, 255, 0);
-  --default-color: #ffffff;
+  --default-color: rgb(255, 255, 255);
   --heading-color: #ffffff;
   color: var(--default-color);
   background-color: var(--background-color);
@@ -989,18 +992,31 @@ section,
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
 
-/*--------------------------------------------------------------
-# Constructions Section
---------------------------------------------------------------*/
+.constructions {
+  display: flex;
+  justify-content: center; /* Center the entire section */
+  flex-wrap: wrap; /* Allow cards to wrap if needed */
+}
+
+.constructions .row {
+  display: flex;
+  justify-content: center; /* Center-align the row items */
+  width: 100%; /* Ensure it takes full width */
+}
+
 .constructions .card-item {
   background-color: var(--surface-color);
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
   position: relative;
   border-radius: 0;
+  margin: 15px; /* Add some spacing between cards */
+  flex: 1 1 300px; /* Allow flexible sizing with a minimum width */
+  max-width: 400px; /* Optional: max width for each card */
 }
 
 .constructions .card-item .card-bg {
-  min-height: 300px;
+  min-height: 200px; /* Reduced height for a smaller card */
+  width: 100%;
   position: relative;
 }
 
@@ -1015,19 +1031,23 @@ section,
   z-index: 1;
 }
 
-.constructions .card-item .card-body {
-  padding: 30px;
+.constructions .card-item .icon-box {
+  width: 100%; /* Full width of the card */
+  height: 40px; /* Height of the icon box */
+  background-color: var(--default-color); /* Default color */
+  transition: background-color 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.constructions .card-item h4 {
-  font-weight: 700;
-  font-size: 20px;
-  margin-bottom: 15px;
+.constructions .card-item .icon-box:hover {
+  background-color: #CD8C5DFF; /* Change to your desired hover color */
 }
 
-.constructions .card-item p {
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
-  margin: 0;
+.constructions .card-item .icon {
+  font-size: 16px; /* Adjust icon size */
+  color: white; /* Icon color */
 }
 
 /*--------------------------------------------------------------
@@ -1303,7 +1323,7 @@ section,
   margin: 0 10px;
   line-height: 1;
   margin-bottom: 5px;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in;
 }
 
 .projects .portfolio-filters li:hover,
@@ -1340,7 +1360,7 @@ section,
   position: absolute;
   inset: 0;
   z-index: 3;
-  transition: all ease-in-out 0.3s;
+  transition: all ease-in 0.3s;
   background: rgba(0, 0, 0, 0.6);
   padding: 15px;
 }
@@ -1514,14 +1534,18 @@ section,
     left: auto;
   }
 }
+.recent-blog-posts{
+  background: #efeeee;
+}
+.recent-blog-posts .h4{
+  justify-content: left;
+}
 
-/*--------------------------------------------------------------
-# Recent Blog Posts Section
---------------------------------------------------------------*/
 .recent-blog-posts .post-item {
   background: var(--surface-color);
   box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
   transition: 0.3s;
+  position: relative; /* Ensure the position is relative for the overlay effect */
 }
 
 .recent-blog-posts .post-item .post-img img {
@@ -1541,14 +1565,15 @@ section,
 }
 
 .recent-blog-posts .post-item .post-content {
-  padding: 30px;
+  padding: 10px;
+  transition: color 0.3s; /* Smooth transition for text color */
 }
 
 .recent-blog-posts .post-item .post-title {
   color: var(--heading-color);
   font-size: 20px;
   font-weight: 700;
-  transition: 0.3s;
+  transition: color 0.3s;
   margin-bottom: 15px;
 }
 
@@ -1572,7 +1597,7 @@ section,
   align-items: center;
   font-weight: 600;
   line-height: 1;
-  transition: 0.3s;
+  transition: color 0.3s;
   color: color-mix(in srgb, var(--default-color), transparent 40%);
 }
 
@@ -1582,9 +1607,15 @@ section,
   font-size: 16px;
 }
 
+/* Hover Effect */
+.recent-blog-posts .post-item:hover {
+  background-color: var(--accent-color); /* Change the background color on hover */
+}
+
 .recent-blog-posts .post-item:hover .post-title,
-.recent-blog-posts .post-item:hover .readmore {
-  color: var(--accent-color);
+.recent-blog-posts .post-item:hover .readmore,
+.recent-blog-posts .post-item:hover .meta span {
+  color: white; /* Change text color to white on hover */
 }
 
 .recent-blog-posts .post-item:hover .post-img img {
