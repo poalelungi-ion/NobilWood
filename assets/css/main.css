@@ -143,8 +143,8 @@ h6 {
 }
 
 .header .logo img {
-  height: 100px;
-  width: 100px;
+  height: 70px;
+  width: 70px;
   margin-right: 8px;
 }
 
@@ -725,8 +725,8 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Hero Section
---------------------------------------------------------------*/
+/* Hero Section */
+/* Hero Section */
 .hero {
   width: 100%;
   min-height: 100vh;
@@ -818,6 +818,24 @@ section,
   transition-duration: 0.4s;
 }
 
+/* Gradient overlay for the top part */
+.hero .carousel-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0) 50%);
+  z-index: 2; /* Keep this above the images */
+}
+
+/* Fade effect for the bottom 10% */
+.hero .carousel-item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 90%, rgba(255, 255, 255, 1) 100%);
+  z-index: 3; /* Ensure this is above the image but below the dark gradient */
+}
+
 .hero .carousel-item img {
   position: absolute;
   inset: 0;
@@ -826,14 +844,6 @@ section,
   height: 100%;
   object-fit: cover;
   z-index: 1;
-}
-
-.hero .carousel-item::before {
-  content: "";
-  background-color: color-mix(in srgb, var(--background-color), transparent 30%);
-  position: absolute;
-  inset: 0;
-  z-index: 2;
 }
 
 .hero .carousel-control-prev {
@@ -873,7 +883,7 @@ section,
 
 .hero .carousel-control-prev,
 .hero .carousel-control-next {
-  z-index: 3;
+  z-index: 4; /* Above everything else */
   transition: 0.3s;
 }
 
@@ -886,6 +896,7 @@ section,
 .hero .carousel-control-next:hover {
   opacity: 0.9;
 }
+
 
 /*--------------------------------------------------------------
 # Get Started Section
@@ -2845,7 +2856,7 @@ section,
     left: 0;
     right: 0;
     visibility: hidden;
-    transform: translateX(-18%);
+    transform: translateX(-6%);
     width: 100vw; /* Full viewport width */
     opacity: 0;
     display: flex;
