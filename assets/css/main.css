@@ -137,7 +137,7 @@ h6 {
   --heading-color: #ffffff;
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 10px 10px;
+  padding: 10px 30px;
   transition: all 0.5s;
   z-index: 997;
 }
