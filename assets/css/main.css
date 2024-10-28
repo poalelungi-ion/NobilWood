@@ -11,7 +11,7 @@
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: rgba(0, 0, 0, 0.87); /* Default color used for the majority of the text content across the entire website */
   --heading-color: #52565e; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #cd8c5d; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --accent-color: rgba(205, 140, 93, 0.79); /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #efeeee; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
@@ -227,6 +227,9 @@ h6 {
   .navmenu > ul > li.language-option {
     position: relative; /* To use ::before for the vertical line */
   }
+  .navmenu > ul > li.language-option  {
+    position: relative; /* To use ::before for the vertical line */
+  }
 
   .navmenu > ul > li.language-option:before {
     content: "";
@@ -419,8 +422,8 @@ h6 {
 --------------------------------------------------------------*/
 .footer {
   color: var(--default-color);
-  background-color: var(--background-color);
-  background: url("../img/footer-bg.jpg") top center no-repeat;
+    background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.94), rgba(0, 0, 0, 0.65)); /* Adjust the direction and colors */
+
   background-size: cover;
   font-size: 14px;
   position: relative;
@@ -467,14 +470,13 @@ h6 {
 .footer .social-links a {
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 5px;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 50%);
+  justify-content: left;
+  width: 20px;
+  height: 20px;
+
+  margin-right: 10%;
   font-size: 16px;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
-  margin-right: 10px;
+
   transition: 0.3s;
 }
 
@@ -2848,7 +2850,7 @@ section,
     opacity: 0;
     display: flex;
     transition: 0.3s;
-    z-index: 100;
+
   }
 
   .navmenu .listing-dropdown ul li {
@@ -2902,3 +2904,6 @@ section,
 }
 
 /*--------------------------------------------------------------
+
+
+ */
