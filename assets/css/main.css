@@ -8,7 +8,7 @@
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
-  --background-color: #3c3c3c; /* Background color for the entire website, including individual sections */
+  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: rgba(0, 0, 0, 0.87); /* Default color used for the majority of the text content across the entire website */
   --heading-color: #52565e; /* Color for headings, subheadings and title throughout the website */
   --accent-color: #cd8c5d; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
@@ -1304,117 +1304,78 @@ section,
   margin-bottom: 0;
 }
 
-/*--------------------------------------------------------------
-# Projects Section
---------------------------------------------------------------*/
-.projects .portfolio-filters {
-  padding: 0;
-  margin: 0 auto 20px auto;
-  list-style: none;
-  text-align: center;
-}
 
-.projects .portfolio-filters li {
-  cursor: pointer;
-  display: inline-block;
-  padding: 0;
-  font-size: 18px;
-  font-weight: 500;
-  margin: 0 10px;
-  line-height: 1;
-  margin-bottom: 5px;
-  transition: all 0.3s ease-in;
-}
+/* Projects Section */
+.projects{
 
-.projects .portfolio-filters li:hover,
-.projects .portfolio-filters li.filter-active {
-  color: var(--accent-color);
+  justify-content: center;
 }
-
-.projects .portfolio-filters li:first-child {
-  margin-left: 0;
-}
-
-.projects .portfolio-filters li:last-child {
-  margin-right: 0;
-}
-
-@media (max-width: 575px) {
-  .projects .portfolio-filters li {
-    font-size: 14px;
-    margin: 0 5px;
-  }
-}
-
 .projects .portfolio-content {
   position: relative;
   overflow: hidden;
 }
 
 .projects .portfolio-content img {
-  transition: 0.3s;
+  width: 100%;
+  transition: transform 0.3s ease;
 }
 
 .projects .portfolio-content .portfolio-info {
-  opacity: 0;
   position: absolute;
   inset: 0;
-  z-index: 3;
-  transition: all ease-in 0.3s;
-  background: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.4); /* Dark overlay */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
   padding: 15px;
+  transition: opacity 0.3s ease;
+}
+
+/* Initially set h4 and p opacity */
+.projects .portfolio-content .portfolio-info h4,
+.projects .portfolio-content .portfolio-info p {
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0;
+  padding: 10px;
+  transition: opacity 0.3s ease;
+  position: absolute;
+  bottom: 15px;
 }
 
 .projects .portfolio-content .portfolio-info h4 {
-  font-size: 14px;
-  padding: 5px 10px;
-  font-weight: 400;
-  color: #ffffff;
-  display: inline-block;
   background-color: var(--accent-color);
+  opacity: 0; /* Initially hidden */
+  z-index: 3;
+  width: 100%;
 }
 
 .projects .portfolio-content .portfolio-info p {
-  position: absolute;
-  bottom: 10px;
-  text-align: center;
-  display: inline-block;
-  left: 0;
-  right: 0;
-  font-size: 16px;
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.8);
+  opacity: 1; /* Initially visible */
+  z-index: 2;
 }
 
-.projects .portfolio-content .portfolio-info .preview-link,
-.projects .portfolio-content .portfolio-info .details-link {
-  position: absolute;
-  left: calc(50% - 40px);
-  font-size: 26px;
-  top: calc(50% - 14px);
-  color: #fff;
-  transition: 0.3s;
-  line-height: 1.2;
-}
-
-.projects .portfolio-content .portfolio-info .preview-link:hover,
-.projects .portfolio-content .portfolio-info .details-link:hover {
-  color: var(--accent-color);
-}
-
-.projects .portfolio-content .portfolio-info .details-link {
-  left: 50%;
-  font-size: 34px;
-  line-height: 0;
-}
-
-.projects .portfolio-content:hover .portfolio-info {
-  opacity: 1;
-}
-
+/* Hover Effect */
 .projects .portfolio-content:hover img {
   transform: scale(1.1);
 }
+
+.projects .portfolio-content:hover .portfolio-info {
+  background: none; /* Remove dark overlay */
+}
+
+.projects .portfolio-content:hover .portfolio-info p {
+  opacity: 0; /* Fade out paragraph text */
+}
+
+.projects .portfolio-content:hover .portfolio-info h4 {
+  opacity: 1; /* Fade in title */
+  transition-delay: 0.3s; /* Delay to appear after overlay disappears */
+}
+
 
 /*--------------------------------------------------------------
 # Testimonials Section
@@ -1534,12 +1495,7 @@ section,
     left: auto;
   }
 }
-.recent-blog-posts{
-  background: #efeeee;
-}
-.recent-blog-posts .h4{
-  justify-content: left;
-}
+
 
 .recent-blog-posts .post-item {
   background: var(--surface-color);
