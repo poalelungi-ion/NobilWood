@@ -2830,7 +2830,7 @@ section,
   font-size: 14px;
 }
 /* Listing Dropdown - Desktop */
-@media (min-width: 1200px) {
+@media (min-width: 1000px) {
   .navmenu .listing-dropdown {
     position: static;
   }
@@ -2845,8 +2845,8 @@ section,
     left: 0;
     right: 0;
     visibility: hidden;
-    transform: translateX(-6%);
-    width: 100vw; /* Full viewport width */
+    transform: translateX(-10%);
+    width: 110vw; /* Full viewport width */
     opacity: 0;
     display: flex;
     transition: 0.3s;
@@ -2880,7 +2880,7 @@ section,
 }
 
 /* Listing Dropdown - Mobile */
-@media (max-width: 1199px) {
+@media (max-width: 1000px) {
   .navmenu .listing-dropdown ul {
     position: static;
     display: none;
