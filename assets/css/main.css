@@ -9,10 +9,10 @@
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #364d59; /* Default color used for the majority of the text content across the entire website */
+  --default-color: rgba(0, 0, 0, 0.87); /* Default color used for the majority of the text content across the entire website */
   --heading-color: #52565e; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #cd8c5d; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --accent-color: rgba(205, 140, 93, 0.79); /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --surface-color: #efeeee; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
@@ -29,13 +29,13 @@
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
 .light-background {
-  --background-color: #f4f7f6;
+  --background-color: #3c3c3c;
   --surface-color: #ffffff;
 }
 
 .dark-background {
   --background-color: #060606;
-  --default-color: #ffffff;
+  --default-color: rgb(255, 255, 255);
   --heading-color: #ffffff;
   --surface-color: #252525;
   --contrast-color: #ffffff;
@@ -53,6 +53,9 @@ body {
   color: var(--default-color);
   background-color: var(--background-color);
   font-family: var(--default-font);
+}
+h5{
+  font-weight: bold;
 }
 
 a {
@@ -133,18 +136,18 @@ h6 {
 --------------------------------------------------------------*/
 .header {
   --background-color: rgba(255, 255, 255, 0);
-  --default-color: #ffffff;
+  --default-color: rgb(255, 255, 255);
   --heading-color: #ffffff;
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 20px 0;
+  padding: 10px 30px;
   transition: all 0.5s;
   z-index: 997;
 }
 
 .header .logo img {
-  height: 100px;
-  width: 100px;
+  height: 70px;
+  width: 70px;
   margin-right: 8px;
 }
 
@@ -154,12 +157,18 @@ h6 {
   font-weight: 700;
   color: var(--heading-color);
 }
-
+.navmenu a i,
+.navmenu a:focus i {
+  font-size: 12px;
+  line-height: 0;
+  margin-left: 5px;
+  transition: 0.3s;
+}
 .header .logo span {
   font-size: 24px;
   padding-left: 1px;
   font-family: var(--heading-font);
-
+  color: var(--color-primary);
 }
 
 .scrolled .header {
@@ -176,16 +185,13 @@ h6 {
   color: white;
 }
 
-/*--------------------------------------------------------------
-# Navigation Menu
---------------------------------------------------------------*/
 /* Desktop Navigation */
-@media (max-width: 1200px) {
-  .navmenu ul {
-    flex-direction: column;
+@media (min-width: 1200px) {
+  .navmenu {
+    padding: 0;
+    display: flex;
     align-items: center;
   }
-}
 
   .navmenu ul {
     margin: 0;
@@ -195,21 +201,53 @@ h6 {
     align-items: center;
   }
 
-  .navmenu li {
+  .navmenu > ul > li {
     position: relative;
-  }
-
-  .navmenu>ul>li {
     white-space: nowrap;
     padding: 15px 14px;
+    display: flex;
+    align-items: center;
   }
 
-  .navmenu>ul>li:last-child {
-    padding-right: 0;
+  /* Remove underline and color change for Home icon */
+  .navmenu > ul > li:first-child a {
+    color: var(--nav-color); /* Reset color */
+    text-decoration: none; /* No underline */
   }
 
-  .navmenu a,
-  .navmenu a:focus {
+  /* Decorative vertical lines only between specific elements */
+  .navmenu > ul > li:first-child:after {
+    content: "";
+    width: 1px;
+    height: 24px;
+    background-color: #ccc;
+    margin-left: 10px; /* Adjust space after the Home icon */
+  }
+
+  .navmenu > ul > li.language-option {
+    position: relative; /* To use ::before for the vertical line */
+  }
+  .navmenu > ul > li.language-option  {
+    position: relative; /* To use ::before for the vertical line */
+  }
+
+  .navmenu > ul > li.language-option:before {
+    content: "";
+    width: 1px;
+    height: 24px;
+    background-color: #ccc;
+    margin-left: 10px; /* Adjust space before the language option */
+    margin-right: 10px; /* Add space after the line */
+  }
+
+  /* Language option in orange */
+  .navmenu > ul > li.language-option a {
+    color: #cd8c5d;
+    font-weight: bold;
+  }
+
+  /* Links styles */
+  .navmenu a {
     color: var(--nav-color);
     font-size: 14px;
     padding: 0 2px;
@@ -218,106 +256,39 @@ h6 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    white-space: nowrap;
-    transition: 0.3s;
-    position: relative;
     text-transform: uppercase;
+    transition: color 0.3s;
+    position: relative; /* To allow positioning of the pseudo-elements */
   }
 
-  .navmenu a i,
-  .navmenu a:focus i {
-    font-size: 12px;
-    line-height: 0;
-    margin-left: 5px;
-    transition: 0.3s;
-  }
-
-  .navmenu>ul>li>a:before {
+  /* Hover effect for links */
+  .navmenu a:before {
     content: "";
     position: absolute;
     height: 2px;
-    bottom: -6px;
+    bottom: -6px; /* Position below the link */
     left: 0;
     background-color: var(--accent-color);
-    visibility: hidden;
-    width: 0px;
-    transition: all 0.3s ease-in-out 0s;
+    visibility: hidden; /* Initially hidden */
+    width: 0;
+    transition: all 0.3s ease-in-out;
   }
 
   .navmenu a:hover:before,
-  .navmenu li:hover>a:before,
+  .navmenu li:hover > a:before,
   .navmenu .active:before {
-    visibility: visible;
-    width: 100%;
+    visibility: visible; /* Show on hover */
+    width: 100%; /* Full width underline */
   }
 
-  .navmenu li:hover>a,
-  .navmenu .active,
-  .navmenu .active:focus {
+  /* Reset styles for active links */
+  .navmenu li:hover > a,
+  .navmenu .active:not(:first-child) {
     color: var(--nav-hover-color);
   }
 
-  .navmenu .dropdown ul {
-    margin: 0;
-    padding: 10px 0;
-    background: var(--nav-dropdown-background-color);
-    display: block;
-    position: absolute;
-    visibility: hidden;
-    left: 14px;
-    top: 130%;
-    opacity: 0;
-    transition: 0.3s;
-    border-radius: 4px;
-    z-index: 99;
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
-  }
-
-  .navmenu .dropdown ul li {
-    min-width: 200px;
-  }
-
-  .navmenu .dropdown ul a {
-    padding: 10px 20px;
-    font-size: 15px;
-    text-transform: none;
-    font-weight: 400;
-    color: var(--nav-dropdown-color);
-  }
-
-  .navmenu .dropdown ul a i {
-    font-size: 12px;
-  }
-
-  .navmenu .dropdown ul a:hover,
-  .navmenu .dropdown ul .active:hover,
-  .navmenu .dropdown ul li:hover>a {
-    color: var(--nav-dropdown-hover-color);
-  }
-
-  .navmenu .dropdown:hover>ul {
-    opacity: 1;
-    top: 100%;
-    visibility: visible;
-  }
-
-  .navmenu .dropdown .dropdown ul {
-    top: 0;
-    left: -90%;
-    visibility: hidden;
-  }
-
-  .navmenu .dropdown .dropdown:hover>ul {
-    opacity: 10;
-    top: 0;
-    left: -100%;
-    visibility: visible;
-  }
-  .header .container-xl {
-    margin-top: 0 !important;
-  }
-
-
+  /* Dropdown styles remain as in your original code */
+}
 
 
 /* Mobile Navigation */
@@ -451,8 +422,8 @@ h6 {
 --------------------------------------------------------------*/
 .footer {
   color: var(--default-color);
-  background-color: var(--background-color);
-  background: url("../img/footer-bg.jpg") top center no-repeat;
+    background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.94), rgba(0, 0, 0, 0.65)); /* Adjust the direction and colors */
+
   background-size: cover;
   font-size: 14px;
   position: relative;
@@ -499,14 +470,13 @@ h6 {
 .footer .social-links a {
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 5px;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 50%);
+  justify-content: left;
+  width: 20px;
+  height: 20px;
+
+  margin-right: 10%;
   font-size: 16px;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
-  margin-right: 10px;
+
   transition: 0.3s;
 }
 
@@ -760,8 +730,8 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Hero Section
---------------------------------------------------------------*/
+/* Hero Section */
+/* Hero Section */
 .hero {
   width: 100%;
   min-height: 100vh;
@@ -853,6 +823,24 @@ section,
   transition-duration: 0.4s;
 }
 
+/* Gradient overlay for the top part */
+.hero .carousel-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0) 50%);
+  z-index: 2; /* Keep this above the images */
+}
+
+/* Fade effect for the bottom 10% */
+.hero .carousel-item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 90%, rgba(255, 255, 255, 1) 100%);
+  z-index: 3; /* Ensure this is above the image but below the dark gradient */
+}
+
 .hero .carousel-item img {
   position: absolute;
   inset: 0;
@@ -861,14 +849,6 @@ section,
   height: 100%;
   object-fit: cover;
   z-index: 1;
-}
-
-.hero .carousel-item::before {
-  content: "";
-  background-color: color-mix(in srgb, var(--background-color), transparent 30%);
-  position: absolute;
-  inset: 0;
-  z-index: 2;
 }
 
 .hero .carousel-control-prev {
@@ -908,7 +888,7 @@ section,
 
 .hero .carousel-control-prev,
 .hero .carousel-control-next {
-  z-index: 3;
+  z-index: 4; /* Above everything else */
   transition: 0.3s;
 }
 
@@ -921,6 +901,7 @@ section,
 .hero .carousel-control-next:hover {
   opacity: 0.9;
 }
+
 
 /*--------------------------------------------------------------
 # Get Started Section
@@ -1013,18 +994,31 @@ section,
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
 
-/*--------------------------------------------------------------
-# Constructions Section
---------------------------------------------------------------*/
+.constructions {
+  display: flex;
+  justify-content: center; /* Center the entire section */
+  flex-wrap: wrap; /* Allow cards to wrap if needed */
+}
+
+.constructions .row {
+  display: flex;
+  justify-content: center; /* Center-align the row items */
+  width: 100%; /* Ensure it takes full width */
+}
+
 .constructions .card-item {
   background-color: var(--surface-color);
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
   position: relative;
   border-radius: 0;
+  margin: 15px; /* Add some spacing between cards */
+  flex: 1 1 300px; /* Allow flexible sizing with a minimum width */
+  max-width: 400px; /* Optional: max width for each card */
 }
 
 .constructions .card-item .card-bg {
-  min-height: 300px;
+  min-height: 200px; /* Reduced height for a smaller card */
+  width: 100%;
   position: relative;
 }
 
@@ -1039,19 +1033,23 @@ section,
   z-index: 1;
 }
 
-.constructions .card-item .card-body {
-  padding: 30px;
+.constructions .card-item .icon-box {
+  width: 100%; /* Full width of the card */
+  height: 40px; /* Height of the icon box */
+  background-color: var(--default-color); /* Default color */
+  transition: background-color 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.constructions .card-item h4 {
-  font-weight: 700;
-  font-size: 20px;
-  margin-bottom: 15px;
+.constructions .card-item .icon-box:hover {
+  background-color: #CD8C5DFF; /* Change to your desired hover color */
 }
 
-.constructions .card-item p {
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
-  margin: 0;
+.constructions .card-item .icon {
+  font-size: 16px; /* Adjust icon size */
+  color: white; /* Icon color */
 }
 
 /*--------------------------------------------------------------
@@ -1308,117 +1306,78 @@ section,
   margin-bottom: 0;
 }
 
-/*--------------------------------------------------------------
-# Projects Section
---------------------------------------------------------------*/
-.projects .portfolio-filters {
-  padding: 0;
-  margin: 0 auto 20px auto;
-  list-style: none;
-  text-align: center;
-}
 
-.projects .portfolio-filters li {
-  cursor: pointer;
-  display: inline-block;
-  padding: 0;
-  font-size: 18px;
-  font-weight: 500;
-  margin: 0 10px;
-  line-height: 1;
-  margin-bottom: 5px;
-  transition: all 0.3s ease-in-out;
-}
+/* Projects Section */
+.projects{
 
-.projects .portfolio-filters li:hover,
-.projects .portfolio-filters li.filter-active {
-  color: var(--accent-color);
+  justify-content: center;
 }
-
-.projects .portfolio-filters li:first-child {
-  margin-left: 0;
-}
-
-.projects .portfolio-filters li:last-child {
-  margin-right: 0;
-}
-
-@media (max-width: 575px) {
-  .projects .portfolio-filters li {
-    font-size: 14px;
-    margin: 0 5px;
-  }
-}
-
 .projects .portfolio-content {
   position: relative;
   overflow: hidden;
 }
 
 .projects .portfolio-content img {
-  transition: 0.3s;
+  width: 100%;
+  transition: transform 0.3s ease;
 }
 
 .projects .portfolio-content .portfolio-info {
-  opacity: 0;
   position: absolute;
   inset: 0;
-  z-index: 3;
-  transition: all ease-in-out 0.3s;
-  background: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.4); /* Dark overlay */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
   padding: 15px;
+  transition: opacity 0.3s ease;
+}
+
+/* Initially set h4 and p opacity */
+.projects .portfolio-content .portfolio-info h4,
+.projects .portfolio-content .portfolio-info p {
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0;
+  padding: 10px;
+  transition: opacity 0.3s ease;
+  position: absolute;
+  bottom: 15px;
 }
 
 .projects .portfolio-content .portfolio-info h4 {
-  font-size: 14px;
-  padding: 5px 10px;
-  font-weight: 400;
-  color: #ffffff;
-  display: inline-block;
   background-color: var(--accent-color);
+  opacity: 0; /* Initially hidden */
+  z-index: 3;
+  width: 100%;
 }
 
 .projects .portfolio-content .portfolio-info p {
-  position: absolute;
-  bottom: 10px;
-  text-align: center;
-  display: inline-block;
-  left: 0;
-  right: 0;
-  font-size: 16px;
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.8);
+  opacity: 1; /* Initially visible */
+  z-index: 2;
 }
 
-.projects .portfolio-content .portfolio-info .preview-link,
-.projects .portfolio-content .portfolio-info .details-link {
-  position: absolute;
-  left: calc(50% - 40px);
-  font-size: 26px;
-  top: calc(50% - 14px);
-  color: #fff;
-  transition: 0.3s;
-  line-height: 1.2;
-}
-
-.projects .portfolio-content .portfolio-info .preview-link:hover,
-.projects .portfolio-content .portfolio-info .details-link:hover {
-  color: var(--accent-color);
-}
-
-.projects .portfolio-content .portfolio-info .details-link {
-  left: 50%;
-  font-size: 34px;
-  line-height: 0;
-}
-
-.projects .portfolio-content:hover .portfolio-info {
-  opacity: 1;
-}
-
+/* Hover Effect */
 .projects .portfolio-content:hover img {
   transform: scale(1.1);
 }
+
+.projects .portfolio-content:hover .portfolio-info {
+  background: none; /* Remove dark overlay */
+}
+
+.projects .portfolio-content:hover .portfolio-info p {
+  opacity: 0; /* Fade out paragraph text */
+}
+
+.projects .portfolio-content:hover .portfolio-info h4 {
+  opacity: 1; /* Fade in title */
+  transition-delay: 0.3s; /* Delay to appear after overlay disappears */
+}
+
 
 /*--------------------------------------------------------------
 # Testimonials Section
@@ -1539,13 +1498,12 @@ section,
   }
 }
 
-/*--------------------------------------------------------------
-# Recent Blog Posts Section
---------------------------------------------------------------*/
+
 .recent-blog-posts .post-item {
   background: var(--surface-color);
   box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
   transition: 0.3s;
+  position: relative; /* Ensure the position is relative for the overlay effect */
 }
 
 .recent-blog-posts .post-item .post-img img {
@@ -1565,14 +1523,15 @@ section,
 }
 
 .recent-blog-posts .post-item .post-content {
-  padding: 30px;
+  padding: 10px;
+  transition: color 0.3s; /* Smooth transition for text color */
 }
 
 .recent-blog-posts .post-item .post-title {
   color: var(--heading-color);
   font-size: 20px;
   font-weight: 700;
-  transition: 0.3s;
+  transition: color 0.3s;
   margin-bottom: 15px;
 }
 
@@ -1596,7 +1555,7 @@ section,
   align-items: center;
   font-weight: 600;
   line-height: 1;
-  transition: 0.3s;
+  transition: color 0.3s;
   color: color-mix(in srgb, var(--default-color), transparent 40%);
 }
 
@@ -1606,9 +1565,15 @@ section,
   font-size: 16px;
 }
 
+/* Hover Effect */
+.recent-blog-posts .post-item:hover {
+  background-color: var(--accent-color); /* Change the background color on hover */
+}
+
 .recent-blog-posts .post-item:hover .post-title,
-.recent-blog-posts .post-item:hover .readmore {
-  color: var(--accent-color);
+.recent-blog-posts .post-item:hover .readmore,
+.recent-blog-posts .post-item:hover .meta span {
+  color: white; /* Change text color to white on hover */
 }
 
 .recent-blog-posts .post-item:hover .post-img img {
@@ -2865,36 +2830,37 @@ section,
   font-size: 14px;
 }
 /* Listing Dropdown - Desktop */
-@media (min-width: 1200px) {
+@media (min-width: 1000px) {
   .navmenu .listing-dropdown {
     position: static;
-
   }
 
   .navmenu .listing-dropdown ul {
     margin: 0;
+    margin-top: 1%;
+    padding: 10px;
     background: var(--nav-dropdown-background-color);
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
     position: absolute;
-    top: 130%;
-    left: calc(-50vw + 50%);
+    top: 150%;
+    left: 0;
+    right: 0;
     visibility: hidden;
+    transform: translateX(-10%);
+    width: 110vw; /* Full viewport width */
     opacity: 0;
     display: flex;
     transition: 0.3s;
-    align-content: center;
-    z-index: 99;
-    width: 100vw;
+
   }
 
   .navmenu .listing-dropdown ul li {
     flex: 1;
-
   }
 
   .navmenu .listing-dropdown ul li a,
   .navmenu .listing-dropdown ul li:hover>a {
-    padding: 10px 20px;
+    padding: 5px 20px;
     font-size: 15px;
     color: var(--nav-dropdown-color);
     background-color: var(--nav-dropdown-background-color);
@@ -2909,13 +2875,13 @@ section,
 
   .navmenu .listing-dropdown:hover>ul {
     opacity: 1;
-    top: 100%;
+    top: 110%;
     visibility: visible;
   }
 }
 
 /* Listing Dropdown - Mobile */
-@media (max-width: 1199px) {
+@media (max-width: 1000px) {
   .navmenu .listing-dropdown ul {
     position: static;
     display: none;
@@ -2939,3 +2905,6 @@ section,
 }
 
 /*--------------------------------------------------------------
+
+
+ */
