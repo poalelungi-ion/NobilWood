@@ -159,7 +159,7 @@ h6 {
   font-size: 24px;
   padding-left: 1px;
   font-family: var(--heading-font);
-  color: var(--color-primary);
+
 }
 
 .scrolled .header {
@@ -180,11 +180,12 @@ h6 {
 # Navigation Menu
 --------------------------------------------------------------*/
 /* Desktop Navigation */
-@media (min-width: 1200px) {
-  .navmenu {
-    padding: 0;
-
+@media (max-width: 1200px) {
+  .navmenu ul {
+    flex-direction: column;
+    align-items: center;
   }
+}
 
   .navmenu ul {
     margin: 0;
@@ -312,13 +313,12 @@ h6 {
     left: -100%;
     visibility: visible;
   }
-  .navmenu .logo, .navbar-brand {
-    margin: 0;
-    padding: 0;
-    display: flex; /* Optional: Ensure proper alignment if the logo has siblings */
-    align-items: center;
+  .header .container-xl {
+    margin-top: 0 !important;
   }
-}
+
+
+
 
 /* Mobile Navigation */
 @media (max-width: 1199px) {
@@ -2873,7 +2873,6 @@ section,
 
   .navmenu .listing-dropdown ul {
     margin: 0;
-
     background: var(--nav-dropdown-background-color);
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
     position: absolute;
@@ -2883,13 +2882,14 @@ section,
     opacity: 0;
     display: flex;
     transition: 0.3s;
-
+    align-content: center;
     z-index: 99;
     width: 100vw;
   }
 
   .navmenu .listing-dropdown ul li {
     flex: 1;
+
   }
 
   .navmenu .listing-dropdown ul li a,
