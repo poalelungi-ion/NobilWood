@@ -35,7 +35,7 @@
 
 .dark-background {
   --background-color: #060606;
-  --default-color: rgb(255, 255, 255);
+  --default-color: rgba(205, 140, 93, 0.79);
   --heading-color: #ffffff;
   --surface-color: #252525;
   --contrast-color: #ffffff;
@@ -136,7 +136,7 @@ h6 {
 --------------------------------------------------------------*/
 .header {
   --background-color: rgba(255, 255, 255, 0);
-  --default-color: rgb(255, 255, 255);
+  --default-color: rgba(205, 140, 93, 0.79);
   --heading-color: #ffffff;
   color: var(--default-color);
   background-color: var(--background-color);
@@ -2912,3 +2912,263 @@ section,
 
 
  */
+/* Sistema Section Styling */
+.sistema-section {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+}
+
+.sistema-content-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.sistema-carousel {
+  flex: 1;
+  max-width: 500px;
+  display: flex;
+  justify-content: center;
+}
+
+.sistema-carousel img {
+  width: 100%;
+  height: auto;
+  max-height: 100%; /* Adjust based on screenshot proportions */
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Ensuring the Next button is visible */
+.carousel-control-next {
+  z-index: 5; /* Ensuring that the next button is on top of the carousel */
+}
+
+.sistema-text {
+  flex: 1;
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.sistema-text h4 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.sistema-text p {
+  margin-bottom: 20px;
+  line-height: 1.5;
+  color: #666;
+}
+
+.sistema-text h5 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.sistema-text ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sistema-text ul li {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 20px;
+}
+
+/* Changed the bullet to rhombus */
+.sistema-text ul li::before {
+  content: "♦";
+  color: rgba(205, 140, 93, 0.79);
+  position: absolute;
+  left: 0;
+  font-size: 20px; /* Adjust the size of the rhombus */
+}
+
+.sistema-downloads {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.sistema-downloads a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: rgba(205, 140, 93, 0.79);
+  font-weight: bold;
+  text-decoration: none;
+  border: 1px solid rgba(205, 140, 93, 0.79);
+  padding: 10px;
+  border-radius: 4px;
+  text-align: center;
+  background-color: transparent;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.sistema-downloads a:hover {
+  background-color: rgba(205, 140, 93, 0.79);
+  color: #fff;
+}
+
+.sistema-downloads img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Default styles for desktop */
+.sistema-materials {
+  display: flex;
+  flex-direction: row; /* Items are side by side by default */
+  gap: 20px; /* Adjust space between items */
+}
+
+/* Responsive Adjustments for mobile */
+@media (max-width: 768px) {
+  .sistema-content-wrapper {
+    flex-direction: column;
+  }
+
+  .sistema-carousel,
+  .sistema-text {
+    max-width: 100%;
+  }
+
+  .sistema-carousel img {
+    max-height: 100%; /* Adjust for mobile proportions */
+  }
+
+  /* On mobile, switch to column layout */
+  .sistema-materials {
+    flex-direction: column; /* Stack items on top of each other */
+    gap: 10px; /* Adjust space between stacked items */
+  }
+
+  .materials-list {
+    flex: 1; /* Make the materials list take full width */
+  }
+
+  .materials-list h5 {
+    font-size: 1rem; /* Adjust font size for mobile */
+  }
+
+  .materials-list ul li {
+    font-size: 14px; /* Adjust font size for mobile */
+  }
+
+  /* Adjust bullet size for mobile */
+  .materials-list ul li::before {
+    font-size: 16px; /* Adjust rhombus size */
+  }
+}
+
+.downloads {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+.downloads2 {
+  flex: 2;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+}
+.downloads2 a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: rgba(205, 140, 93, 0.79);
+  font-weight: bold;
+  text-align: center;
+  transition: color 0.3s;
+}
+
+.downloads2 a:hover {
+  color: rgba(205, 140, 93, 0.79);
+}
+
+.downloads2 img {
+  width: 40px; /* Adjust the size of the icon */
+  height: auto;
+  margin-bottom: 5px;
+}
+
+.downloads2 span {
+  font-size: 0.9rem;
+}
+
+
+.downloads a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: rgba(205, 140, 93, 0.79);
+  font-weight: bold;
+  text-align: center;
+  transition: color 0.3s;
+}
+
+.downloads a:hover {
+  color: rgba(205, 140, 93, 0.79);
+}
+
+.downloads img {
+  width: 40px; /* Adjust the size of the icon */
+  height: auto;
+  margin-bottom: 5px;
+}
+
+.downloads span {
+  font-size: 0.9rem;
+}
+
+/* Mobile Navigation */
+@media (max-width: 1199px) {
+  /* Hide images inside the dropdowns */
+  .navmenu .listing-dropdown img {
+    display: none;
+  }
+
+  /* Hide empty <li> elements with no text */
+  .navmenu .listing-dropdown li {
+    display: block;
+  }
+  .navmenu .listing-dropdown li:empty {
+    display: none; /* Hide empty li elements */
+  }
+
+  /* Hide any <a> links with only the "‎" character */
+  .navmenu .listing-dropdown a {
+    display: block;
+  }
+  .navmenu .listing-dropdown a[href="#"]:empty {
+    display: none; /* Hide links with no actual content */
+  }
+
+  /* Ensure that submenus remain visible */
+  .navmenu .listing-dropdown > ul {
+    display: block !important;
+  }
+
+  .navmenu .listing-dropdown ul ul {
+    display: block !important;
+  }
+}
+/* CSS to hide .listing-dropdown on mobile devices */
+@media (max-width: 1000px) {
+  .navmenu .listing-dropdowns {
+    display: none !important;
+  }
+}
