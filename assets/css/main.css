@@ -294,7 +294,7 @@ h6 {
 
 
 /* Mobile Navigation */
-@media (max-width: 1199px) {
+@media (max-width: 1000px) {
   .mobile-nav-toggle {
     color: var(--nav-color);
     font-size: 28px;
@@ -620,7 +620,7 @@ h6 {
 /*--------------------------------------------------------------
 # Disable aos animation delay on mobile devices
 --------------------------------------------------------------*/
-@media screen and (max-width: 768px) {
+@media screen and (max-width:1000px) {
   [data-aos-delay] {
 
   }
@@ -839,7 +839,7 @@ section,
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 90%, rgba(255, 255, 255, 1) 100%);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 85%, rgba(255, 255, 255, 1) 100%);
   z-index: 3; /* Ensure this is above the image but below the dark gradient */
 }
 
