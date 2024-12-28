@@ -2576,7 +2576,7 @@ section,
   color: var(--accent-color);
   width: 56px;
   height: 56px;
-  font-size: 24px;
+  font-size: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2596,7 +2596,7 @@ section,
 .contact .info-item p {
   padding: 0;
   margin-bottom: 0;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .contact .php-email-form {
@@ -2639,14 +2639,35 @@ section,
 .contact .php-email-form button[type=submit] {
   color: var(--contrast-color);
   background: var(--accent-color);
-  border: 0;
+
   padding: 10px 30px;
   transition: 0.4s;
-  border-radius: 50px;
+
 }
 
 .contact .php-email-form button[type=submit]:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
+}
+.contact .info-item {
+  font-size: 24px; /* Increase icon size */
+  color: var(--accent-color); /* Use theme's accent color */
+  transition: color 0.3s ease-in-out; /* Add hover transition effect */
+}
+
+.contact .info-item:hover {
+  color: color-mix(in srgb, var(--accent-color), transparent 20%); /* Darken on hover */
+}
+
+.contact .info-item i {
+  font-size: 32px; /* Customize icon size */
+}
+
+.col-lg-1 {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  justify-content: flex-start; /* Align at the top */
+  align-items: center; /* Center icons horizontally */
+  gap: 15px; /* Add spacing between icons */
 }
 
 /*--------------------------------------------------------------
