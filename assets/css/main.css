@@ -1356,75 +1356,39 @@ section,
 }
 
 
-/* Projects Section */
-.projects{
-
-  justify-content: center;
-}
-.projects .portfolio-content {
-  position: relative;
-  overflow: hidden;
-}
-
-.projects .portfolio-content img {
-  width: 100%;
-  transition: transform 0.3s ease;
-}
-
-.projects .portfolio-content .portfolio-info {
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-  background: rgba(0, 0, 0, 0.4); /* Dark overlay */
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 15px;
-  transition: opacity 0.3s ease;
-}
-
-/* Initially set h4 and p opacity */
-.projects .portfolio-content .portfolio-info h4,
-.projects .portfolio-content .portfolio-info p {
-  font-size: 16px;
-  font-weight: bold;
-  color: #ffffff;
+* {
+  padding: 0;
   margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 18px;
+}
+
+.gallary_container {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+  grid-auto-rows: 15.5em;
   padding: 10px;
-  transition: opacity 0.3s ease;
-  position: absolute;
-  bottom: 15px;
 }
 
-.projects .portfolio-content .portfolio-info h4 {
-  background-color: var(--accent-color);
-  opacity: 0; /* Initially hidden */
-  z-index: 3;
+.image_container img {
   width: 100%;
+  height: 100%;
+  box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+  object-fit: cover;
 }
 
-.projects .portfolio-content .portfolio-info p {
-  opacity: 1; /* Initially visible */
-  z-index: 2;
-}
+@media screen and (min-width: 768px) {
+  .image-tall {
+    grid-row: span 2 / auto;
+  }
 
-/* Hover Effect */
-.projects .portfolio-content:hover img {
-  transform: scale(1.1);
-}
-
-.projects .portfolio-content:hover .portfolio-info {
-  background: none; /* Remove dark overlay */
-}
-
-.projects .portfolio-content:hover .portfolio-info p {
-  opacity: 0; /* Fade out paragraph text */
-}
-
-.projects .portfolio-content:hover .portfolio-info h4 {
-  opacity: 1; /* Fade in title */
-  transition-delay: 0.3s; /* Delay to appear after overlay disappears */
+  .image-wide {
+    grid-column: span 2 / auto;
+  }
 }
 
 
@@ -3175,20 +3139,14 @@ section,
   background-color: #333; /* Color of the line */
   margin: 0 20px; /* Add spacing around the line */
 }
-
-/* Darken Row with full-width background */
+/* Full-width darkened row */
 .darken-row {
   background-color: #efeeee; /* Light gray background */
-  width: 200%; /* Full width of the screen */
-  margin: 0; /* Remove default margins */
   padding: 20px 0; /* Vertical padding */
-}
-
-.darken-row .container {
-  max-width: 1200px; /* Default Bootstrap container width */
-  margin: 0 auto; /* Center the container content */
-}
-
-.darken-row .post-item {
-  margin-bottom: 20px; /* Spacing between items */
+  width: 100vw; /* Full viewport width */
+  position: relative;
+  left: 50%; /* Offset for centering */
+  transform: translateX(-50%); /* Center align */
+  margin-top: 1%;
+  margin-bottom: 1%;
 }
