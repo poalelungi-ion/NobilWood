@@ -3257,6 +3257,16 @@ body {
   background-color: #333; /* Color of the line */
   margin: 0 20px; /* Add spacing around the line */
 }
+/* Hide vertical lines on mobile */
+@media (max-width: 1000px) {
+  .vertical-line {
+    display: none !important; /* Hides the lines on mobile */
+  }
+
+
+}
+
+
 /* Full-width darkened row */
 .darken-row {
   background-color: #efeeee; /* Light gray background */
@@ -3377,3 +3387,38 @@ body {
     grid-template-columns: 1fr; /* 1 column on very small screens */
   }
 }
+/* For mobile screens (max-width: 1000px) */
+@media (max-width: 1000px) {
+  .downloads {
+    flex-direction: row;       /* Stack items horizontally on mobile */
+    gap: 10px;                 /* Adjust space between items */
+    justify-content: center;   /* Center items horizontally */
+  }
+
+  .pdf-link {
+    justify-content: center;   /* Center content inside each link */
+  }
+}
+
+/* Lightbox Styling */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Dark background */
+  display: none; /* Initially hidden */
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox.active {
+  display: flex; /* Show the lightbox when active */
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+}
+

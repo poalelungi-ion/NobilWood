@@ -192,3 +192,16 @@
   });
 
 })();
+// Open the lightbox and display the clicked image
+function openLightbox(image) {
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImage = document.getElementById('lightbox-image');
+  lightboxImage.src = image.src; // Set the full-size image
+  lightbox.classList.add('active'); // Make the lightbox visible
+}
+
+// Close the lightbox when clicking anywhere on it
+function closeLightbox() {
+  const lightbox = document.getElementById('lightbox');
+  lightbox.classList.remove('active'); // Hide the lightbox
+}
