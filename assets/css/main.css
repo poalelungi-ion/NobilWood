@@ -3151,7 +3151,7 @@ body {
   margin-bottom: 1%;
 }
 
-/* Gallery  */
+/* General Reset */
 * {
   padding: 0;
   margin: 0;
@@ -3164,45 +3164,63 @@ body {
   background-color: #f9f9f9;
 }
 
+/* Gallery Container */
 .gallery_container {
   display: grid;
-  gap: 0; /* Removed the gap between grid items */
+  gap: 0; /* Remove any unnecessary gaps between items */
   max-width: 1200px;
   margin: 0 auto;
-  grid-template-columns: repeat(3, 1fr); /* 3 columns layout */
-  grid-auto-rows: 15.5em;
-  padding: 0; /* No padding */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Flexible grid with auto-fill */
+  grid-auto-rows: minmax(250px, auto); /* Auto height rows to fit content */
+  padding: 0;
 }
 
+/* Individual Image Container */
 .image_container {
   overflow: hidden;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
+/* Image Styling */
 .image_container img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; /* Ensure image fills space without distortion */
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
 }
 
+/* Hover Effect */
 .image_container img:hover {
-  transform: scale(1.1);
+  transform: scale(1.05); /* Slight zoom on hover */
   box-shadow: rgba(3, 8, 20, 0.3) 0px 0.25rem 1rem, rgba(2, 8, 20, 0.3) 0px 0.125rem 0.375rem;
 }
 
-/* Layout for wide and tall images */
+/* For Images Retaining Original Aspect Ratio */
+.image_container.original-ratio img {
+  object-fit: contain; /* Retains original aspect ratio */
+  object-position: center;
+  max-height: 100%; /* Avoid images being too tall */
+  max-width: 100%;  /* Ensure the image is scaled down if too large */
+}
+
+/* Layout for Wide and Tall Images */
 .image-wide {
-  grid-column: span 2;
+  grid-column: span 2; /* Wide images take up two columns */
 }
 
 .image-tall {
-  grid-row: span 2;
+  grid-row: span 2; /* Tall images take up two rows */
+  max-height: 400px;  /* Limit max height for tall images */
+  object-fit: contain;  /* Retain aspect ratio but fit in grid */
 }
 
-/* Lightbox styling */
+/* Lightbox Styling (optional, if implemented) */
 .lightbox {
   position: fixed;
   top: 0;
