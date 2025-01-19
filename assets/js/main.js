@@ -1,12 +1,4 @@
-/**
-* Template Name: Flattern
-* Template URL: https://bootstrapmade.com/flattern-multipurpose-bootstrap-template/
-* Updated: Aug 07 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
-(function() {
+(function () {
   "use strict";
 
   /**
@@ -26,13 +18,16 @@
    * Mobile nav toggle
    */
   const mobileNavToggleBtn = document.querySelector('.mobile-nav-toggle');
+  const navbar = document.querySelector('.navbar-collapse');
 
-  function mobileNavToogle() {
-    document.querySelector('body').classList.toggle('mobile-nav-active');
+  function mobileNavToggle() {
+    document.body.classList.toggle('mobile-nav-active');
     mobileNavToggleBtn.classList.toggle('bi-list');
     mobileNavToggleBtn.classList.toggle('bi-x');
+    navbar.classList.toggle('show');
   }
-  mobileNavToggleBtn.addEventListener('click', mobileNavToogle);
+
+  mobileNavToggleBtn.addEventListener('click', mobileNavToggle);
 
   /**
    * Hide mobile nav on same-page/hash links
@@ -40,17 +35,16 @@
   document.querySelectorAll('#navmenu a').forEach(navmenu => {
     navmenu.addEventListener('click', () => {
       if (document.querySelector('.mobile-nav-active')) {
-        mobileNavToogle();
+        mobileNavToggle();
       }
     });
-
   });
 
   /**
    * Toggle mobile nav dropdowns
    */
   document.querySelectorAll('.navmenu .toggle-dropdown').forEach(navmenu => {
-    navmenu.addEventListener('click', function(e) {
+    navmenu.addEventListener('click', function (e) {
       e.preventDefault();
       this.parentNode.classList.toggle('active');
       this.parentNode.nextElementSibling.classList.toggle('dropdown-active');
@@ -71,7 +65,7 @@
   /**
    * Scroll top button
    */
-  let scrollTop = document.querySelector('.scroll-top');
+  const scrollTop = document.querySelector('.scroll-top');
 
   function toggleScrollTop() {
     if (scrollTop) {
@@ -125,13 +119,13 @@
   /**
    * Init isotope layout and filters
    */
-  document.querySelectorAll('.isotope-layout').forEach(function(isotopeItem) {
+  document.querySelectorAll('.isotope-layout').forEach(function (isotopeItem) {
     let layout = isotopeItem.getAttribute('data-layout') ?? 'masonry';
     let filter = isotopeItem.getAttribute('data-default-filter') ?? '*';
     let sort = isotopeItem.getAttribute('data-sort') ?? 'original-order';
 
     let initIsotope;
-    imagesLoaded(isotopeItem.querySelector('.isotope-container'), function() {
+    imagesLoaded(isotopeItem.querySelector('.isotope-container'), function () {
       initIsotope = new Isotope(isotopeItem.querySelector('.isotope-container'), {
         itemSelector: '.isotope-item',
         layoutMode: layout,
@@ -140,8 +134,8 @@
       });
     });
 
-    isotopeItem.querySelectorAll('.isotope-filters li').forEach(function(filters) {
-      filters.addEventListener('click', function() {
+    isotopeItem.querySelectorAll('.isotope-filters li').forEach(function (filters) {
+      filters.addEventListener('click', function () {
         isotopeItem.querySelector('.isotope-filters .filter-active').classList.remove('filter-active');
         this.classList.add('filter-active');
         initIsotope.arrange({
@@ -158,12 +152,12 @@
   /**
    * Animate the skills items on reveal
    */
-  let skillsAnimation = document.querySelectorAll('.skills-animation');
+  const skillsAnimation = document.querySelectorAll('.skills-animation');
   skillsAnimation.forEach((item) => {
     new Waypoint({
       element: item,
       offset: '80%',
-      handler: function(direction) {
+      handler: function (direction) {
         let progress = item.querySelectorAll('.progress .progress-bar');
         progress.forEach(el => {
           el.style.width = el.getAttribute('aria-valuenow') + '%';
@@ -176,9 +170,9 @@
    * Init swiper sliders
    */
   function initSwiper() {
-    document.querySelectorAll(".init-swiper").forEach(function(swiperElement) {
+    document.querySelectorAll(".init-swiper").forEach(function (swiperElement) {
       let config = JSON.parse(
-        swiperElement.querySelector(".swiper-config").innerHTML.trim()
+          swiperElement.querySelector(".swiper-config").innerHTML.trim()
       );
 
       if (swiperElement.classList.contains("swiper-tab")) {
@@ -191,33 +185,10 @@
 
   window.addEventListener("load", initSwiper);
 
-})();
-const toggleButton = document.querySelector('.mobile-nav-toggle');
-const navMenu = document.querySelector('.navmenu');
-
-toggleButton.addEventListener('click', () => {
-  document.body.classList.toggle('mobile-nav-active');
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-  const images = document.querySelectorAll(".image_container img");
-  const lightbox = document.querySelector(".lightbox");
-  const lightboxImage = lightbox.querySelector("img");
-
-  images.forEach((image) => {
-    image.addEventListener("click", () => {
-      lightboxImage.src = image.src;
-      lightbox.classList.add("active");
-    });
-  });
-
-  lightbox.addEventListener("click", () => {
-    lightbox.classList.remove("active");
-  });
-
+  // Mobile nav toggle (for both initial and final event)
   document.querySelector('.mobile-nav-toggle').addEventListener('click', function () {
-    document.querySelector('.navmenu').classList.toggle('active');
+    const navbar = document.querySelector('.navbar-collapse');
+    navbar.classList.toggle('show');
   });
 
-});
-
+})();
