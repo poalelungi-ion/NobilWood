@@ -192,3 +192,26 @@
   window.addEventListener("load", initSwiper);
 
 })();
+const toggleButton = document.querySelector('.mobile-nav-toggle');
+const navMenu = document.querySelector('.navmenu');
+
+toggleButton.addEventListener('click', () => {
+  document.body.classList.toggle('mobile-nav-active');
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const images = document.querySelectorAll(".image_container img");
+  const lightbox = document.querySelector(".lightbox");
+  const lightboxImage = lightbox.querySelector("img");
+
+  images.forEach((image) => {
+    image.addEventListener("click", () => {
+      lightboxImage.src = image.src;
+      lightbox.classList.add("active");
+    });
+  });
+
+  lightbox.addEventListener("click", () => {
+    lightbox.classList.remove("active");
+  });
+});

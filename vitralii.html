@@ -512,43 +512,69 @@
   <!-- Projects Section -->
   <section id="projects" class="projects section">
 
-    <div class="gallary_container">
-      <div class="image_container image-wide image-tall">
-        <img src="assets/img/Vitralii/fassadenkreuz_a8_115464.jpg" alt="mosaic collection image" loading="lazy"/>
-      </div>
-
-      <div class="image_container">
-        <img src="assets/img/Vitralii/Uniform_TheWave_4-1024x597.jpg" alt="mosaic collection image" loading="lazy"/>
-      </div>
-
-      <div class="image_container">
-        <img src="assets/img/Vitralii/pls_2.jpg" alt="mosaic collection image" loading="lazy"/>
-      </div>
-
+    <div class="gallery_container">
       <div class="image_container image-wide">
-        <img src="assets/img/Vitralii/unl2-1-scaled.jpg" alt="mosaic collection image" loading="lazy"/>
+        <img src="assets/img/pereti_cortina/1.jpg" alt="Image 1" loading="lazy" />
       </div>
-
-      <div class="image_container">
-        <img src="assets/img/Vitralii/fo3.jpg" alt="mosaic collection image" loading="lazy"/>
-      </div>
-
-      <div class="image_container">
-        <img src="assets/img/Vitralii/Village_3.jpg" alt="mosaic collection image" loading="lazy"/>
-      </div>
-
       <div class="image_container image-tall">
-        <img src="assets/img/Vitralii/Uniform_Tortona-37_6-1024x597.jpg" alt="mosaic collection image" loading="lazy"/>
+        <img src="assets/img/pereti_cortina/2.jpg" alt="Image 2" loading="lazy" />
       </div>
-
-      <div class="image_container">
-        <img src="assets/img/Vitralii/fo1.jpg" alt="mosaic collection image" loading="lazy"/>
+      <div class="image_container image-wide"> <!-- Updated for full preview -->
+        <img src="assets/img/pereti_cortina/3.jpg" alt="Image 3" loading="lazy" />
       </div>
-
       <div class="image_container">
-        <img src="assets/img/Vitralii/Uniform_Villa-PLS_2-1024x597.jpg" alt="mosaic collection image" loading="lazy"/>
+        <img src="assets/img/pereti_cortina/4.jpg" alt="Image 4" loading="lazy" />
+      </div>
+      <div class="image_container image-wide"> <!-- Updated for full preview -->
+        <img src="assets/img/pereti_cortina/5.jpg" alt="Image 5" loading="lazy" />
+      </div>
+      <div class="image_container image-wide">
+        <img src="assets/img/pereti_cortina/6.jpg" alt="Image 6" loading="lazy" />
+      </div>
+      <div class="image_container">
+        <img src="assets/img/pereti_cortina/7.jpg" alt="Image 7" loading="lazy" />
+      </div>
+      <div class="image_container">
+        <img src="assets/img/pereti_cortina/8.jpg" alt="Image 8" loading="lazy" />
+      </div>
+      <div class="image_container image-tall">
+        <img src="assets/img/pereti_cortina/9.jpg" alt="Image 9" loading="lazy" />
+      </div>
+      <div class="image_container">
+        <img src="assets/img/pereti_cortina/10.jpg" alt="Image 10" loading="lazy" />
+      </div>
+      <div class="image_container">
+        <img src="assets/img/pereti_cortina/11.jpg" alt="Image 11" loading="lazy" />
+      </div>
+      <div class="image_container">
+        <img src="assets/img/pereti_cortina/12.jpg" alt="Image 12" loading="lazy" />
+      </div>
+      <div class="image_container">
+        <img src="assets/img/pereti_cortina/13.jpg" alt="Image 13" loading="lazy" />
       </div>
     </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox">
+      <img src="" alt="Full-size image" />
+    </div>
+
+
+    <script>
+      function openLightbox(image) {
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImage = document.getElementById('lightbox-image');
+        lightboxImage.src = image.src;
+        lightbox.classList.add('active');
+      }
+
+      function closeLightbox() {
+        const lightbox = document.getElementById('lightbox');
+        lightbox.classList.remove('active');
+      }
+    </script>
+
+
 
 
   </section><!-- /Projects Section -->
@@ -611,4 +637,4 @@
 
 </body>
 
-</html> 
+</html>
