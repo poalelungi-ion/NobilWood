@@ -214,4 +214,10 @@ document.addEventListener("DOMContentLoaded", () => {
   lightbox.addEventListener("click", () => {
     lightbox.classList.remove("active");
   });
+
+  document.querySelector('.mobile-nav-toggle').addEventListener('click', function () {
+    document.querySelector('.navmenu').classList.toggle('active');
+  });
+
 });
+
