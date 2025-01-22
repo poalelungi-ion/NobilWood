@@ -640,7 +640,7 @@ h6 {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  line-height: 1.7;
+  line-height: 1.9;
 
 }
 
@@ -3025,14 +3025,14 @@ body {
 }
 
 .sistema-text h4 {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
   text-transform: uppercase;
 }
 
 .sistema-text p {
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   line-height: 1.5;
   color: #666;
 }
@@ -3040,7 +3040,7 @@ body {
 .sistema-text h5 {
   font-size: 1.2rem;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .sistema-text ul {
@@ -3049,7 +3049,8 @@ body {
 }
 
 .sistema-text ul li {
-  margin-bottom: 10px;
+  font-size: 12px;
+  margin-bottom: 0px;
   position: relative;
   padding-left: 20px;
 }
@@ -3077,7 +3078,7 @@ body {
   font-weight: bold;
   text-decoration: none;
   border: 1px solid rgba(205, 140, 93, 0.79);
-  padding: 10px;
+  padding: 5px;
   border-radius: 4px;
   text-align: center;
   background-color: transparent;
@@ -3098,7 +3099,7 @@ body {
 .sistema-materials {
   display: flex;
   flex-direction: row; /* Items are side by side by default */
-  gap: 20px; /* Adjust space between items */
+  gap: 2px; /* Adjust space between items */
 }
 
 /* Responsive Adjustments for mobile */
@@ -3119,7 +3120,7 @@ body {
   /* On mobile, switch to column layout */
   .sistema-materials {
     flex-direction: column; /* Stack items on top of each other */
-    gap: 10px; /* Adjust space between stacked items */
+    gap: 20px; /* Adjust space between stacked items */
   }
 
   .materials-list {
@@ -3243,6 +3244,12 @@ body {
     display: none !important;
   }
 }
+/* CSS to hide .listing-dropdown on mobile devices */
+@media (max-width: 1000px) {
+  .listing-dropdowns {
+    display: none !important;
+  }
+}
 /* Horizontal Line */
 .horizontal-line {
   width: 100%; /* Full width of the container */
@@ -3253,7 +3260,7 @@ body {
 /* Vertical Line */
 .vertical-line {
   width: 1px; /* Width of the line */
-  height: 300px; /* Full height of the viewport */
+  height: 250px; /* Full height of the viewport */
   background-color: #333; /* Color of the line */
   margin: 0 20px; /* Add spacing around the line */
 }
@@ -3296,7 +3303,7 @@ body {
 .gallery_container {
   display: grid;
   gap: 0; /* Remove any unnecessary gaps between items */
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Flexible grid with auto-fill */
   grid-auto-rows: minmax(250px, auto); /* Auto height rows to fit content */
@@ -3311,6 +3318,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
+  padding: 1%;
 }
 
 /* Image Styling */
@@ -3422,3 +3430,31 @@ body {
   max-height: 90%;
 }
 
+/*    Materials List */
+.materials-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 5px auto; /* Adjusted spacing between rows */
+
+}
+
+.materials-list li {
+  font-size: 16px;
+  margin-bottom: 5px;
+  padding-left: 30px; /* Adjusted padding */
+  position: relative;
+}
+
+.materials-list li img {
+  width: 100%;
+  height: 20%; /* Adjusted height to fit in the grid */
+  object-fit: contain; /* Ensure image fills space without distortion */
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.materials-list li img {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
