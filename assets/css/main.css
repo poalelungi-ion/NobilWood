@@ -671,7 +671,7 @@ h6 {
 .footer .social-links a {
   width: 24px;
   height: 24px;
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -1083,6 +1083,7 @@ section,
 .hero .slide-down-button i:hover {
   transform: translateY(5px);
 }
+
 
 
 /*--------------------------------------------------------------
@@ -1808,6 +1809,7 @@ body {
 .about .about-img {
   min-height: 400px;
   position: relative;
+  aspect-ratio: initial;
 }
 
 @media (min-width: 992px) {
@@ -3472,4 +3474,129 @@ body {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+}
+
+/*--------------------------------------------------------------
+# Downloads
+--------------------------------------------------------------*/
+.download-section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.downloads-header {
+  margin-bottom: 40px;
+}
+
+.downloads-header p {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.items-container {
+  position: relative;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 25px 0;
+  width: 100%;
+}
+
+/* Horizontal lines */
+.item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: #eee;
+}
+
+/* Vertical line */
+.item::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background-color: #eee;
+}
+
+.title h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+  text-transform: uppercase;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.title h3 span {
+  font-weight: normal;
+}
+
+.links {
+  display: flex;
+  gap: 30px;
+}
+
+.download-link,
+.technical-sheet {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #666;
+  font-size: 13px;
+  gap: 8px;
+}
+
+.download-link img,
+.technical-sheet img {
+  width: 16px;
+  height: 16px;
+}
+
+.download-link:hover,
+.technical-sheet:hover {
+  color: #e67e22;
+}
+
+.download-link:hover img,
+.technical-sheet:hover img {
+  filter: brightness(0) saturate(100%) invert(65%) sepia(75%) saturate(845%) hue-rotate(346deg) brightness(91%) contrast(92%);
+}
+
+/* Left vertical line */
+.items-container::before {
+  content: '';
+  position: absolute;
+  left: -15px;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background-color: #eee;
+}
+
+/* Bullet points */
+.title::before {
+  content: '';
+  position: absolute;
+  left: -19px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #eee;
+  top: 50%;
+  transform: translateY(-50%);
 }

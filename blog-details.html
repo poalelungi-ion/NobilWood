@@ -26,7 +26,42 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <style>
 
+    /* Base styles for carousel items */
+    .carousel-item {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 100vh;
+    }
+
+    /* Use the data-bg attribute to set the background image for desktop */
+    [data-bg] {
+      background-image: url(attr(data-bg));
+    }
+
+    /* Responsive design for smaller screens (max-width: 768px) */
+    @media (max-width: 768px) {
+      [data-bg="assets/img/prima_pagina/C1.jpg"] {
+        background-image: url('assets/img/prima_pagina/m1.jpg'); /* Mobile version of C1 */
+      }
+      [data-bg="assets/img/prima_pagina/C2.jpg"] {
+        background-image: url('assets/img/prima_pagina/m2.jpg'); /* Mobile version of C2 */
+      }
+      [data-bg="assets/img/prima_pagina/C3.jpg"] {
+        background-image: url('assets/img/prima_pagina/m3.jpg'); /* Mobile version of C3 */
+      }
+      [data-bg="assets/img/prima_pagina/C4.jpg"] {
+        background-image: url('assets/img/prima_pagina/m4.jpg'); /* Mobile version of C4 */
+      }
+      [data-bg="assets/img/prima_pagina/C5.jpg"] {
+        background-image: url('assets/img/prima_pagina/m5.jpg'); /* Mobile version of C5 */
+      }
+    }
+
+  </style>
 
 </head>
 

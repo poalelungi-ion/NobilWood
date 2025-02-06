@@ -192,3 +192,16 @@
   window.addEventListener("load", initSwiper);
 
 })();
+// Wait for the DOM to fully load
+document.addEventListener("DOMContentLoaded", function () {
+  // Check if the screen width is greater than 768px (desktop)
+  if (window.matchMedia("(min-width: 769px)").matches) {
+    // Apply the data-bg attribute as the background image for desktop screens
+    document.querySelectorAll('.carousel-item').forEach(item => {
+      const bg = item.getAttribute('data-bg');
+      if (bg) {
+        item.style.backgroundImage = `url(${bg})`;
+      }
+    });
+  }
+});
