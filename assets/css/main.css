@@ -144,11 +144,24 @@ h6 {
   transition: all 0.5s;
   z-index: 997;
 }
-
 .header .logo img {
-  height: 100px;
-  width: 100px;
+  height: 120px;
+  width: 120px;
   margin-right: 8px;
+}
+
+@media (max-width: 768px) {
+  .header .logo img {
+    height:75px;
+    width: 75px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header .logo img {
+    height: 50px;
+    width: 50px;
+  }
 }
 
 .header .logo h1 {
@@ -3248,27 +3261,50 @@ body {
     display: none; /* Hide links with no actual content */
   }
 
-  /* Ensure that submenus remain visible */
-  .navmenu .listing-dropdown > ul {
-    display: block !important;
+  /* Ensure that submenus remain hidden by default */
+  .navmenu .dropdown-content {
+    display: none; /* Hidden by default */
   }
 
-  .navmenu .listing-dropdown ul ul {
-    display: block !important;
+  /* Show the dropdown content when the corresponding link is clicked */
+  .navmenu .dropdown-content:target {
+    display: block;
+  }
+
+  /* Toggle button for the navbar */
+  .navmenu .toggle-button {
+    display: block;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+
+  /* Navbar is hidden by default */
+  .navmenu .navbar-collapse {
+    display: none;
+  }
+
+  /* Show the navbar when it's toggled */
+  .navmenu .navbar-collapse.show {
+    display: block;
   }
 }
+
 /* CSS to hide .listing-dropdown on mobile devices */
 @media (max-width: 1000px) {
   .navmenu .listing-dropdowns {
     display: none !important;
   }
 }
+
 /* CSS to hide .listing-dropdown on mobile devices */
 @media (max-width: 1000px) {
   .listing-dropdowns {
     display: none !important;
   }
 }
+
 /* Horizontal Line */
 .horizontal-line {
   width: 100%; /* Full width of the container */
@@ -3276,6 +3312,7 @@ body {
   background-color: #333; /* Color of the line */
   margin: 20px 0; /* Add spacing around the line */
 }
+
 /* Vertical Line */
 .vertical-line {
   width: 1px; /* Width of the line */
@@ -3283,15 +3320,13 @@ body {
   background-color: #333; /* Color of the line */
   margin: 0 20px; /* Add spacing around the line */
 }
+
 /* Hide vertical lines on mobile */
 @media (max-width: 1000px) {
   .vertical-line {
     display: none !important; /* Hides the lines on mobile */
   }
-
-
 }
-
 
 /* Full-width darkened row */
 .darken-row {
