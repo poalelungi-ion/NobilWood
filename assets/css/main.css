@@ -364,7 +364,7 @@ h6 {
 /* Mobile Navigation */
 @media (max-width: 1000px) {
   .mobile-nav-toggle {
-    color: #333; /* Default nav color */
+    color: #333;
     font-size: 28px;
     line-height: 0;
     margin-right: 10px;
@@ -383,7 +383,7 @@ h6 {
     padding: 10px 0;
     margin: 0;
     border-radius: 6px;
-    background-color: #fff; /* Default mobile background color */
+    background-color: #fff;
     border: 1px solid rgba(0, 0, 0, 0.1);
     box-shadow: none;
     overflow-y: auto;
@@ -392,9 +392,9 @@ h6 {
   }
   .navmenu a,
   .navmenu a:focus {
-    color: #333; /* Default dropdown color */
+    color: #333;
     padding: 10px 20px;
-    font-family: Arial, sans-serif; /* Default font */
+    font-family: Arial, sans-serif;
     font-size: 17px;
     font-weight: 500;
     display: flex;
@@ -415,22 +415,22 @@ h6 {
     justify-content: center;
     border-radius: 50%;
     transition: 0.3s;
-    background-color: rgba(0, 0, 0, 0.1); /* Default accent color */
+    background-color: rgba(0, 0, 0, 0.1);
   }
   .navmenu a i:hover,
   .navmenu a:focus i:hover {
-    background-color: #000; /* Default accent color */
-    color: #fff; /* Default contrast color */
+    background-color: #000;
+    color: #fff;
   }
   .navmenu a:hover,
   .navmenu .active,
   .navmenu .active:focus {
-    color: #000; /* Default hover color */
+    color: #000;
   }
   .navmenu .active i,
   .navmenu .active:focus i {
-    background-color: #000; /* Default accent color */
-    color: #fff; /* Default contrast color */
+    background-color: #000;
+    color: #fff;
     transform: rotate(180deg);
   }
   .navmenu .dropdown ul {
@@ -439,7 +439,7 @@ h6 {
     z-index: 99;
     padding: 10px 0;
     margin: 10px 20px;
-    background-color: #f8f8f8; /* Default dropdown background color */
+    background-color: #f8f8f8;
     transition: all 0.5s ease-in-out;
   }
   .navmenu .dropdown ul ul {
@@ -468,10 +468,9 @@ h6 {
     background: rgba(33, 37, 41, 0.8);
     transition: 0.3s;
   }
-  .mobile-nav-active .navmenu>ul {
+  .mobile-nav-active .navmenu > ul {
     display: block;
   }
-
   /* Optimized Mobile Dropdown Navigation */
   .navmenu .listing-dropdown ul {
     position: static;
@@ -479,17 +478,13 @@ h6 {
     z-index: 99;
     padding: 10px 0;
     margin: 10px 20px;
-    background-color: #f8f8f8; /* Default dropdown background color */
+    background-color: #f8f8f8;
     border: 1px solid rgba(0, 0, 0, 0.1);
     box-shadow: none;
     transition: all 0.3s ease-in-out;
   }
   .navmenu .listing-dropdown ul ul {
     background-color: rgba(33, 37, 41, 0.1);
-  }
-  .navmenu .listing-dropdown > .dropdown-active {
-    display: block;
-    background-color: rgba(33, 37, 41, 0.03);
   }
   .navmenu .listing-dropdown > a {
     cursor: pointer;
@@ -499,16 +494,10 @@ h6 {
   .navmenu .listing-dropdown.dropdown-active ul {
     display: block;
   }
-  /* Remove Dropdown Icons */
-  .navmenu .listing-dropdown > a::after {
-    content: none;
-  }
-  .navmenu .listing-dropdown > a:focus,
-  .navmenu .listing-dropdown > a:active {
-    outline: none;
+  .navmenu .listing-dropdown > a[href] {
+    pointer-events: auto;
   }
 }
-
 /* General Styling for Dropdowns */
 .navmenu .dropdown ul {
   list-style: none;
@@ -529,10 +518,6 @@ h6 {
 .navmenu .dropdown ul li a:hover {
   background-color: #f0f0f0;
 }
-/*--------------------------------------------------------------
-
-
- */
 
 /* Listing Dropdown - Desktop */
 @media (min-width: 1000px) {
@@ -3200,77 +3185,12 @@ body {
   font-size: 0.9rem;
 }
 
-/* Mobile Navigation */
-@media (max-width: 1000px) {
-  /* Hide images inside the dropdowns */
-  .navmenu .listing-dropdown img {
-    display: none;
-  }
 
-  /* Hide empty <li> elements with no text */
-  .navmenu .listing-dropdown li {
-    display: block;
-  }
-  .navmenu .listing-dropdown li:empty {
-    display: none; /* Hide empty li elements */
-  }
 
-  /* Hide any <a> links with only the "‎" character */
-  .navmenu .listing-dropdown a {
-    display: block;
-  }
-  .navmenu .listing-dropdown a[href="#"]:empty {
-    display: none; /* Hide links with no actual content */
-  }
-
-  /* Ensure that submenus remain hidden by default */
-  .navmenu .dropdown-content {
-    display: none; /* Hidden by default */
-  }
-
-  /* Show the dropdown content when the corresponding link is clicked */
-  .navmenu .dropdown-content:target {
-    display: block;
-  }
-
-  /* Toggle button for the navbar */
-  .navmenu .toggle-button {
-    display: block;
-    background-color: #333;
-    color: white;
-    padding: 10px 20px;
-    cursor: pointer;
-  }
-
-  /* Navbar is hidden by default */
-  .navmenu .navbar-collapse {
-    display: none;
-  }
-
-  /* Show the navbar when it's toggled */
-  .navmenu .navbar-collapse.show {
-    display: block;
-  }
-}
-
-/* CSS to hide .listing-dropdown on mobile devices */
-@media (max-width: 1000px) {
-  .navmenu .listing-dropdowns {
-    display: none !important;
-  }
-}
-
-/* CSS to hide .listing-dropdown on mobile devices */
-@media (max-width: 1000px) {
-  .listing-dropdowns {
-    display: none !important;
-  }
-}
-
-/* Horizontal Line */
+  /* Horizontal Line */
 .horizontal-line {
   width: 100%; /* Full width of the container */
-  height: 2px; /* Height of the line */
+  height: 1px; /* Height of the line */
   background-color: #333; /* Color of the line */
   margin: 20px 0; /* Add spacing around the line */
 }
