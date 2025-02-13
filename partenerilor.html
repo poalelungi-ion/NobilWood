@@ -23,6 +23,44 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
+  <style>
+
+    /* Base styles for carousel items */
+    .carousel-item {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 100vh;
+    }
+
+    /* Use the data-bg attribute to set the background image for desktop */
+    [data-bg] {
+      background-image: url(attr(data-bg));
+    }
+
+    /* Responsive design for smaller screens (max-width: 768px) */
+    @media (max-width: 768px) {
+      [data-bg="assets/img/prima_pagina/C1.jpg"] {
+        background-image: url('assets/img/prima_pagina/m1.jpg'); /* Mobile version of C1 */
+      }
+      [data-bg="assets/img/prima_pagina/C2.jpg"] {
+        background-image: url('assets/img/prima_pagina/m2.jpg'); /* Mobile version of C2 */
+      }
+      [data-bg="assets/img/prima_pagina/C3.jpg"] {
+        background-image: url('assets/img/prima_pagina/m3.jpg'); /* Mobile version of C3 */
+      }
+      [data-bg="assets/img/prima_pagina/C4.jpg"] {
+        background-image: url('assets/img/prima_pagina/m4.jpg'); /* Mobile version of C4 */
+      }
+      [data-bg="assets/img/prima_pagina/C5.jpg"] {
+        background-image: url('assets/img/prima_pagina/m5.jpg'); /* Mobile version of C5 */
+      }
+    }
+
+  </style>
+
+
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
@@ -466,32 +504,45 @@
 </main>
 
 <footer id="footer" class="footer dark-background">
-  <div class="footer-top">
-    <div class="row gy-4">
-      <div class="col-lg-3 col-md-6 listing-dropdowns">
-        <img src="assets/img/logo.png" width="150px" alt="NobilWood Logo">
+  <div class="container footer-top">
+    <div class="row gy-6">
+      <div class="col-lg-2 col-md-3 footer-about listing-dropdowns ">
+        <a href="index.html" class="logo d-flex align-items-center">
+          <span class="sitename"> <img src="assets/img/logo.png" width="120px" alt="NobilWood Logo"></span>
+        </a>
+
       </div>
-      <div class="col-lg-9 col-md-6 footer-links">
+
+      <div class="col-lg-1 col-md-3 footer-links listing-dropdowns">
+        <h4>‎‎‎‎‎‎‎‎‎‎‎‎‎‎</h4>
+
+      </div>
+
+      <div class="col-lg-2 col-md-3 footer-links" style="margin-left: 20%; width: 80%; padding-bottom: -10%">
         <div class="footer-details">
           <a>CASE</a> <br/>
           <a>PARTENERILOR</a><br/>
           <a>CONTACTE</a><br>
-          <div class="contact-info">
-            <a href="mailto:info@nobilwood.com">info@nobilwood.com</a>
-            <span class="separator">|</span>
-            <a href="tel:+37360000077">+37 360 000 077</a>
-            <span class="separator">|</span>
-            <a href="https://maps.app.goo.gl/6YCYrgXC6iDxHGKP6">mun. Chisinau, sat. Singera, str. Industriala 5</a>
-          </div>
+
         </div>
+
+        <div class="contact-info" style=" flex-wrap: nowrap; /* Prevents wrapping */">
+          <a href="mailto:info@nobilwood.com">info@nobilwood.com</a>
+          <span class="separator">|</span>
+          <a href="tel:+37360000077">+37 360 000 077</a>
+          <span class="separator">|</span>
+          <a href="https://maps.app.goo.gl/6YCYrgXC6iDxHGKP6">mun. Chisinau, sat. Singera, str. Industriala 5</a>
+        </div>
+
+
         <div class="social-links">
-          <a href="#" class="facebook"></a>
-          <a href="#" class="instagram"></a>
-          <a href="#" class="telegram"></a>
-          <a href="#" class="viber"></a>
-          <a href="#" class="whatsapp"></a>
+          <a href=""><i class="bi bi-twitter-x"></i></a>
+          <a href=""><i class="bi bi-facebook"></i></a>
+          <a href=""><i class="bi bi-instagram"></i></a>
+          <a href=""><i class="bi bi-linkedin"></i></a>
         </div>
       </div>
+
     </div>
   </div>
   <div class="copyright">

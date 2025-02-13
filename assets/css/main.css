@@ -46,6 +46,7 @@
   scroll-behavior: smooth;
 }
 
+
 /*--------------------------------------------------------------
 # General Styling & Shared Classes
 --------------------------------------------------------------*/
@@ -580,10 +581,10 @@ h6 {
 --------------------------------------------------------------*/
 /* Footer Styling */
 .footer {
-  background: #252525;
+  background: linear-gradient(to right, #464646, #000000);
   color: #ffffff;
-  font-size: 14px;
-  padding: 20px 0;
+  font-size: 12px;
+  padding: 10px 0;
 }
 
 .footer .footer-top {
@@ -598,15 +599,17 @@ h6 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  line-height: 1.9;
+  line-height: 1.2;
 }
 
 .footer .footer-links a {
   color: #ffffff;
   text-decoration: none;
   margin: 0;
-  font-size: 14px;
+  font-size: 12px;
+  font-weight: lighter;
 }
+
 
 .footer .contact-info {
   margin-top: 10px;
@@ -620,11 +623,12 @@ h6 {
 .footer .separator {
   color: #cb8b5d;
   margin: 0 5px;
+
 }
 
 .footer .social-links {
   display: flex;
-  gap: 15px;
+  gap: 40%;
   margin-top: 15px;
 }
 
@@ -657,6 +661,48 @@ h6 {
   margin-right: 5%;
 }
 
+@media (min-width: 992px) {
+  /* Apply only on desktops (≥992px) */
+  .footer .row {
+    display: flex;
+    flex-wrap: nowrap; /* Prevents wrapping */
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .contact-info a, .footer-links a {
+    display: inline-block;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 991px) {
+  /* For tablets and mobile (≤991px) */
+  .footer .row {
+    display: block; /* Default behavior for smaller screens */
+  }
+}
+
+@media (max-width: 767px) {
+  /* Applies only on mobile (≤767px) */
+  .footer-links {
+    margin-left: 0 !important; /* Removes margin */
+    width: 100% !important; /* Ensures full width */
+  }
+
+  /* Make sure no content is overflowing the container */
+  .footer .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  /* Prevent any large elements from causing overflow */
+  .footer .footer-details, .contact-info, .social-links {
+    word-wrap: break-word;
+    white-space: normal;
+    overflow: hidden;
+  }
+}
 
 /*--------------------------------------------------------------
 # Preloader
@@ -2674,110 +2720,73 @@ body {
 # Contact Section
 --------------------------------------------------------------*/
 .contact .info-item {
-  background-color: var(--surface-color);
-  padding: 20px 0 30px 0;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-}
-
-.contact .info-item i {
-  font-size: 20px;
-  color: var(--accent-color);
-  width: 56px;
-  height: 56px;
-  font-size: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 4px;
-  transition: all 0.3s ease-in-out;
-  border-radius: 50%;
-  border: 2px dotted color-mix(in srgb, var(--accent-color), transparent 40%);
-}
-
-.contact .info-item h3 {
-  font-size: 20px;
-  font-size: 18px;
-  font-weight: 700;
-  margin: 10px 0;
+  background-color: transparent;
+  padding: 10px 0;
+  font-size: 16px;
 }
 
 .contact .info-item p {
-  padding: 0;
-  margin-bottom: 0;
-  font-size: 12px;
+  margin: 0;
+  line-height: 1.5;
 }
 
-.contact .php-email-form {
-  background-color: var(--surface-color);
-  height: 100%;
-  padding: 30px;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+.contact .info-item strong {
+  color: #3E3F41;
+  font-size: 18px;
 }
 
-@media (max-width: 575px) {
-  .contact .php-email-form {
-    padding: 20px;
+/* Social Icons */
+.col-lg-1 {
+  display: flex; /* Use Flexbox for layout */
+  flex-direction: column; /* Default to vertical on larger screens */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  gap: 20px; /* Space between icons */
+}
+
+.col-lg-1 i {
+  transition: transform 0.3s ease;
+  font-size: 24px;
+  color: #C58C5D;
+}
+
+.col-lg-1 i:hover {
+  transform: scale(1.1);
+}
+
+.col-lg-5 img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Default styles for all devices */
+.contact .col-lg-6 {
+  background: #F7F7F7;
+  padding: 30px; /* default padding */
+}
+
+/* Styles applied only on desktop devices */
+@media (min-width: 992px) { /* Assuming 992px is the breakpoint for 'lg' in Bootstrap */
+  .contact .col-lg-6 {
+    padding-left: 60%; /* Extended padding */
+    margin-left: -50%; /* Negative margin */
+    width: 150%; /* Extended width */
+    box-sizing: border-box; /* Ensures padding doesn't affect layout flow */
+    position: relative; /* To ensure proper stacking context */
+    z-index: 1; /* Ensure content stays above any pseudo-elements */
   }
 }
 
-.contact .php-email-form input[type=text],
-.contact .php-email-form input[type=email],
-.contact .php-email-form textarea {
-  font-size: 14px;
-  padding: 10px 15px;
-  box-shadow: none;
-  border-radius: 0;
-  color: var(--default-color);
-  background-color: var(--surface-color);
-  border-color: color-mix(in srgb, var(--default-color), transparent 80%);
+/* Mobile-specific styles for social links */
+@media (max-width: 991px) { /* Adjust for smaller screens */
+  .col-lg-1 {
+    flex-direction: row; /* Make icons horizontal */
+    gap: 10px; /* Reduce spacing for smaller screens */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+  }
 }
-
-.contact .php-email-form input[type=text]:focus,
-.contact .php-email-form input[type=email]:focus,
-.contact .php-email-form textarea:focus {
-  border-color: var(--accent-color);
-}
-
-.contact .php-email-form input[type=text]::placeholder,
-.contact .php-email-form input[type=email]::placeholder,
-.contact .php-email-form textarea::placeholder {
-  color: color-mix(in srgb, var(--default-color), transparent 70%);
-}
-
-.contact .php-email-form button[type=submit] {
-  color: var(--contrast-color);
-  background: var(--accent-color);
-
-  padding: 10px 30px;
-  transition: 0.4s;
-
-}
-
-.contact .php-email-form button[type=submit]:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 20%);
-}
-.contact .info-item {
-  font-size: 24px; /* Increase icon size */
-  color: var(--accent-color); /* Use theme's accent color */
-  transition: color 0.3s ease-in-out; /* Add hover transition effect */
-}
-
-.contact .info-item:hover {
-  color: color-mix(in srgb, var(--accent-color), transparent 20%); /* Darken on hover */
-}
-
-.contact .info-item i {
-  font-size: 32px; /* Customize icon size */
-}
-
-.col-lg-1 {
-  display: flex;
-  flex-direction: column; /* Stack items vertically */
-  justify-content: flex-start; /* Align at the top */
-  align-items: center; /* Center icons horizontally */
-  gap: 15px; /* Add spacing between icons */
-}
-
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
@@ -3519,3 +3528,23 @@ body {
   top: 50%;
   transform: translateY(-50%);
 }
+
+
+@media (max-width: 767px) { /* Hides the element on screens ≤767px (mobile) */
+  .listing-dropdowns {
+    display: none !important;
+  }
+}
+
+/* Hide the br on desktop */
+.mobile-br {
+  display: none;
+}
+
+/* Show the br only on mobile (≤767px) */
+@media (max-width: 767px) {
+  .mobile-br {
+    display: block;
+  }
+}
+
