@@ -2770,7 +2770,7 @@ body {
 @media (min-width: 992px) { /* Assuming 992px is the breakpoint for 'lg' in Bootstrap */
   .contact .col-lg-6 {
     padding-left: 60%; /* Extended padding */
-    margin-left: -50%; /* Negative margin */
+    margin-left: -55%; /* Negative margin */
     width: 150%; /* Extended width */
     box-sizing: border-box; /* Ensures padding doesn't affect layout flow */
     position: relative; /* To ensure proper stacking context */
