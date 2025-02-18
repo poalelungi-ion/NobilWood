@@ -433,17 +433,99 @@
 
   </section><!-- /Hero Section -->
 
-  <!-- Partner Section -->
   <section id="become-partner" class="section py-5">
-    <div class="container">
+    <style>
+      /* Desktop Styles (Original) */
+      .partner-section {
+        position: relative;
+      }
+      .partner-section img {
+        max-width: 100%;
+        height: auto;
+      }
+      .partner-section h2 {
+        background: linear-gradient(to bottom right, rgba(205, 140, 93, 0.79), #3E3F41);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 2.5em;
+        font-weight: bold;
+      }
+      .horizontal-line {
+        height: 6px;
+        background: linear-gradient(to right, rgba(205, 140, 93, 0.79), #3E3F41);
+      }
+      .cooperation-item {
+        padding: 1rem;
+      }
+
+      /* Mobile Styles (New) */
+      @media (max-width: 768px) {
+        .partner-section .col-lg-5,
+        .partner-section .col-lg-6 {
+          margin-left: 0;
+          margin-right: 0;
+          padding-left: 0;
+          padding-right: 0;
+        }
+        .partner-section .col-lg-12 {
+          margin-top: 0;
+          margin-left: 0;
+          margin-right: 0;
+          padding-left: 0;
+          padding-right: 0;
+          width: 100%;
+        }
+        .partner-section h2 {
+          font-size: 1.8em; /* Smaller font size for mobile */
+        }
+        .partner-section .horizontal-line {
+          margin-right: 0;
+          padding-right: 0;
+        }
+        .partner-section img {
+          width: 100%;
+          margin-top: 0;
+          margin-right: 0;
+          padding-right: 0;
+        }
+        .partner-section .cooperation-item {
+          margin-top: 0;
+          margin-bottom: 0;
+          padding-left: 0;
+          padding-right: 0;
+        }
+        .partner-section .row {
+          flex-direction: column;
+        }
+        .partner-section .col-lg-5 img {
+          margin-bottom: 1rem;
+        }
+        .partner-section .col-lg-12 {
+          background-color: #efeeee;
+          padding: 1rem;
+          margin: 1rem 0;
+        }
+        .partner-section .cooperation-item p {
+          margin: 1rem 0;
+        }
+      }
+    </style>
+
+    <div class="container partner-section">
       <div class="row align-items-center justify-content-between">
         <div class="col-lg-5">
-          <img src="assets/img/partenerilor/Logo.png" alt="NobilWood Logo" class="img-fluid mb-4">
+          <img src="assets/img/partenerilor/Logo.png" alt="NobilWood Logo" class="img-fluid mb-4" style="position: relative; z-index: 1;">
         </div>
-        <div class="col-lg-6">
-          <h2 style="background: linear-gradient(to bottom right, rgba(205,140,93,0.79), #3E3F41); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-size: 2.5em; font-weight: bold;">
-            VREI SA DEVII PARTENER?
-          </h2>
+        <div class="col-lg-12"
+             style="background-color: #efeeee;
+                  width: 100vw;
+                  margin-top: 35%;
+                  margin-left: -100%;
+                  padding-left: 50%;
+                  padding-right: 10%;
+                  margin-bottom: -6%;
+                  padding-bottom: 15%;">
+          <h2>VREI SA DEVII PARTENER?</h2>
           <p class="mt-4">Fabrica NobilWood, producător de tâmplărie premium, se extinde și caută parteneri în întreaga lume.</p>
           <p>Vă propunem să deschideți o reprezentanță a brandului NobilWood în orașul dumneavoastră și să câștigați bani cu noi pe piața locală.</p>
           <p><strong>Ofertă exclusivă</strong> partenerelor ce doresc să creeze o cooperare reciproc avantajoasă și pe termen lung.</p>
@@ -451,38 +533,32 @@
       </div>
     </div>
 
-    <div class="container">
+    <div class="container partner-section">
       <div class="row align-items-center">
         <div class="col-lg-5">
-          <h2 style="background: linear-gradient(to bottom right, rgba(205,140,93,0.79), #3E3F41); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-size: 2.5em; font-weight: bold;">
-            PENTRU CINE?
-          </h2>
-          <div class="horizontal-line my-4" style="height: 4px; background: linear-gradient(to right, rgba(205,140,93,0.79), #3E3F41);"></div>
+          <h2>PENTRU CINE?</h2>
+          <div class="horizontal-line my-12" style="height: 6px; background: linear-gradient(to right, rgba(205,140,93,0.79), #3E3F41); margin-right: -100%; padding-right: -100%"></div>
           <p>Pentru <strong>profesionisti</strong>: designeri, arhitecti si constructori, revinzatori de timplarie plastic, cărora le oferim conditii favorabile de cooperare.</p>
           <p class="mt-4">Pentru Antreprenori interesati de o nouă directie promitătoare.</p>
-          <img src="assets/img/partenerilor/2.jpg" alt="" class="img-fluid mt-5" >
+          <img src="assets/img/partenerilor/2.jpg" alt="" class="img-fluid mt-5" style="width: 110%; z-index: 1; position: relative; padding-right: -10%">
         </div>
         <div class="col-lg-6 offset-lg-1">
-          <img src="assets/img/partenerilor/1.jpg" alt="" class="img-fluid" style="margin-top: -100%">
+          <div class="position-relative">
+            <img src="assets/img/partenerilor/1.jpg" alt="" class="img-fluid" style="position: relative; z-index: 1; margin-top: -100%; margin-right: -10%; padding-right: -10%">
+          </div>
         </div>
       </div>
     </div>
 
-
-    <div class="container">
-
+    <div class="container partner-section">
       <div class="row mt-6">
-        <div class="col-lg-6">
+        <div class="col-lg-5">
           <div class="cooperation-item p-4">
-            <h2 style="background: linear-gradient(to bottom right, rgba(205,140,93,0.79), #3E3F41); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-size: 2.5em; font-weight: bold;">
-              VA ASTEPTAM CU DRAG
-              SA COOPERAM?
-            </h2>
+            <h2>VA ASTEPTAM CU DRAG SA COOPERAM?</h2>
           </div>
         </div>
-
-        <div class="col-lg-6" style="padding-top:30% ; margin-top: -80%;margin-bottom: 20%; background-color: #cb8b5d ">
-          <div class="cooperation-item p-4">
+        <div class="col-lg-12" style="padding-top:22%; margin-top: -58%; margin-bottom:12.5%; margin-left:-42.6%; margin-right: -50%; padding-left: 60%; padding-right: 29%; background-color: #cb8b5d;">
+          <div class="cooperation-item p-8">
             <p>Pentru revânzători oferim un flux cât mai de simplu în administrarea proiectelor pentru o prezentare corectă și promovare în cerința sau la locație clienților.</p>
           </div>
         </div>
