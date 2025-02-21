@@ -144,11 +144,15 @@ h6 {
   padding: 10px 30px;
   transition: all 0.5s;
   z-index: 997;
+  margin-left: -10%;
+  margin-right: -10%;
 }
 .header .logo img {
-  height: 120px;
-  width: 120px;
-  margin-right: 8px;
+  height: 75px;
+  width: 75px;
+
+  margin-left: -15%;
+  margin-bottom: -4%;
 }
 
 @media (max-width: 768px) {
@@ -204,6 +208,7 @@ h6 {
 /* Desktop Navigation */
 @media (min-width: 1200px) {
   .navmenu {
+    margin-right: -9%;
     padding: 0;
     display: flex;
     align-items: center;
@@ -215,6 +220,7 @@ h6 {
     display: flex;
     list-style: none;
     align-items: center;
+
   }
 
   .navmenu > ul > li {
@@ -319,8 +325,8 @@ h6 {
 
   .navmenu .listing-dropdown ul {
     margin: 0;
-    margin-top: 1%;
-    padding: 5px;
+
+
     background: var(--nav-dropdown-background-color);
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
     position: absolute;
@@ -342,7 +348,7 @@ h6 {
 
   .navmenu .listing-dropdown ul li a,
   .navmenu .listing-dropdown ul li:hover>a {
-    padding: 5px 20px;
+    padding: 2px 2px;
     font-size: 15px;
     color: var(--nav-dropdown-color);
     background-color: var(--nav-dropdown-background-color);
@@ -381,7 +387,7 @@ h6 {
     list-style: none;
     position: absolute;
     inset: 60px 20px 20px 20px;
-    padding: 10px 0;
+    padding: 1px 0;
     margin: 0;
     border-radius: 6px;
     background-color: #fff;
@@ -438,8 +444,8 @@ h6 {
     position: static;
     display: none;
     z-index: 99;
-    padding: 10px 0;
-    margin: 10px 20px;
+    padding: 1px 0;
+    margin: 1px 2px;
     background-color: #f8f8f8;
     transition: all 0.5s ease-in-out;
   }
@@ -477,8 +483,8 @@ h6 {
     position: static;
     display: none;
     z-index: 99;
-    padding: 10px 0;
-    margin: 10px 20px;
+    padding: 2px 0;
+    margin: 2px 2px;
     background-color: #f8f8f8;
     border: 1px solid rgba(0, 0, 0, 0.1);
     box-shadow: none;
@@ -511,7 +517,7 @@ h6 {
 }
 .navmenu .dropdown ul li a {
   display: block;
-  padding: 10px 20px;
+
   text-decoration: none;
   color: #333;
   transition: background-color 0.3s;
@@ -1383,7 +1389,7 @@ section,
 }
 
 .alt-services .icon-box h4 {
-  font-weight: 700;
+  font-weight: 300;
   margin-bottom: 10px;
   font-size: 18px;
 }
