@@ -24,6 +24,92 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <style>
+    /* Desktop Styles (Original) */
+    .partner-section {
+      position: relative;
+    }
+    .partner-section img {
+      max-width: 100%;
+      height: auto;
+    }
+    .partner-section h2 {
+      background: linear-gradient(to bottom right, rgba(205, 140, 93, 0.79), #3E3F41);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 2.5em;
+      font-weight: bold;
+    }
+    .horizontal-line {
+      height: 6px;
+      background: linear-gradient(to right, rgba(205, 140, 93, 0.79), #3E3F41);
+    }
+    .cooperation-item {
+      padding: 1rem;
+    }
+
+    /* Mobile Styles (New) */
+    @media (max-width: 768px) {
+      .partner-section .col-lg-5,
+      .partner-section .col-lg-6 {
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
+      }
+      .partner-section .col-lg-12 {
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
+        width: 100%;
+      }
+      .partner-section h2 {
+        font-size: 1.8em; /* Smaller font size for mobile */
+      }
+      .partner-section .horizontal-line {
+        margin-right: 0;
+        padding-right: 0;
+      }
+      .partner-section img {
+        width: 100%;
+        margin-top: 0;
+        margin-right: 0;
+        padding-right: 0;
+      }
+      .partner-section .cooperation-item {
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-left: 0;
+        padding-right: 0;
+      }
+      .partner-section .row {
+        flex-direction: column;
+      }
+      .partner-section .col-lg-5 img {
+        margin-bottom: 1rem;
+      }
+      .partner-section .col-lg-12 {
+        background-color: #efeeee;
+        padding: 1rem;
+        margin: 1rem 0;
+      }
+      .partner-section .cooperation-item p {
+        margin: 1rem 0;
+      }
+      .partner-section .logo-container {
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+      .partner-section .logo-container img {
+        max-width: 80%; /* Adjust as needed */
+        margin: 0 auto;
+      }
+      .partner-section .text-container {
+        width: 100%;
+        padding: 0 1rem;
+      }
+    }
 
     /* Base styles for carousel items */
     .carousel-item {
@@ -41,21 +127,13 @@
 
     /* Responsive design for smaller screens (max-width: 768px) */
     @media (max-width: 768px) {
-      [data-bg="assets/img/prima_pagina/C1.jpg"] {
-        background-image: url('assets/img/prima_pagina/m1.jpg'); /* Mobile version of C1 */
+      [data-bg="assets/img/partenerilor/C1.jpg"] {
+        background-image: url('assets/img/partenerilor/m1.jpg'); /* Mobile version of C1 */
       }
-      [data-bg="assets/img/prima_pagina/C2.jpg"] {
-        background-image: url('assets/img/prima_pagina/m2.jpg'); /* Mobile version of C2 */
+      [data-bg="assets/img/partenerilor/C2.jpg"] {
+        background-image: url('assets/img/partenerilor/m1.jpg'); /* Mobile version of C2 */
       }
-      [data-bg="assets/img/prima_pagina/C3.jpg"] {
-        background-image: url('assets/img/prima_pagina/m3.jpg'); /* Mobile version of C3 */
-      }
-      [data-bg="assets/img/prima_pagina/C4.jpg"] {
-        background-image: url('assets/img/prima_pagina/m4.jpg'); /* Mobile version of C4 */
-      }
-      [data-bg="assets/img/prima_pagina/C5.jpg"] {
-        background-image: url('assets/img/prima_pagina/m5.jpg'); /* Mobile version of C5 */
-      }
+
     }
 
   </style>
@@ -70,18 +148,15 @@
 
 <header id="header" class="header d-flex align-items-center fixed-top">
   <div class="container">
-    <a href="index.html" class="logo d-flex align-items-center">
 
-      <img src="assets/img/logo.png"  >
-
-    </a>
 
     <div class="container-fluid  position-relative d-flex align-items-center justify-content-between d-flex ">
-      <a href="index.html" class="logo d-flex align-items-center" >
+      <a  class="logo d-flex align-items-center" >
 
+        <img src="assets/img/logo.png" href="index.html" >
 
       </a>
-      <nav id="navmenu" class="navmenu">
+      <nav id="navmenu" class="navmenu" >
         <ul>
           <li><a href="index.html"><i class="bi bi-house-door listing-dropdowns" style="font-size: 20px; width: 25px; height: 25px"></i></a> </li>
           <li class=" listing-dropdown "><a href="#"><span>Produse</span> </a>
@@ -255,9 +330,7 @@
 
 <main class="main">
 
-  <!-- Hero Section -->
   <section id="hero" class="hero section dark-background">
-
     <div class="info d-flex align-items-center">
       <div class="container">
         <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
@@ -266,19 +339,14 @@
       </div>
     </div>
 
-    <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="9999999">
-
-
-
-      <div class="carousel-item active">
-        <img src="assets/img/partenerilor/c1.jpg" alt="">
-    </div>
+    <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+      <div class="carousel-item active" data-bg="assets/img/partenerilor/C1.jpg"></div> <!-- First image -->
+      <div class="carousel-item" data-bg="assets/img/partenerilor/C1.jpg"></div>         <!-- Second image -->
 
 
       <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
         <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
       </a>
-
       <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
         <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
       </a>
@@ -290,97 +358,11 @@
         <i class="bi bi-chevron-down" style="font-size: 80px; color: rgba(205, 140, 93, 0.79);"></i>
       </a>
     </div>
-
   </section><!-- /Hero Section -->
 
   <section id="become-partner" class="section py-5">
     <style>
-      /* Desktop Styles (Original) */
-      .partner-section {
-        position: relative;
-      }
-      .partner-section img {
-        max-width: 100%;
-        height: auto;
-      }
-      .partner-section h2 {
-        background: linear-gradient(to bottom right, rgba(205, 140, 93, 0.79), #3E3F41);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-size: 2.5em;
-        font-weight: bold;
-      }
-      .horizontal-line {
-        height: 6px;
-        background: linear-gradient(to right, rgba(205, 140, 93, 0.79), #3E3F41);
-      }
-      .cooperation-item {
-        padding: 1rem;
-      }
 
-      /* Mobile Styles (New) */
-      @media (max-width: 768px) {
-        .partner-section .col-lg-5,
-        .partner-section .col-lg-6 {
-          margin-left: 0;
-          margin-right: 0;
-          padding-left: 0;
-          padding-right: 0;
-        }
-        .partner-section .col-lg-12 {
-          margin-top: 0;
-          margin-left: 0;
-          margin-right: 0;
-          padding-left: 0;
-          padding-right: 0;
-          width: 100%;
-        }
-        .partner-section h2 {
-          font-size: 1.8em; /* Smaller font size for mobile */
-        }
-        .partner-section .horizontal-line {
-          margin-right: 0;
-          padding-right: 0;
-        }
-        .partner-section img {
-          width: 100%;
-          margin-top: 0;
-          margin-right: 0;
-          padding-right: 0;
-        }
-        .partner-section .cooperation-item {
-          margin-top: 0;
-          margin-bottom: 0;
-          padding-left: 0;
-          padding-right: 0;
-        }
-        .partner-section .row {
-          flex-direction: column;
-        }
-        .partner-section .col-lg-5 img {
-          margin-bottom: 1rem;
-        }
-        .partner-section .col-lg-12 {
-          background-color: #efeeee;
-          padding: 1rem;
-          margin: 1rem 0;
-        }
-        .partner-section .cooperation-item p {
-          margin: 1rem 0;
-        }
-        .partner-section .logo-container {
-          text-align: center;
-          margin-bottom: 1rem;
-        }
-        .partner-section .logo-container img {
-          max-width: 80%; /* Adjust as needed */
-          margin: 0 auto;
-        }
-        .partner-section .text-container {
-          width: 100%;
-          padding: 0 1rem;
-        }
-      }
     </style>
 
     <div class="container partner-section">
@@ -397,7 +379,7 @@
                   padding-right: 10%;
                   margin-bottom: -6%;
                   padding-bottom: 15%;">
-          <h2>VREI SA DEVII PARTENER?</h2>
+          <h2 style="margin-top:-23%">VREI SA DEVII PARTENER?</h2>
           <p class="mt-4">Fabrica NobilWood, producător de tâmplărie premium, se extinde și caută parteneri în întreaga lume.</p>
           <p>Vă propunem să deschideți o reprezentanță a brandului NobilWood în orașul dumneavoastră și să câștigați bani cu noi pe piața locală.</p>
           <p><strong>Ofertă exclusivă</strong> partenerelor ce doresc să creeze o cooperare reciproc avantajoasă și pe termen lung.</p>
@@ -408,10 +390,10 @@
     <div class="container partner-section">
       <div class="row align-items-center">
         <div class="col-lg-5 text-container">
-          <h2>PENTRU CINE?</h2>
+          <h2 style="font-weight:normal">PENTRU <b> CINE? </b></h2>
           <div class="horizontal-line my-12" style="height: 6px; background: linear-gradient(to right, rgba(205,140,93,0.79), #3E3F41); margin-right: -100%; padding-right: -100%"></div>
           <p>Pentru <strong>profesionisti</strong>: designeri, arhitecti si constructori, revinzatori de timplarie plastic, cărora le oferim conditii favorabile de cooperare.</p>
-          <p class="mt-4">Pentru Antreprenori interesati de o nouă directie promitătoare.</p>
+          <p class="mt-4" style="font-weight: bold ">Pentru Antreprenori interesati de o nouă directie promitătoare.</p>
           <img src="assets/img/partenerilor/2.jpg" alt="" class="img-fluid mt-5" style="width: 110%; z-index: 1; position: relative; padding-right: -10%">
         </div>
         <div class="col-lg-6 offset-lg-1">
@@ -425,12 +407,13 @@
     <div class="container partner-section">
       <div class="row mt-6">
         <div class="col-lg-5 text-container">
-          <div class="cooperation-item p-4">
+          <div class="cooperation-item p-2">
             <h2>VA ASTEPTAM CU DRAG SA COOPERAM?</h2>
           </div>
         </div>
-        <div class="col-lg-12 text-container" style="padding-top:22%; margin-top: -58%; margin-bottom:12.5%; margin-left:-42.6%; margin-right: -50%; padding-left: 60%; padding-right: 29%; background-color: #cb8b5d;">
+        <div class="col-lg-12 text-container" style="padding-top:22%; margin-top: -58%; margin-bottom:16%; margin-left:-42.6%; margin-right: -50%; padding-left: 50%; padding-right: 10%; background-color: #cb8b5d;">
           <div class="cooperation-item p-8">
+            <h1 style="color: white; font-weight: lighter; font-size: 35px">CITEVA DIN <br> <b>MODALITATILE</b><small> DE</small> <b>COOPERARE</b>:</h1>
             <p>Pentru revânzători oferim un flux cât mai de simplu în administrarea proiectelor pentru o prezentare corectă și promovare în cerința sau la locație clienților.</p>
           </div>
         </div>

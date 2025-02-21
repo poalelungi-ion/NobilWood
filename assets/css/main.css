@@ -1684,6 +1684,21 @@ body {
   position: relative; /* Ensure the position is relative for the overlay effect */
 }
 
+/* Darken every odd row */
+.recent-blog-posts .post-item:nth-child(odd) {
+  background: color-mix(in srgb, var(--surface-color), black 15%);
+}
+
+/* Keep even rows normal */
+.recent-blog-posts .post-item:nth-child(even) {
+  background: var(--surface-color);
+}
+
+.recent-blog-posts .post-item:hover {
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
 .recent-blog-posts .post-item .post-img img {
   transition: 0.5s;
 }
@@ -1742,7 +1757,6 @@ body {
   margin-left: 6px;
   font-size: 16px;
 }
-
 /* Hover Effect */
 .recent-blog-posts .post-item:hover {
   background-color: var(--accent-color); /* Change the background color on hover */
