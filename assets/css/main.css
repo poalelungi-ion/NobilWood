@@ -3022,7 +3022,7 @@ body {
   height: auto;
   max-height: 100%; /* Adjust based on screenshot proportions */
   object-fit: cover;
-  border-radius: 8px;
+
 }
 
 /* Ensuring the Next button is visible */
@@ -3037,6 +3037,14 @@ body {
   flex-direction: column;
 }
 
+/* Apply margin-top only for screens wider than 992px (desktops) */
+@media (min-width: 992px) {
+  .sistema-text {
+    margin-top: 7.5%; /* Adjust as needed */
+  }
+}
+
+
 .sistema-text h4 {
   font-size: 1.6rem;
   font-weight: bold;
@@ -3046,7 +3054,8 @@ body {
 
 .sistema-text p {
   margin-bottom: 0px;
-  line-height: 1.5;
+  line-height: 1.2;
+  font-size: 0.9rem;
   color: #666;
 }
 
@@ -3140,6 +3149,19 @@ body {
     flex: 1; /* Make the materials list take full width */
   }
 
+  /* Apply dark background only on mobile (screens smaller than 992px) */
+  @media (max-width: 991px) {
+    .sistema-materials {
+      background-color: #efeeee; /* Dark background */
+      padding: 15px; /* Optional: Add some padding for spacing */
+      margin-left: -10%;
+      margin-right: -10%;
+      padding-right: 10%;
+      padding-left: 10%;
+    }
+  }
+
+
   .materials-list h5 {
     font-size: 1rem; /* Adjust font size for mobile */
   }
@@ -3154,6 +3176,16 @@ body {
   }
 }
 
+@media (max-width: 768px) {
+  .downloads a {
+    font-size: 14px; /* Smaller text size on mobile */
+    gap: 8px; /* Smaller gap */
+  }
+
+  .downloads img {
+    width: 10px; /* Smaller icon size on mobile */
+  }
+}
 .downloads {
   flex: 1;
   display: flex;
@@ -3207,12 +3239,18 @@ body {
 }
 @media (max-width: 768px) {
   .downloads2 img {
-    width: 35px; /* Smaller size on mobile */
+    width: 30px; /* Smaller size on mobile */
+  }
+}
+@media (max-width: 768px) {
+  .downloads img {
+    width: 20px; /* Smaller size on mobile */
   }
 }
 
 .downloads2 span {
   font-size: 0.9rem;
+
 }
 
 
@@ -3239,6 +3277,7 @@ body {
 
 .downloads span {
   font-size: 0.9rem;
+  color: #464646;
 }
 
 
@@ -3254,7 +3293,7 @@ body {
 /* Vertical Line */
 .vertical-line {
   width: 1px; /* Width of the line */
-  height: 250px; /* Full height of the viewport */
+  height: 180px; /* Full height of the viewport */
   background-color: #333; /* Color of the line */
   margin: 0 20px; /* Add spacing around the line */
 }
@@ -3268,15 +3307,22 @@ body {
 
 /* Full-width darkened row */
 .darken-row {
-  background-color: #efeeee; /* Light gray background */
   padding: 20px 0; /* Vertical padding */
   width: 100vw; /* Full viewport width */
   position: relative;
-  left: 50%; /* Offset for centering */
-  transform: translateX(-50%); /* Center align */
+  left: 50%;
+  transform: translateX(-50%);
   margin-top: 1%;
   margin-bottom: 1%;
 }
+
+/* Apply darkened background only for screens wider than 992px (desktops) */
+@media (min-width: 992px) {
+  .darken-row {
+    background-color: #efeeee; /* Light gray background */
+  }
+}
+
 
 /* General Reset */
 * {
