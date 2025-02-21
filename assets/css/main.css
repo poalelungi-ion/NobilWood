@@ -3176,16 +3176,6 @@ body {
   }
 }
 
-@media (max-width: 768px) {
-  .downloads a {
-    font-size: 14px; /* Smaller text size on mobile */
-    gap: 8px; /* Smaller gap */
-  }
-
-  .downloads img {
-    width: 10px; /* Smaller icon size on mobile */
-  }
-}
 .downloads {
   flex: 1;
   display: flex;
@@ -3244,7 +3234,7 @@ body {
 }
 @media (max-width: 768px) {
   .downloads img {
-    width: 20px; /* Smaller size on mobile */
+    width: 30px; /* Smaller size on mobile */
   }
 }
 
