@@ -150,22 +150,24 @@ h6 {
 .header .logo img {
   height: 75px;
   width: 75px;
-
-  margin-left: -15%;
-  margin-bottom: -4%;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 1024px) { /* Adjust the breakpoint as needed */
   .header .logo img {
-    height:75px;
-    width: 75px;
+    margin-left: -15%;
+    margin-bottom: -4%;
   }
 }
 
+
+
 @media (max-width: 480px) {
   .header .logo img {
-    height: 50px;
-    width: 50px;
+    height: 65px;
+    width: 60px;
+    margin-left: 5%;
+    margin-bottom:-9%;
+    padding-bottom: 1%;
   }
 }
 
@@ -369,18 +371,22 @@ h6 {
 }
 
 /* Mobile Navigation */
-@media (max-width: 1000px) {
+@media (max-width: 972px) {
   .mobile-nav-toggle {
-    color: #333;
+    color: rgba(205, 140, 93, 0.79);
     font-size: 28px;
     line-height: 0;
-    margin-right: 10px;
+    margin-right: 20%;
+    margin-top:-80%;
     cursor: pointer;
     transition: color 0.3s;
   }
   .navmenu {
+    margin-top: -4%;
+    padding-right: 5%;
     padding: 0;
     z-index: 9997;
+    margin-bottom: 5%;
   }
   .navmenu ul {
     display: none;
@@ -693,7 +699,7 @@ h6 {
   /* Applies only on mobile (≤767px) */
   .footer-links {
     margin-left: 0 !important; /* Removes margin */
-    width: 100% !important; /* Ensures full width */
+
   }
 
   /* Make sure no content is overflowing the container */
@@ -707,6 +713,19 @@ h6 {
     word-wrap: break-word;
     white-space: normal;
     overflow: hidden;
+
+  }
+
+  .footer .social-links {
+    display: flex;
+    gap: 10%;
+    margin-top: 15px;
+  }
+  .footer .footer-top {
+    display: flex;
+    align-items: flex-start;
+    width: 90%;
+
   }
 }
 
@@ -3051,7 +3070,7 @@ body {
 
 /* Changed the bullet to rhombus */
 .sistema-text ul li::before {
-  content: "♦";
+  content: image("assets/img/romb.svg");
   color: rgba(205, 140, 93, 0.79);
   position: absolute;
   left: 0;
@@ -3114,7 +3133,7 @@ body {
   /* On mobile, switch to column layout */
   .sistema-materials {
     flex-direction: column; /* Stack items on top of each other */
-    gap: 20px; /* Adjust space between stacked items */
+    gap: 30px; /* Adjust space between stacked items */
   }
 
   .materials-list {
@@ -3142,6 +3161,22 @@ body {
   align-items: center;
   gap: 15px;
 }
+@media (max-width: 768px) {
+  .downloads {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+  }
+  .downloads2 {
+    flex: 2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    margin-left: 10%;
+  }
+}
 .downloads2 {
   flex: 2;
   display: flex;
@@ -3168,6 +3203,12 @@ body {
   width: 40px; /* Adjust the size of the icon */
   height: auto;
   margin-bottom: 5px;
+
+}
+@media (max-width: 768px) {
+  .downloads2 img {
+    width: 35px; /* Smaller size on mobile */
+  }
 }
 
 .downloads2 span {
