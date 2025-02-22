@@ -29,48 +29,89 @@
     @media (max-width: 768px) {
       .partner-section {
         margin-top: 0 !important;
-        padding: 1rem !important;
+        padding: 1.5rem !important;
         width: 100vw !important;
+        background-color: inherit !important;
+      }
+
+      .lastes{
+        margin-bottom: -50%;
+        padding-bottom: -20%;
+      }
+      .header_h1{
+        padding-top: 50%;
+        margin-top: 30%;
+        margin-left: -17.5%;
+        margin-bottom: -10%;
       }
 
       .logo-container img {
-        width: 80% !important;
+        width: 70% !important;
         margin: 0 auto !important;
         display: block !important;
         margin-top: 20px !important;
       }
 
-      h1 {
-        margin-top: 0 !important;
-        text-align: center !important;
-        padding: 0 !important;
-        font-size: 1.5rem !important;
+      h1, h2, h3, p {
+        text-align: left !important; /* Align text to the left */
+
       }
 
       .text-container {
         width: 100vw !important;
-        padding: 1rem !important;
-        margin: 0 !important;
-        text-align: center !important;
+        padding-left: 0% !important;
+        margin: 0 auto !important;
+        text-align: left !important; /* Align text to the left */
         background-color: inherit !important;
+        border-radius: 10px !important;
+
       }
 
       .horizontal-line {
-        margin: 1rem auto !important;
-        width: 80% !important;
+        margin: 1.5rem auto !important;
+        width: 120% !important;
+        height: 4px !important;
+        margin-left: -50%;
+        background: linear-gradient(to right, rgba(205,140,93,0.79), #3E3F41) !important;
       }
 
       .cooperation-item {
-        padding: 1rem !important;
+        padding: 1.5rem !important;
+      }
+
+      .image-container {
+        width: 100vw !important;
+        margin: 1.5rem 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
       }
 
       .image-container img {
-        width: 100vw !important;
+        width: 100% !important;
         height: auto !important;
-        display: block !important;
-        margin: 1rem 0 !important;
+        border-radius: 8px !important;
       }
+
+      .image-container.full-width {
+        width: 10vw !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+      }
+
+      .image-container:nth-of-type(odd) {
+        display: flex !important;
+        flex-direction: column !important;
+      }
+
+      .image-container:nth-of-type(even) {
+        display: flex !important;
+        flex-direction: column-reverse !important;
+
+      }
+
     }
+
 
 
     /* Base styles for carousel items */
@@ -110,15 +151,18 @@
 
 <header id="header" class="header d-flex align-items-center fixed-top">
   <div class="container">
+    <a href="index.html" class="logo d-flex align-items-center">
 
+      <img src="assets/img/logo.png"  >
+
+    </a>
 
     <div class="container-fluid  position-relative d-flex align-items-center justify-content-between d-flex ">
-      <a  class="logo d-flex align-items-center" >
+      <a href="index.html" class="logo d-flex align-items-center" >
 
-        <img src="assets/img/logo.png" href="index.html" >
 
       </a>
-      <nav id="navmenu" class="navmenu" >
+      <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="index.html"><i class="bi bi-house-door listing-dropdowns" style="font-size: 20px; width: 25px; height: 25px"></i></a> </li>
           <li class=" listing-dropdown "><a href="#"><span>Produse</span> </a>
@@ -181,8 +225,8 @@
           </li>
 
           <li><a href="portfolio.html">Portofolio</a></li>
-          <li><a href="partenerilor.html" class="active">Partenerilor</a></li>
-          <li class="listing-dropdown"><a href="#" ><span>Info</span> </a>
+          <li><a href="partenerilor.html">Partenerilor</a></li>
+          <li class="listing-dropdown"><a href="#" class="active"><span>Info</span> </a>
             <ul style="margin-left: -15%">
 
               <li class="listing-dropdowns">
@@ -328,13 +372,13 @@
 
     <div class="partner-section" style="margin-top: -20%">
       <div class="align-items-center">
-        <div class="col-lg-5 logo-container">
+        <div class="col-lg-5 logo-container listing-dropdowns">
           <img src="assets/img/partenerilor/Logo.png" alt="NobilWood Logo" class="img-fluid mb-4"
                style="position: relative; width: 67.5%; margin-left: 36%; margin-top: 55%">
         </div>
 
         <!-- Move H1 out of the darkened background -->
-        <h1 style="margin-top:-20.5%; font-weight: lighter; text-align: center;
+        <h1 class ="header_h1" style="margin-top:-20.5%; font-weight: lighter; text-align: center;
                background: linear-gradient(to bottom right, rgba(205,140,93,0.79), #3E3F41);
                -webkit-background-clip: text;
                -webkit-text-fill-color: transparent;
@@ -345,7 +389,7 @@
         <div class="text-container"
              style="background-color: #efeeee; width: 100vw; padding-left: 47.5%; padding-right: 20%;
                 margin-bottom: -3%; padding-bottom: 10%;">
-<br>
+                <br>
           <p class="mt-4"><b>Fabrica Nobil</b>Wood, <b> producător de tâmplărie premium, se extinde și caută parteneri în întreaga lume.</b></p>
           <p>Vă propunem să deschideți o reprezentanță a brandului NobilWood în orașul dumneavoastră și să câștigați bani cu noi pe piața locală.</p>
           <p><strong>Ofertă exclusivă</strong> partenerelor ce doresc să creeze o cooperare reciproc<br> avantajoasă și pe termen lung.</p>
@@ -362,20 +406,20 @@
           <div class="horizontal-line my-12" style="height: 6px; background: linear-gradient(to right, rgba(205,140,93,0.79), #3E3F41); margin-right: -100%; padding-right: -100%"></div>
           <p>Pentru <strong>profesionisti</strong>: designeri, arhitecti si constructori, revinzatori de timplarie plastic, cărora le oferim conditii favorabile de cooperare.</p>
           <p class="mt-4" style="font-weight: bold ">Pentru Antreprenori interesati de o nouă directie promitătoare.</p>
-          <img src="assets/img/partenerilor/2.jpg" alt="" class="img-fluid mt-5" style="width: 110%; z-index: 1; position: relative; padding-right: -20%">
+          <img  src="assets/img/partenerilor/2.jpg" alt="" class="img-fluid mt-5 lis" style="width: 110%; z-index: 1; position: relative; padding-right: -20%">
         </div>
         <div class="col-lg-6 offset-lg-1">
           <div class="position-relative">
-            <img src="assets/img/partenerilor/1.jpg" alt="" class="" style="position: relative; z-index: 1; margin-top: -100%; margin-right: -15%; padding-right: -5% ; margin-left: 21%; width: 110%">
+            <img src="assets/img/partenerilor/1.jpg" alt="" class="listing-dropdowns" style="position: relative; z-index: 1; margin-top: -100%; margin-right: -15%; padding-right: -5% ; margin-left: 21%; width: 110%">
           </div>
         </div>
       </div>
     </div>
 
-    <div class="container partner-section">
+    <div class="container partner-section lastes" >
       <div class="row mt-6">
         <div class="col-lg-5 text-container">
-          <div class="cooperation-item p-2">
+          <div class="cooperation-item p-2 lastes" >
             <h1 style="background: linear-gradient(to bottom right, rgba(205,140,93,0.79), #3E3F41);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
@@ -384,7 +428,7 @@
 
           </div>
         </div>
-        <div class="col-lg-12 text-container" style="padding-top:20%; margin-top: -55%; margin-bottom:12.5%; margin-left:-42.6%; margin-right: -40%; padding-left: 50%;  background-color: #cb8b5d;">
+        <div class="col-lg-12 text-container annas" style="padding-top:20%; margin-top: -55%; margin-bottom:12.5%; margin-left:-42.6%; margin-right: -40%; padding-left: 50%;  background-color: #cb8b5d;">
           <div class="cooperation-item p-8">
             <h1 style="color: white; font-weight: lighter; font-size: 35px">CITEVA DIN <br> <b>MODALITATILE</b><small> DE</small> <b>COOPERARE</b>:</h1>
             <br>
