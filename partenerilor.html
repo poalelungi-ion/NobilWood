@@ -24,92 +24,54 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <style>
-    /* Desktop Styles (Original) */
-    .partner-section {
-      position: relative;
-    }
-    .partner-section img {
-      max-width: 100%;
-      height: auto;
-    }
-    .partner-section h2 {
-      background: linear-gradient(to bottom right, rgba(205, 140, 93, 0.79), #3E3F41);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      font-size: 2.5em;
-      font-weight: bold;
-    }
-    .horizontal-line {
-      height: 6px;
-      background: linear-gradient(to right, rgba(205, 140, 93, 0.79), #3E3F41);
-    }
-    .cooperation-item {
-      padding: 1rem;
+
+    /* Mobile override styles */
+    @media (max-width: 768px) {
+      .partner-section {
+        margin-top: 0 !important;
+        padding: 1rem !important;
+        width: 100vw !important;
+      }
+
+      .logo-container img {
+        width: 80% !important;
+        margin: 0 auto !important;
+        display: block !important;
+        margin-top: 20px !important;
+      }
+
+      h1 {
+        margin-top: 0 !important;
+        text-align: center !important;
+        padding: 0 !important;
+        font-size: 1.5rem !important;
+      }
+
+      .text-container {
+        width: 100vw !important;
+        padding: 1rem !important;
+        margin: 0 !important;
+        text-align: center !important;
+        background-color: inherit !important;
+      }
+
+      .horizontal-line {
+        margin: 1rem auto !important;
+        width: 80% !important;
+      }
+
+      .cooperation-item {
+        padding: 1rem !important;
+      }
+
+      .image-container img {
+        width: 100vw !important;
+        height: auto !important;
+        display: block !important;
+        margin: 1rem 0 !important;
+      }
     }
 
-    /* Mobile Styles (New) */
-    @media (max-width: 768px) {
-      .partner-section .col-lg-5,
-      .partner-section .col-lg-6 {
-        margin-left: 0;
-        margin-right: 0;
-        padding-left: 0;
-        padding-right: 0;
-      }
-      .partner-section .col-lg-12 {
-        margin-top: 0;
-        margin-left: 0;
-        margin-right: 0;
-        padding-left: 0;
-        padding-right: 0;
-        width: 100%;
-      }
-      .partner-section h2 {
-        font-size: 1.8em; /* Smaller font size for mobile */
-      }
-      .partner-section .horizontal-line {
-        margin-right: 0;
-        padding-right: 0;
-      }
-      .partner-section img {
-        width: 100%;
-        margin-top: 0;
-        margin-right: 0;
-        padding-right: 0;
-      }
-      .partner-section .cooperation-item {
-        margin-top: 0;
-        margin-bottom: 0;
-        padding-left: 0;
-        padding-right: 0;
-      }
-      .partner-section .row {
-        flex-direction: column;
-      }
-      .partner-section .col-lg-5 img {
-        margin-bottom: 1rem;
-      }
-      .partner-section .col-lg-12 {
-        background-color: #efeeee;
-        padding: 1rem;
-        margin: 1rem 0;
-      }
-      .partner-section .cooperation-item p {
-        margin: 1rem 0;
-      }
-      .partner-section .logo-container {
-        text-align: center;
-        margin-bottom: 1rem;
-      }
-      .partner-section .logo-container img {
-        max-width: 80%; /* Adjust as needed */
-        margin: 0 auto;
-      }
-      .partner-section .text-container {
-        width: 100%;
-        padding: 0 1rem;
-      }
-    }
 
     /* Base styles for carousel items */
     .carousel-item {
@@ -219,8 +181,8 @@
           </li>
 
           <li><a href="portfolio.html">Portofolio</a></li>
-          <li><a href="partenerilor.html">Partenerilor</a></li>
-          <li class="listing-dropdown"><a href="#" class="active"><span>Info</span> </a>
+          <li><a href="partenerilor.html" class="active">Partenerilor</a></li>
+          <li class="listing-dropdown"><a href="#" ><span>Info</span> </a>
             <ul style="margin-left: -15%">
 
               <li class="listing-dropdowns">
@@ -330,6 +292,7 @@
 
 <main class="main">
 
+  <!-- Hero Section -->
   <section id="hero" class="hero section dark-background">
     <div class="info d-flex align-items-center">
       <div class="container">
@@ -341,8 +304,8 @@
 
     <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
       <div class="carousel-item active" data-bg="assets/img/partenerilor/C1.jpg"></div> <!-- First image -->
-      <div class="carousel-item" data-bg="assets/img/partenerilor/C1.jpg"></div>         <!-- Second image -->
-
+      <div class="carousel-item" data-bg="assets/img/partenerilor/C2.jpg"></div>         <!-- Second image -->
+>
 
       <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
         <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
@@ -360,45 +323,50 @@
     </div>
   </section><!-- /Hero Section -->
 
+
   <section id="become-partner" class="section py-5">
-    <style>
 
-    </style>
-
-    <div class="container partner-section">
-      <div class="row align-items-center justify-content-between">
+    <div class="partner-section" style="margin-top: -20%">
+      <div class="align-items-center">
         <div class="col-lg-5 logo-container">
-          <img src="assets/img/partenerilor/Logo.png" alt="NobilWood Logo" class="img-fluid mb-4" style="position: relative; z-index: 1;">
+          <img src="assets/img/partenerilor/Logo.png" alt="NobilWood Logo" class="img-fluid mb-4"
+               style="position: relative; width: 67.5%; margin-left: 36%; margin-top: 55%">
         </div>
-        <div class="col-lg-12 text-container"
-             style="background-color: #efeeee;
-                  width: 100vw;
-                  margin-top: 35%;
-                  margin-left: -100%;
-                  padding-left: 50%;
-                  padding-right: 10%;
-                  margin-bottom: -6%;
-                  padding-bottom: 15%;">
-          <h2 style="margin-top:-23%">VREI SA DEVII PARTENER?</h2>
-          <p class="mt-4">Fabrica NobilWood, producător de tâmplărie premium, se extinde și caută parteneri în întreaga lume.</p>
+
+        <!-- Move H1 out of the darkened background -->
+        <h1 style="margin-top:-20.5%; font-weight: lighter; text-align: center;
+               background: linear-gradient(to bottom right, rgba(205,140,93,0.79), #3E3F41);
+               -webkit-background-clip: text;
+               -webkit-text-fill-color: transparent;
+               padding-left: 17.5%">
+          VREI SA DEVII <b>PARTENER?</b>
+        </h1>
+
+        <div class="text-container"
+             style="background-color: #efeeee; width: 100vw; padding-left: 47.5%; padding-right: 20%;
+                margin-bottom: -3%; padding-bottom: 10%;">
+<br>
+          <p class="mt-4"><b>Fabrica Nobil</b>Wood, <b> producător de tâmplărie premium, se extinde și caută parteneri în întreaga lume.</b></p>
           <p>Vă propunem să deschideți o reprezentanță a brandului NobilWood în orașul dumneavoastră și să câștigați bani cu noi pe piața locală.</p>
-          <p><strong>Ofertă exclusivă</strong> partenerelor ce doresc să creeze o cooperare reciproc avantajoasă și pe termen lung.</p>
+          <p><strong>Ofertă exclusivă</strong> partenerelor ce doresc să creeze o cooperare reciproc<br> avantajoasă și pe termen lung.</p>
         </div>
       </div>
     </div>
 
+    </div>
+
     <div class="container partner-section">
       <div class="row align-items-center">
-        <div class="col-lg-5 text-container">
-          <h2 style="font-weight:normal">PENTRU <b> CINE? </b></h2>
+        <div class="col-lg-5 text-container" style="margin-right: -15%">
+          <h2 style="font-weight:lighter">PENTRU <b> CINE? </b></h2>
           <div class="horizontal-line my-12" style="height: 6px; background: linear-gradient(to right, rgba(205,140,93,0.79), #3E3F41); margin-right: -100%; padding-right: -100%"></div>
           <p>Pentru <strong>profesionisti</strong>: designeri, arhitecti si constructori, revinzatori de timplarie plastic, cărora le oferim conditii favorabile de cooperare.</p>
           <p class="mt-4" style="font-weight: bold ">Pentru Antreprenori interesati de o nouă directie promitătoare.</p>
-          <img src="assets/img/partenerilor/2.jpg" alt="" class="img-fluid mt-5" style="width: 110%; z-index: 1; position: relative; padding-right: -10%">
+          <img src="assets/img/partenerilor/2.jpg" alt="" class="img-fluid mt-5" style="width: 110%; z-index: 1; position: relative; padding-right: -20%">
         </div>
         <div class="col-lg-6 offset-lg-1">
           <div class="position-relative">
-            <img src="assets/img/partenerilor/1.jpg" alt="" class="img-fluid" style="position: relative; z-index: 1; margin-top: -100%; margin-right: -10%; padding-right: -10%">
+            <img src="assets/img/partenerilor/1.jpg" alt="" class="" style="position: relative; z-index: 1; margin-top: -100%; margin-right: -15%; padding-right: -5% ; margin-left: 21%; width: 110%">
           </div>
         </div>
       </div>
@@ -408,15 +376,31 @@
       <div class="row mt-6">
         <div class="col-lg-5 text-container">
           <div class="cooperation-item p-2">
-            <h2>VA ASTEPTAM CU DRAG SA COOPERAM?</h2>
+            <h1 style="background: linear-gradient(to bottom right, rgba(205,140,93,0.79), #3E3F41);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+
+          font-weight: lighter;">VA ASTEPTAM CU DRAG <br>SA <b>COOPERAM?</b></h1>
+
           </div>
         </div>
-        <div class="col-lg-12 text-container" style="padding-top:22%; margin-top: -58%; margin-bottom:16%; margin-left:-42.6%; margin-right: -50%; padding-left: 50%; padding-right: 10%; background-color: #cb8b5d;">
+        <div class="col-lg-12 text-container" style="padding-top:20%; margin-top: -55%; margin-bottom:12.5%; margin-left:-42.6%; margin-right: -40%; padding-left: 50%;  background-color: #cb8b5d;">
           <div class="cooperation-item p-8">
             <h1 style="color: white; font-weight: lighter; font-size: 35px">CITEVA DIN <br> <b>MODALITATILE</b><small> DE</small> <b>COOPERARE</b>:</h1>
-            <p>Pentru revânzători oferim un flux cât mai de simplu în administrarea proiectelor pentru o prezentare corectă și promovare în cerința sau la locație clienților.</p>
+            <br>
+            <h5 style="color: white; font-weight: lighter;" > <img src="assets/img/romb_white.png" style="width: 10px; height: auto; margin-left: -2.5%"> Celor ce doresc să lanseze un show-room personalizat cu plasarea produselor noastre Nobile, le oferim reprezentanta  oficială cu tot sprijinul necesar. <br></h5><br>
+            <h5 style="color: white; font-weight: lighter;" > <img src="assets/img/romb_white.png" style="width: 10px; height: auto; margin-left: -2.5%"> Detinatorilor de  birou, magazin sau show-room,  oferim mostre de produse cu toată gama de culori și informația necesară pentru o prezentare efectiva. <br></h5><br>
+            <h5 style="color: white; font-weight: lighter;" > <img src="assets/img/romb_white.png" style="width: 10px; height: auto; margin-left: -2.5%"> Pentru revinzatori oferim o valiza cu  mostre a produselor noastre, care este ideal pentru o prezentare la șantier sau la locația clientului. <br></h5>
+            <br>
+
+            <h4 style="color: rgba(205,140,93,0.79);  margin-bottom: -160%"  >  Fiecare tară are arhitectura si stilul său, de aceia
+              suntem gata să implementăm si să personalizăm
+              produsele noastre Nobile sub <br> cerintele
+              fiecărui partener <br></h4>
           </div>
+
         </div>
+
       </div>
     </div>
   </section>
