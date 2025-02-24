@@ -26,6 +26,32 @@
 
   <style>
 
+    /* Mobile override styles */
+    @media (max-width: 768px) {
+      .container_contact {
+        width: 110% !important;
+        padding: 0 !important;
+        margin-right: -2% !important;
+      }
+
+
+
+
+      .row {
+
+        width: 100% !important;
+        margin-top: 5% !important;
+        display: flex !important;
+        justify-content: center !important;
+      }
+
+      iframe {
+margin-left: -15%;
+        width: 130% !important;
+        height: 400px !important; /* Adjust height if needed */
+      }
+    }
+
     /* Base styles for carousel items */
     .carousel-item {
       background-size: cover;
@@ -281,13 +307,15 @@
   <!-- Get Started Section -->
   <section id="get-started" class="get-started section">
     <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-12 text-center" data-aos="zoom-out" data-aos-delay="100">
+      <div class="row justify-content-left">
+        <div class="col-lg-12 text-left" data-aos="zoom-out" data-aos-delay="100">
           <h3 style="background: linear-gradient(to bottom right, rgba(205,140,93,0.79), #3E3F41);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
                 font-size: 3em;
-                font-weight: bold;">
+                font-weight: bold;
+padding-left: 9%">
+
             CONTACTE
           </h3>
         </div>
@@ -297,20 +325,20 @@
 
   <!-- Contact Section -->
   <section id="contact" class="contact section">
-    <div class="container" data-aos="fade-up" data-aos-delay="100">
-      <div class="row">
+    <div class="container container_contact"  data-aos="fade-up" data-aos-delay="100">
+      <div class="row" style="padding-left: 0%">
         <!-- Contact Information -->
-        <div class="col-lg-6 d-flex flex-column justify-content-between" style=" /* Extends far to the left */">
+        <div class="col-lg-6 d-flex flex-column justify-content-between" style=" padding-left:  /* Extends far to the left */">
           <div class="info-item">
-            <p><strong>GSM</strong></p>
-            <p style="color: #C58C5D;">+373600000077</p>
+            <p>GSM</p>
+            <p style="color: #C58C5D; font-weight: bold;">+373600000077</p>
           </div>
           <div class="info-item">
-            <p><strong>E-mail</strong></p>
-            <p style="color: #C58C5D;">info@nobilwood.com</p>
+            <p>E-mail</p>
+            <p style="color: #C58C5D;font-weight: bold;">info@nobilwood.com</p>
           </div>
           <div class="info-item">
-            <p><strong>Program de lucru</strong></p>
+            <p>Program de lucru</p>
             <p>
               <span style="color: #C58C5D; font-weight: bold;">L-V : 08:00 - 17:00</span><br>
               <span style="color: #C58C5D; font-weight: bold;">S : 08:00 - 12:00</span><br>
@@ -318,23 +346,26 @@
             </p>
           </div>
           <div class="info-item">
-            <p><strong>Adresa :</strong></p>
-            <p style="color: #C58C5D;">MD-2091, mun. Chisinau, or. Singera, str. Industriala 5</p>
+            <p>Adresa :</p>
+            <p style="color: #C58C5D;font-weight: bold;">MD-2091,<br> mun. Chisinau, <br>or. Singera, <br>str. Industriala 5</p>
           </div>
         </div>
 
         <!-- Social Media Icons -->
-        <div class="col-lg-1 d-flex flex-column align-items-center justify-content-center">
-          <i class="bi bi-facebook"></i>
-          <i class="bi bi-instagram"></i>
-          <i class="bi bi-telegram"></i>
-          <i class="bi bi-whatsapp"></i>
-          <i class="bi bi-telephone"></i>
+        <div class="col-lg-1 d-flex flex-column align-items-center justify-content-center listing-dropdowns">
+          <i class="bi bi-facebook" style="margin-bottom: 20%; margin-top: -10%"></i>
+          <i class="bi bi-instagram" style="margin-bottom: 20%; margin-top: 10%"></i>
+          <i class="bi bi-telegram" style="margin-bottom: 20%; margin-top: 10%"></i>
+          <i class="bi bi-whatsapp" style="margin-bottom: 20%; margin-top: 10%"></i>
+          <i class="bi bi-telephone" style="margin-bottom: -20%; margin-top:10%"></i>
         </div>
         <!-- Contact Image -->
-        <div class="col-lg-5">
-          <img src="assets/img/d540bbd2216972e3e4f96dd55a06bdcb.jpg" class="img-fluid" alt="Contact Image" style="border-radius: 10px;">
+        <div class="col-lg-5 listing-dropdowns">
+          <img src="assets/img/d540bbd2216972e3e4f96dd55a06bdcb.jpg" class="img-fluid" alt="Contact Image" style="width: 70%;">
         </div>
+      </div>
+      <div class="row" style="padding-left: 9.5%; width: 84.5%; margin-top: 10%;">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3247.02684686338!2d29.004142300000005!3d46.915041200000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c976575a83ab1d%3A0x1d17a7aa5c158536!2sStr.%20Industrial%C4%83!5e1!3m2!1sen!2s!4v1740236365875!5m2!1sen!2s" width="100%"; height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
   </section><!-- /Contact Section -->
