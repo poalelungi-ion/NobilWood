@@ -3054,7 +3054,7 @@ body {
 /* Apply margin-top only for screens wider than 992px (desktops) */
 @media (min-width: 992px) {
   .sistema-text {
-    margin-top: 7.5%; /* Adjust as needed */
+    margin-top: 5%; /* Adjust as needed */
   }
 }
 
