@@ -28,6 +28,26 @@
 
   <style>
 
+    @media (min-width: 768px) {
+      .languages {
+        transform: translateX(-80%)!important;
+      }
+      .infodrop{
+        margin-left: -15% !important;
+      }
+      .productdrop{
+        margin-left: -15% !important;
+
+      }
+    }
+    @media (min-width: 768px) {
+
+      .productdrop{
+        margin-bottom: 20% !important;
+        height: 110% !important;
+      }
+    }
+
     /* Base styles for carousel items */
     .carousel-item {
       background-size: cover;
@@ -73,7 +93,6 @@
 <header id="header" class="header d-flex align-items-center fixed-top">
   <div class="container">
     <a href="index.html" class="logo d-flex align-items-center">
-
       <img src="assets/img/logo.png"  >
 
     </a>
@@ -85,9 +104,9 @@
       </a>
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="index.html"><i class="bi bi-house-door listing-dropdowns" style="font-size: 20px; width: 25px; height: 25px"></i></a> </li>
-          <li class=" listing-dropdown "><a href="#"><span>Produse</span> </a>
-            <ul style="margin-left: -15%" >
+          <li><a href="index.html"><i class="bi bi-house-door listing-dropdowns" style="font-size: 20px; width: 25px; height: 25px"></i></a>  </li>
+          <li class=" listing-dropdown dropdown " dropdown><a href="#"><span>Produse</span>  <i class="bi bi-chevron-down toggle-dropdown mobile-br"></i> </a>
+            <ul class="productdrop" >
               <li class="listing-dropdowns">
                 <a style="font-weight: bold; font-size: 20px">‎ </a>
                 <a href="#" style=" font-size: 10px">‎ </a>
@@ -113,24 +132,28 @@
               </li>
               <img src="assets/img/ficon.svg" class="listing-dropdowns" style="height: 70px; margin-bottom: -5%; margin-top: -5%">
               <li>
-                <a style="font-weight: bold; font-size: 12px ; margin-bottom: -3%; margin-top: -3%">Ferestre</a>
+                <a  class="listing-dropdowns"; style="font-weight: bold; font-size: 12px ; margin-bottom: -3%; margin-top: -3%">Ferestre</a>
+                <a class="mobile-br" ; href="#" style=" font-size: 10px">‎ </a>
                 <a href="lemn_aluminiu.html" style=" font-size: 12px ; margin-bottom: -5%; margin-top: -5%">LEMN & ALUMINIU</a>
                 <a href="sisteme_glisante.html" style=" font-size: 12px ; margin-bottom: -5%; margin-top: -5%">SISTEME GLISANTE</a>
                 <a href="vitralii.html" style=" font-size: 12px ; margin-bottom: -5%; margin-top: -5%">VITRALII</a>
               </li>
               <img src="assets/img/uicon.svg" class="listing-dropdowns" style="height: 70px; margin-bottom: -5%; margin-top: -5%">
               <li>
-                <a style="font-weight: bold; font-size: 12px; margin-bottom: 1px; margin-top: 1px">USI</a>
+                <a  class="listing-dropdowns"; style="font-weight: bold;  font-size: 12px; margin-bottom: 1px; margin-top: 1px">USI</a>
+                <a class="mobile-br";  href="#" style=" font-size: 10px">‎ </a>
                 <a href="usi_exterior.html" style=" font-size: 12px ;  margin-bottom: -5%; margin-top: -5%">Usi Exterior</a>
                 <a href="usi_interior.html" style=" font-size: 12px;  margin-bottom: -5%; margin-top: -5%">Usi Interior</a>
                 <a href="#" style=" font-size: 12px;  margin-bottom: -5%; margin-top: -5%" class="listing-dropdowns">‎ </a>
               </li>
-              <img src="assets/img/picon.svg" style="height: 70px; margin-bottom: -5%; margin-top: -5%">
+              <img src="assets/img/picon.svg" class="listing-dropdowns" style="height: 70px; margin-bottom: -5%; margin-top: -5%">
               <li>
-                <a style="font-weight: bold; font-size: 12px; margin-bottom: 1px; margin-top: 1px">PARCHET</a>
+                <a class="listing-dropdowns" style="font-weight: bold;  font-size: 12px; margin-bottom: 1px; margin-top: 1px">PARCHET</a>
+                <a class="mobile-br"; href="#" style=" font-size: 10px">‎ </a>
                 <a href="parket.html" style=" font-size: 12px;  margin-bottom: -5%; margin-top: -5%">PARCHET STRATIFICAT</a>
                 <a href="plinte.html" style=" font-size: 12px;  margin-bottom: -5%; margin-top: -5%">PLINTE</a>
                 <a href="#" style=" font-size: 10px; margin-bottom: 1px; margin-top: 1px" class="listing-dropdowns">‎ </a>
+                <a class="mobile-br"   href="#" style=" font-size: 10px">‎ </a>
               </li>
               <li class="listing-dropdowns">
                 <a style="font-weight: bold; font-size: 20px">‎ </a>
@@ -147,8 +170,8 @@
 
           <li><a href="portfolio.html">Portofolio</a></li>
           <li><a href="partenerilor.html">Partenerilor</a></li>
-          <li class="listing-dropdown"><a href="#" class="active"><span>Info</span> </a>
-            <ul style="margin-left: -15%">
+          <li class="listing-dropdown dropdown "><a href="#" class="active"><span>Info</span> <i class="bi bi-chevron-down toggle-dropdown mobile-br"></i> </a>
+            <ul class="infodrop">
 
               <li class="listing-dropdowns">
                 <a style="font-weight: bold; font-size: 20px"></a>
@@ -167,7 +190,7 @@
                 <a href="#" style="color: white">_</a>
               </li>
               <li>
-                <a style="font-weight: bold; font-size: 12px; margin-bottom: -1%; ">Info</a>
+                <a class="listing-dropdowns" style="font-weight: bold; font-size: 12px; margin-bottom: -1%; ">Info</a>
                 <a href="about.html" style=" font-size: 12px ; margin-bottom: -1%; margin-top: -1%">DESPRE NOI</a>
                 <a href="downloads.html" style=" font-size: 12px ;  margin-top: -1%">DOWNLOAD</a>
               </li>
@@ -175,8 +198,8 @@
           </li>
 
           <li><a href="contact.html">Contact</a></li>
-          <li class="language-option listing-dropdown"><a href="#">RO</a>
-            <ul style="transform: translateX(-80%);">
+          <li class="language-option listing-dropdown dropdown"><a href="#">RO <i class="bi bi-chevron-down toggle-dropdown mobile-br"></i></a>
+            <ul class="languages">
 
               <li class="listing-dropdowns">
                 <a style="font-weight: bold; font-size: 20px"></a>
@@ -254,6 +277,375 @@
     </div>
   </div>
 </header>
+  <div class="container">
+    <a href="index.html" class="logo d-flex align-items-center">
+      <img src="assets/img/logo.png"  >
+
+    </a>
+
+    <div class="container-fluid  position-relative d-flex align-items-center justify-content-between d-flex ">
+      <a href="index.html" class="logo d-flex align-items-center" >
+
+
+      </a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html"><i class="bi bi-house-door listing-dropdowns" style="font-size: 20px; width: 25px; height: 25px"></i></a>  </li>
+          <li class=" listing-dropdown dropdown " dropdown><a href="#"><span>Produse</span>  <i class="bi bi-chevron-down toggle-dropdown mobile-br"></i> </a>
+            <ul class="productdrop" >
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px">‎ </a>
+                <a href="#" style=" font-size: 10px">‎ </a>
+                <a href="#" style=" font-size: 10px">‎ </a>
+              </li>
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px">‎ </a>
+                <a href="#" style=" font-size: 10px">‎ </a>
+                <a href="#" style=" font-size: 10px">‎ </a>
+              </li>
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px">‎ </a>
+
+              </li>
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px">‎ </a>
+
+              </li>
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px">‎ </a>
+                <a href="#" style=" font-size: 10px">‎ </a>
+                <a href="#" style=" font-size: 10px">‎ </a>
+              </li>
+              <img src="assets/img/ficon.svg" class="listing-dropdowns" style="height: 70px; margin-bottom: -5%; margin-top: -5%">
+              <li>
+                <a  class="listing-dropdowns"; style="font-weight: bold; font-size: 12px ; margin-bottom: -3%; margin-top: -3%">Ferestre</a>
+                <a class="mobile-br" ; href="#" style=" font-size: 10px">‎ </a>
+                <a href="lemn_aluminiu.html" style=" font-size: 12px ; margin-bottom: -5%; margin-top: -5%">LEMN & ALUMINIU</a>
+                <a href="sisteme_glisante.html" style=" font-size: 12px ; margin-bottom: -5%; margin-top: -5%">SISTEME GLISANTE</a>
+                <a href="vitralii.html" style=" font-size: 12px ; margin-bottom: -5%; margin-top: -5%">VITRALII</a>
+              </li>
+              <img src="assets/img/uicon.svg" class="listing-dropdowns" style="height: 70px; margin-bottom: -5%; margin-top: -5%">
+              <li>
+                <a  class="listing-dropdowns"; style="font-weight: bold;  font-size: 12px; margin-bottom: 1px; margin-top: 1px">USI</a>
+                <a class="mobile-br";  href="#" style=" font-size: 10px">‎ </a>
+                <a href="usi_exterior.html" style=" font-size: 12px ;  margin-bottom: -5%; margin-top: -5%">Usi Exterior</a>
+                <a href="usi_interior.html" style=" font-size: 12px;  margin-bottom: -5%; margin-top: -5%">Usi Interior</a>
+                <a href="#" style=" font-size: 12px;  margin-bottom: -5%; margin-top: -5%" class="listing-dropdowns">‎ </a>
+              </li>
+              <img src="assets/img/picon.svg" class="listing-dropdowns" style="height: 70px; margin-bottom: -5%; margin-top: -5%">
+              <li>
+                <a class="listing-dropdowns" style="font-weight: bold;  font-size: 12px; margin-bottom: 1px; margin-top: 1px">PARCHET</a>
+                <a class="mobile-br"; href="#" style=" font-size: 10px">‎ </a>
+                <a href="parket.html" style=" font-size: 12px;  margin-bottom: -5%; margin-top: -5%">PARCHET STRATIFICAT</a>
+                <a href="plinte.html" style=" font-size: 12px;  margin-bottom: -5%; margin-top: -5%">PLINTE</a>
+                <a href="#" style=" font-size: 10px; margin-bottom: 1px; margin-top: 1px" class="listing-dropdowns">‎ </a>
+                <a class="mobile-br"   href="#" style=" font-size: 10px">‎ </a>
+              </li>
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px">‎ </a>
+                <a href="#" style=" font-size: 10px">‎ </a>
+                <a href="#" style=" font-size: 10px">‎ </a>
+              </li>
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px">‎ </a>
+                <a href="#" style=" font-size: 10px">‎ </a>
+                <a href="#" style=" font-size: 10px">‎ </a>
+              </li>
+            </ul>
+          </li>
+
+          <li><a href="portfolio.html">Portofolio</a></li>
+          <li><a href="partenerilor.html">Partenerilor</a></li>
+          <li class="listing-dropdown dropdown "><a href="#" class="active"><span>Info</span> <i class="bi bi-chevron-down toggle-dropdown mobile-br"></i> </a>
+            <ul class="infodrop">
+
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px"></a>
+                <a href="#"></a>
+                <a href="#" style="color: white">_</a>
+              </li>
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px"></a>
+                <a href="#"></a>
+                <a href="#" style="color: white">_</a>
+              </li>
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#" style="color: white">_</a>
+              </li>
+              <li>
+                <a class="listing-dropdowns" style="font-weight: bold; font-size: 12px; margin-bottom: -1%; ">Info</a>
+                <a href="about.html" style=" font-size: 12px ; margin-bottom: -1%; margin-top: -1%">DESPRE NOI</a>
+                <a href="downloads.html" style=" font-size: 12px ;  margin-top: -1%">DOWNLOAD</a>
+              </li>
+            </ul>
+          </li>
+
+          <li><a href="contact.html">Contact</a></li>
+          <li class="language-option listing-dropdown dropdown"><a href="#">RO <i class="bi bi-chevron-down toggle-dropdown mobile-br"></i></a>
+            <ul class="languages">
+
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#" style="color: white">_</a>
+              </li>
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#" style="color: white">_</a>
+              </li>
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#" style="color: white">_</a>
+              </li>
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#" style="color: white">_</a>
+              </li>
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#" style="color: white">_</a>
+              </li>
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#" style="color: white">_</a>
+              </li>
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#" style="color: white">_</a>
+              </li>
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px">‎ </a>
+                <a href="#" style=" font-size: 10px">‎ </a>
+                <a href="#" style=" font-size: 10px">‎ </a>
+              </li>
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px">‎ </a>
+                <a href="#" style=" font-size: 10px">‎ </a>
+                <a href="#" style=" font-size: 10px">‎ </a>
+              </li>
+              <li>
+                <a style="font-weight: bold; font-size: 12px; color: rgba(205,140,93,0.79); margin-bottom: -2%; margin-top: -1%">RO</a>
+                <a href="#" style=" font-size: 12px; margin-bottom: -3%; margin-top: -3%">RU</a>
+                <a href="#" style=" font-size: 12px; margin-bottom: -3%; margin-top: -3%">IT</a>
+                <a href="#" style=" font-size: 12px; margin-bottom: -3%; margin-top: -3%;">EN</a>
+                <a href="#" style=" font-size: 12px;  margin-top: -3%;">FR</a>
+              </li>
+              <a style="font-weight: bold; font-size: 20px">‎ </a>
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#" style="color: white">_</a>
+              </li>
+
+            </ul>
+          </li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list" style=" margin-top: -50%"></i>
+      </nav>
+
+    </div>
+  </div>
+</header>>
+  <div class="container">
+    <a href="index.html" class="logo d-flex align-items-center">
+      <img src="assets/img/logo.png"  >
+
+    </a>
+
+    <div class="container-fluid  position-relative d-flex align-items-center justify-content-between d-flex ">
+      <a href="index.html" class="logo d-flex align-items-center" >
+
+
+      </a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html"><i class="bi bi-house-door listing-dropdowns" style="font-size: 20px; width: 25px; height: 25px"></i></a>  </li>
+          <li class=" listing-dropdown dropdown " dropdown><a href="#"><span>Produse</span>  <i class="bi bi-chevron-down toggle-dropdown mobile-br"></i> </a>
+            <ul class="productdrop" >
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px">‎ </a>
+                <a href="#" style=" font-size: 10px">‎ </a>
+                <a href="#" style=" font-size: 10px">‎ </a>
+              </li>
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px">‎ </a>
+                <a href="#" style=" font-size: 10px">‎ </a>
+                <a href="#" style=" font-size: 10px">‎ </a>
+              </li>
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px">‎ </a>
+
+              </li>
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px">‎ </a>
+
+              </li>
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px">‎ </a>
+                <a href="#" style=" font-size: 10px">‎ </a>
+                <a href="#" style=" font-size: 10px">‎ </a>
+              </li>
+              <img src="assets/img/ficon.svg" class="listing-dropdowns" style="height: 70px; margin-bottom: -5%; margin-top: -5%">
+              <li>
+                <a style="font-weight: bold; font-size: 12px ; margin-bottom: -3%; margin-top: -3%">Ferestre</a>
+                <a href="lemn_aluminiu.html" style=" font-size: 12px ; margin-bottom: -5%; margin-top: -5%">LEMN & ALUMINIU</a>
+                <a href="sisteme_glisante.html" style=" font-size: 12px ; margin-bottom: -5%; margin-top: -5%">SISTEME GLISANTE</a>
+                <a href="vitralii.html" style=" font-size: 12px ; margin-bottom: -5%; margin-top: -5%">VITRALII</a>
+              </li>
+              <img src="assets/img/uicon.svg" class="listing-dropdowns" style="height: 70px; margin-bottom: -5%; margin-top: -5%">
+              <li>
+                <a style="font-weight: bold; font-size: 12px; margin-bottom: 1px; margin-top: 1px">USI</a>
+                <a href="usi_exterior.html" style=" font-size: 12px ;  margin-bottom: -5%; margin-top: -5%">Usi Exterior</a>
+                <a href="usi_interior.html" style=" font-size: 12px;  margin-bottom: -5%; margin-top: -5%">Usi Interior</a>
+                <a href="#" style=" font-size: 12px;  margin-bottom: -5%; margin-top: -5%" class="listing-dropdowns">‎ </a>
+              </li>
+              <img src="assets/img/picon.svg" class="listing-dropdowns" style="height: 70px; margin-bottom: -5%; margin-top: -5%">
+              <li>
+                <a style="font-weight: bold; font-size: 12px; margin-bottom: 1px; margin-top: 1px">PARCHET</a>
+                <a href="parket.html" style=" font-size: 12px;  margin-bottom: -5%; margin-top: -5%">PARCHET STRATIFICAT</a>
+                <a href="plinte.html" style=" font-size: 12px;  margin-bottom: -5%; margin-top: -5%">PLINTE</a>
+                <a href="#" style=" font-size: 10px; margin-bottom: 1px; margin-top: 1px" class="listing-dropdowns">‎ </a>
+              </li>
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px">‎ </a>
+                <a href="#" style=" font-size: 10px">‎ </a>
+                <a href="#" style=" font-size: 10px">‎ </a>
+              </li>
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px">‎ </a>
+                <a href="#" style=" font-size: 10px">‎ </a>
+                <a href="#" style=" font-size: 10px">‎ </a>
+              </li>
+            </ul>
+          </li>
+
+          <li><a href="portfolio.html">Portofolio</a></li>
+          <li><a href="partenerilor.html">Partenerilor</a></li>
+          <li class="listing-dropdown dropdown "><a href="#" class="active"><span>Info</span> <i class="bi bi-chevron-down toggle-dropdown mobile-br"></i> </a>
+            <ul class="infodrop">
+
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px"></a>
+                <a href="#"></a>
+                <a href="#" style="color: white">_</a>
+              </li>
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px"></a>
+                <a href="#"></a>
+                <a href="#" style="color: white">_</a>
+              </li>
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#" style="color: white">_</a>
+              </li>
+              <li>
+                <a style="font-weight: bold; font-size: 12px; margin-bottom: -1%; ">Info</a>
+                <a href="about.html" style=" font-size: 12px ; margin-bottom: -1%; margin-top: -1%">DESPRE NOI</a>
+                <a href="downloads.html" style=" font-size: 12px ;  margin-top: -1%">DOWNLOAD</a>
+              </li>
+            </ul>
+          </li>
+
+          <li><a href="contact.html">Contact</a></li>
+          <li class="language-option listing-dropdown dropdown"><a href="#">RO <i class="bi bi-chevron-down toggle-dropdown mobile-br"></i></a>
+            <ul class="languages">
+
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#" style="color: white">_</a>
+              </li>
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#" style="color: white">_</a>
+              </li>
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#" style="color: white">_</a>
+              </li>
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#" style="color: white">_</a>
+              </li>
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#" style="color: white">_</a>
+              </li>
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#" style="color: white">_</a>
+              </li>
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#" style="color: white">_</a>
+              </li>
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px">‎ </a>
+                <a href="#" style=" font-size: 10px">‎ </a>
+                <a href="#" style=" font-size: 10px">‎ </a>
+              </li>
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px">‎ </a>
+                <a href="#" style=" font-size: 10px">‎ </a>
+                <a href="#" style=" font-size: 10px">‎ </a>
+              </li>
+              <li>
+                <a style="font-weight: bold; font-size: 12px; color: rgba(205,140,93,0.79); margin-bottom: -2%; margin-top: -1%">RO</a>
+                <a href="#" style=" font-size: 12px; margin-bottom: -3%; margin-top: -3%">RU</a>
+                <a href="#" style=" font-size: 12px; margin-bottom: -3%; margin-top: -3%">IT</a>
+                <a href="#" style=" font-size: 12px; margin-bottom: -3%; margin-top: -3%;">EN</a>
+                <a href="#" style=" font-size: 12px;  margin-top: -3%;">FR</a>
+              </li>
+              <a style="font-weight: bold; font-size: 20px">‎ </a>
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#" style="color: white">_</a>
+              </li>
+
+            </ul>
+          </li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list" style=" margin-top: -50%"></i>
+      </nav>
+
+    </div>
+  </div>
+</header>
+
 
   <main class="main">
 
