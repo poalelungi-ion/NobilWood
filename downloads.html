@@ -41,296 +41,254 @@
 
 
     }
-    @media (max-width: 768px) {
+     
+      body {
+        font-family: Arial, sans-serif;
+        justify-content: center;
+        align-items: center;
+        background-color: #f4f4f4;
+      }
+
       .download-item {
         width: 100%;
-        background: #f8f8f8;
-        padding: 25px 20px;
-        margin-bottom: 2px;
-        position: relative;
-        min-height: 80px;
+        background: #f1f1f1;
+        padding-left: 15%;
+        padding-right: 15%;
+        padding-bottom: 3%;
+        padding-top: 3%;
+        border-radius: 5px;
       }
 
       .download-item h2 {
-        font-size: 18px;
-        margin: 0;
-        padding: 0;
+        font-size: 32px;
         color: #333;
-        text-align: left;
-        position: relative;
         font-weight: normal;
+        margin: 0;
+        /* Allow long titles to wrap */
+        white-space: normal;
+        word-break: break-word;
+
       }
 
-      /* Style for the first word (FERESTRE, USI, PARCHET) */
-      .download-item h2 .bold {
+      .bold {
         font-weight: bold;
-        color: #000;
-        text-transform: uppercase;
       }
 
-      /* Style for the second part (LEMN ALUMINIU, INTERIOARE, NATURAL) */
-      .download-item h2 span:not(.bold) {
-        color: #666;
-        text-transform: uppercase;
-        margin-left: 8px;
+      .divider {
+        margin-left: -80%;
+        padding-left: 150%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
 
-      /* Hide the original lines and buttons */
-      .line-left, .line-right, .line-left .btn, .line-right .btn {
-        display: none;
+      .line-left,
+      .line-right {
+        flex: 1;
+        height: 1px;
+        background: black;
+        margin-left: -250%;
       }
 
-      /* Diamond styling */
       .diamond-container {
-        position: absolute;
-        right: 20px;
-        top: 50%;
-        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
       }
 
       .diamond {
-        width: 10px;
-        height: 10px;
+        width: 15px;
+        height: 15px;
         background: white;
-        border: 1px solid #333;
+        border: 1px solid black;
         transform: rotate(45deg);
       }
 
-      /* Hide the original diamond lines */
-      .diamond-line-left, .diamond-line-right {
-        display: none;
+      .diamond-line-left,
+      .diamond-line-right {
+        width: 1px;
+        height: 30px;
+        background: black;
+        position: absolute;
+      }
+
+      .diamond-line-left {
+        top: 20px;
+      }
+
+      .diamond-line-right {
+        bottom: 20px;
+      }
+
+      .line-left .btn,
+      .line-right .btn {
+        gap: 5px;
+        color: black;
+        font-weight: bold;
+        font-size: 14px;
+        cursor: pointer;
+        margin: 10px 20px 0 20px;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        white-space: nowrap;
+      }
+
+      .line-left .btn span,
+      .line-right .btn span {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .line-left .btn span i,
+      .line-right .btn span i {
+        color: #d18c42;
+        font-size: 50px;
+        position: absolute;
+        top: -70px;
+      }
+
+      /* Base styles for carousel items */
+      .carousel-item {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100vh;
+      }
+
+      /* Use the data-bg attribute to set the background image for desktop */
+      [data-bg] {
+        background-image: url(attr(data-bg));
+      }
+
+    /* Mobile Styles for Downloads Section */
+    /* Mobile Styles for Downloads Section */
+    @media (max-width: 768px) {
+      /* Basic download item container */
+      .download-item {
+        width: 100% !important;
+        background: #f9f9f9 !important;
+        padding: 15px 20px !important;
+        margin-bottom: 0 !important;
+        position: relative !important;
+        min-height: 50px !important;
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        border-radius: 0 !important;
       }
 
       /* Alternating background colors */
       .download-item:nth-child(even) {
-        background: #fff;
+        background: #ffffff !important;
       }
 
-      /* Remove any floating behaviors */
-      .download-item::after {
-        content: '';
-        display: table;
-        clear: both;
-      }
-
-      /* Remove divider visibility */
-      .divider {
-        background: none;
-        border: none;
-      }
-    }
-
-    /* Additional mobile-specific adjustments for smaller screens */
-    @media (max-width: 480px) {
-      .download-item {
-        padding: 20px 15px;
-      }
-
+      /* Title container */
       .download-item h2 {
-        font-size: 16px;
+        font-size: 15px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        color: #777 !important;
+        text-align: left !important;
+        font-weight: normal !important;
+        white-space: normal !important;
+        word-break: normal !important;
+        text-transform: uppercase !important;
+        flex: 1 !important;
       }
 
-      .diamond {
-        width: 8px;
-        height: 8px;
+      /* Bold part of title */
+      .download-item h2 .bold {
+        font-weight: bold !important;
+        color: #000 !important;
+        text-transform: uppercase !important;
+        display: inline !important;
       }
 
-      .diamond-container {
-        right: 15px;
+      /* Complete redesign of the divider and buttons */
+      .download-item .divider {
+        display: flex !important;
+        justify-content: flex-end !important;
+        align-items: center !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        background: none !important;
+        width: auto !important;
       }
-    }
-    body {
-      font-family: Arial, sans-serif;
-      justify-content: center;
-      align-items: center;
-      background-color: #f4f4f4;
-    }
 
-    .download-item {
-      width: 100%;
-      background: #f1f1f1;
-      padding-left: 15%;
-      padding-right: 15%;
-      padding-bottom: 3%;
-      padding-top: 3%;
-      border-radius: 5px;
-    }
-
-    .download-item h2 {
-      font-size: 32px;
-      color: #333;
-      font-weight: normal;
-      margin: 0;
-      /* Allow long titles to wrap */
-      white-space: normal;
-      word-break: break-word;
-
-    }
-
-    .bold {
-      font-weight: bold;
-    }
-
-    .divider {
-      margin-left: -80%;
-      padding-left: 150%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .line-left,
-    .line-right {
-      flex: 1;
-      height: 1px;
-      background: black;
-      margin-left: -250%;
-    }
-
-    .diamond-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      position: relative;
-    }
-
-    .diamond {
-      width: 15px;
-      height: 15px;
-      background: white;
-      border: 1px solid black;
-      transform: rotate(45deg);
-    }
-
-    .diamond-line-left,
-    .diamond-line-right {
-      width: 1px;
-      height: 30px;
-      background: black;
-      position: absolute;
-    }
-
-    .diamond-line-left {
-      top: 20px;
-    }
-
-    .diamond-line-right {
-      bottom: 20px;
-    }
-
-    .line-left .btn,
-    .line-right .btn {
-      gap: 5px;
-      color: black;
-      font-weight: bold;
-      font-size: 14px;
-      cursor: pointer;
-      margin: 10px 20px 0 20px;
-      display: flex;
-      justify-content: end;
-      align-items: center;
-      white-space: nowrap;
-    }
-
-    .line-left .btn span,
-    .line-right .btn span {
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .line-left .btn span i,
-    .line-right .btn span i {
-      color: #d18c42;
-      font-size: 50px;
-      position: absolute;
-      top: -70px;
-    }
-
-    /* Base styles for carousel items */
-    .carousel-item {
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      width: 100%;
-      height: 100vh;
-    }
-
-    /* Use the data-bg attribute to set the background image for desktop */
-    [data-bg] {
-      background-image: url(attr(data-bg));
-    }
-
-    /* Responsive design for smaller screens (max-width: 768px) */
-    @media (max-width: 768px) {
-      body {
-        padding: 10px;
+      /* Hide the diamond container and lines */
+      .download-item .diamond-container,
+      .download-item .diamond-line-left,
+      .download-item .diamond-line-right,
+      .download-item .diamond {
+        display: none !important;
       }
-      .download-item {
-        padding: 20px;
-        margin: 10px 0;
+
+      /* Reset line containers */
+      .download-item .line-left,
+      .download-item .line-right {
+        display: flex !important;
+        height: auto !important;
+        width: auto !important;
+        background: none !important;
+        margin: 0 !important;
       }
-      .download-item h2 {
-        font-size: 24px;
-        text-align: center;
+
+      /* Style the download buttons */
+      .download-item .line-left .btn,
+      .download-item .line-right .btn {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        margin: 0 0 0 10px !important;
+        background: none !important;
+        border: none !important;
+        padding: 0 !important;
+        font-size: 0 !important; /* Hide text */
       }
-      .divider {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
+
+      /* Download icons */
+      .download-item .line-left .btn i,
+      .download-item .line-right .btn i {
+        font-size: 24px !important;
+        color: #cb8b5d !important;
+        position: static !important;
+        display: block !important;
       }
-      .line-left,
-      .line-right {
-        width: 100%;
-        height: auto;
-        background: none;
+
+      /* Special styles for colored text */
+      .download-item h2 [style*="color: #cb8b5d"],
+      .download-item h2 span.bold + span {
+        color: #cb8b5d !important;
+        display: inline !important;
       }
-      .line-left .btn,
-      .line-right .btn {
-        display: block;
-        width: 100%;
-        padding: 10px;
-        box-sizing: border-box;
-        margin: 0;
-        justify-content: center;
+
+      /* Specific styles for LONG, HERRINGBONE, SHEVRON */
+      .download-item h2 span[style*="color: #cb8b5d"] .bold {
+        color: #cb8b5d !important;
+        font-weight: bold !important;
       }
-      /* Make the left button darkened and full width */
-      .line-left .btn {
-        background-color: #333;
-        color: #fff;
-      }
-      /* Right button remains normal */
-      .line-right .btn {
-        background-color: transparent;
-        color: #000;
-      }
-      .diamond-container {
-        margin: 10px 0;
-      }
-      /* Optionally, reduce the size of the download-item container padding */
-      .download-item {
-        padding: 20px;
+
+      /* Specific case for LONG PLANKS */
+      .download-item h2 span[style*="color: #cb8b5d"] {
+        color: #cb8b5d !important;
       }
     }
 
     @media (max-width: 768px) {
       /* Responsive background images for carousel */
+      [data-bg="assets/img/download/C1.jpg"] {
+        background-image: url('assets/img/download/m1.jpg');
+      }
       [data-bg="assets/img/prima_pagina/C1.jpg"] {
-        background-image: url('assets/img/prima_pagina/m1.jpg');
+        background-image: url('assets/img/download/m1.jpg');
       }
-      [data-bg="assets/img/prima_pagina/C2.jpg"] {
-        background-image: url('assets/img/prima_pagina/m2.jpg');
-      }
-      [data-bg="assets/img/prima_pagina/C3.jpg"] {
-        background-image: url('assets/img/prima_pagina/m3.jpg');
-      }
-      [data-bg="assets/img/prima_pagina/C4.jpg"] {
-        background-image: url('assets/img/prima_pagina/m4.jpg');
-      }
-      [data-bg="assets/img/prima_pagina/C5.jpg"] {
-        background-image: url('assets/img/prima_pagina/m5.jpg');
-      }
+
     }
   </style>
 
@@ -532,28 +490,23 @@
 
 <main class="main">
 
+  <!-- Hero Section -->
   <section id="hero" class="hero section dark-background">
-
     <div class="info d-flex align-items-center">
       <div class="container">
         <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
+          <!-- Add any content here -->
         </div>
       </div>
     </div>
 
     <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
-      <div class="carousel-item">
-        <img src="assets/img/download/download.jpg" alt="">
-      </div>
-
-      <div class="carousel-item active">
-        <img src="assets/img/download/download.jpg" alt="">
-      </div>
+      <div class="carousel-item active" data-bg="assets/img/download/C1.jpg"></div> <!-- First image -->
+      <div class="carousel-item" data-bg="assets/img/download/C1.jpg"></div>         <!-- Second image -->
 
       <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
         <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
       </a>
-
       <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
         <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
       </a>
@@ -565,9 +518,7 @@
         <i class="bi bi-chevron-down" style="font-size: 80px; color: rgba(205, 140, 93, 0.79);"></i>
       </a>
     </div>
-
-  </section>
-  <!-- /Hero Section -->
+  </section><!-- /Hero Section -->
 
   <section id="get-started" class="get-started section">
     <div class="container">
@@ -699,7 +650,7 @@
   </div>
 
   <div class="download-item"  style="background-color: white">
-    <h2><span class="bold">PARCHET</span> STRATIFICAT <span style="color: #cb8b5d"><span class="bold">LONG </span>PLANKS</span> </h2>
+    <h2><span class="bold">PARCHET</span> STRATIFICAT <br class="mobile-br"> <span style="color: #cb8b5d"><span class="bold">LONG </span>PLANKS</span> </h2>
     <div class="divider">
       <div class="line-left">
         <div class="btn">
@@ -720,7 +671,7 @@
   </div>
 
   <div class="download-item">
-    <h2><span class="bold">PARCHET</span> STRATIFICAT <span style="color: #cb8b5d"><span class="bold"> HERRINGBONE</span></span> </h2>
+    <h2><span class="bold">PARCHET</span> STRATIFICAT <br class="mobile-br"> <span style="color: #cb8b5d"><span class="bold"> HERRINGBONE</span></span> </h2>
     <div class="divider">
       <div class="line-left">
         <div class="btn">
@@ -741,7 +692,7 @@
   </div>
 
   <div class="download-item"  style="background-color: white">
-    <h2><span class="bold">PARCHET</span> STRATIFICAT  <span style="color: #cb8b5d"><span class="bold">SHEVRON</span></span></h2>
+    <h2><span class="bold">PARCHET</span> STRATIFICAT <br class="mobile-br">  <span style="color: #cb8b5d"><span class="bold">SHEVRON</span></span></h2>
     <div class="divider">
       <div class="line-left">
         <div class="btn">
