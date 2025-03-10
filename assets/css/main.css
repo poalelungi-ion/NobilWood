@@ -416,6 +416,8 @@ h6 {
     transition: 0.3s;
   }
 
+  .toggle-dropdown {align-content: center;!important; padding-left: 2.75% !important;}
+
   .navmenu a i,
   .navmenu a:focus i {
     font-size: 12px;
