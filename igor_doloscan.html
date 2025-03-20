@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Contact</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    p {
+      text-align: center;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body onload="createContact()">
+<p>Adding contact... Check your downloads or contacts!</p>
+
+<script>
+  function createContact() {
+    // Create vCard content
+    const vCard = `
+BEGIN:VCARD
+VERSION:3.0
+N:Doloscan;Igor;;;
+FN:Igor Doloscan
+ORG:Nobil Wood srl
+TITLE:Production Manager
+TEL;TYPE=CELL:+37369125307
+EMAIL;TYPE=WORK:production@nobilwood.com
+URL:http://nobilwood.com
+ADR;TYPE=WORK:;;Industriala 5;Singera;mun. Chișinău;MD-2091;Moldova
+END:VCARD
+            `.trim();
+
+    // Create a blob with the vCard data
+    const blob = new Blob([vCard], { type: 'text/vcard' });
+    const url = window.URL.createObjectURL(blob);
+
+    // Create a temporary link element and trigger download
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'Igor_Doloscan.vcf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    window.URL.revokeObjectURL(url);
+  }
+</script>
+</body>
+</html>
