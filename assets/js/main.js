@@ -33,7 +33,6 @@
     mobileNavToggleBtn.classList.toggle('bi-x');
   }
   mobileNavToggleBtn.addEventListener('click', mobileNavToogle);
-
   /**
    * Hide mobile nav on same-page/hash links
    */
