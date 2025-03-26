@@ -397,51 +397,151 @@
 
   <!-- Projects Section -->
   <section id="projects" class="projects section">
-
     <div class="gallery_container">
-      <div class="image_container  ">
-        <img src="assets/img/sisteme_culisante/1.jpg" alt="Image 1" loading="lazy" onclick="openLightbox(this)" />
+      <div class="image_container mobile-wide">
+        <img src="assets/img/sisteme_culisante/1.jpg" alt="Image 1" loading="lazy" onclick="openLightbox(0)" />
       </div>
-      <div class="image_container  image-wide">
-        <img src="assets/img/sisteme_culisante/2.jpg" alt="Image 2" loading="lazy" onclick="openLightbox(this)" />
+      <div class="image_container image-wide">
+        <img src="assets/img/sisteme_culisante/2.jpg" alt="Image 2" loading="lazy" onclick="openLightbox(1)" />
       </div>
-      <div class="image_container  ">
-        <img src="assets/img/sisteme_culisante/3.jpg" alt="Image 3" loading="lazy" onclick="openLightbox(this)" />
+      <div class="image_container">
+        <img src="assets/img/sisteme_culisante/3.jpg" alt="Image 3" loading="lazy" onclick="openLightbox(2)" />
       </div>
-      <div class="image_container  ">
-        <img src="assets/img/sisteme_culisante/4.jpg" alt="Image 4" loading="lazy" onclick="openLightbox(this)" />
+      <div class="image_container">
+        <img src="assets/img/sisteme_culisante/4.jpg" alt="Image 4" loading="lazy" onclick="openLightbox(3)" />
       </div>
-      <div class="image_container  ">
-        <img src="assets/img/sisteme_culisante/5.jpg" alt="Image 5" loading="lazy" onclick="openLightbox(this)" />
+      <div class="image_container">
+        <img src="assets/img/sisteme_culisante/5.jpg" alt="Image 5" loading="lazy" onclick="openLightbox(4)" />
       </div>
-      <div class="image_container ">
-        <img src="assets/img/sisteme_culisante/6.jpg" alt="Image 6" loading="lazy" onclick="openLightbox(this)" />
+      <div class="image_container">
+        <img src="assets/img/sisteme_culisante/6.jpg" alt="Image 6" loading="lazy" onclick="openLightbox(5)" />
       </div>
-      <div class="image_container ">
-        <img src="assets/img/sisteme_culisante/7.jpg" alt="Image 7" loading="lazy" onclick="openLightbox(this)" />
+      <div class="image_container mobile-wide">
+        <img src="assets/img/sisteme_culisante/7.jpg" alt="Image 7" loading="lazy" onclick="openLightbox(6)" />
       </div>
     </div>
 
     <!-- Lightbox -->
-    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <div class="lightbox" id="lightbox">
+      <span class="close-btn" onclick="closeLightbox()">&times;</span>
+      <button class="prev-btn" onclick="changeImage(-1)"><span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span></button>
       <img src="" alt="Full-size image" id="lightbox-image" />
+      <button class="next-btn" onclick="changeImage(1)">                       <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span></button>
     </div>
+  </section>
 
-    <script>
-      function openLightbox(image) {
-        const lightbox = document.getElementById('lightbox');
-        const lightboxImage = document.getElementById('lightbox-image');
-        lightboxImage.src = image.src;  // Set the source of the lightbox image to the clicked image
-        lightbox.classList.add('active');  // Display the lightbox
+  <style>
+
+
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .lightbox.active {
+      display: flex;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: white;
+      font-size: 40px;
+      cursor: pointer;
+    }
+
+
+    .prev-btn, .next-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: white;
+      font-size: 40px;
+      cursor: pointer;
+      padding: 10px;
+    }
+
+    .prev-btn {
+      left: 20px;
+      font-weight: lighter;
+    }
+
+    .next-btn {
+      right: 20px;
+      font-weight: lighter;
+    }
+
+    /* Mobile adjustments */
+    @media (max-width: 768px) {
+      .gallery_container {
+        flex-direction: column;
+        align-items: center;
       }
-
-      function closeLightbox() {
-        const lightbox = document.getElementById('lightbox');
-        lightbox.classList.remove('active');  // Hide the lightbox
+      .image_container, .image-wide {
+        flex: 1 1 100%;
+        max-width: 100%;
       }
-    </script>
+      .mobile-wide {
+        grid-column: span 2; /* Wide images take up two columns */
+      }
+    }
+  </style>
 
-  </section><!-- /Projects Section -->
+  <script>
+    const images = [
+      "assets/img/sisteme_culisante/1.jpg",
+      "assets/img/sisteme_culisante/2.jpg",
+      "assets/img/sisteme_culisante/3.jpg",
+      "assets/img/sisteme_culisante/4.jpg",
+      "assets/img/sisteme_culisante/5.jpg",
+      "assets/img/sisteme_culisante/6.jpg",
+      "assets/img/sisteme_culisante/7.jpg"
+    ];
+    let currentIndex = 0;
+
+    function openLightbox(index) {
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImage = document.getElementById("lightbox-image");
+      currentIndex = index;
+      lightboxImage.src = images[currentIndex];
+      lightbox.classList.add("active");
+    }
+
+    function closeLightbox() {
+      const lightbox = document.getElementById("lightbox");
+      lightbox.classList.remove("active");
+    }
+
+    function changeImage(direction) {
+      currentIndex += direction;
+      if (currentIndex < 0) currentIndex = images.length - 1; // Loop to last image
+      if (currentIndex >= images.length) currentIndex = 0; // Loop to first image
+      document.getElementById("lightbox-image").src = images[currentIndex];
+    }
+
+    // Close lightbox when clicking outside the image
+    document.getElementById("lightbox").addEventListener("click", function (e) {
+      if (e.target === this) closeLightbox();
+    });
+  </script>
 
 
 
