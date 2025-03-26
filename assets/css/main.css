@@ -498,7 +498,12 @@ h6 {
   }
 
 }
-
+/* Landscape Mode Adjustments */
+@media  (max-width: 1299px) and (orientation: landscape) {
+  .headerlogo {
+    display: none; /* Hide logo in landscape mode between 800px and 1299px */
+  }
+}
 
   /* Specific styles for Produse dropdown */
   .navmenu .listing-dropdown ul li.listing-dropdowns {
