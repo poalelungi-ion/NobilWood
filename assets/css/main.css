@@ -161,7 +161,7 @@ h6 {
 
 
 
-@media (max-width: 480px) {
+@media (max-width: 1000px) {
   .header .logo img {
     height: 65px;
     width: 60px;
@@ -684,7 +684,7 @@ h6 {
   margin-right: 5%;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1000px) {
   /* Apply only on desktops (≥992px) */
   .footer .row {
     display: flex;
@@ -699,14 +699,14 @@ h6 {
   }
 }
 
-@media (max-width: 991px) {
+@media (max-width:1000px) {
   /* For tablets and mobile (≤991px) */
   .footer .row {
     display: block; /* Default behavior for smaller screens */
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1000px) {
   /* Applies only on mobile (≤767px) */
   .footer-links {
     margin-left: 0 !important; /* Removes margin */
@@ -943,7 +943,7 @@ section,
   padding: 140px 0 60px 0;
 }
 
-@media (max-width: 768px),
+@media (max-width: 1000px),
 (max-height: 480px) {
   .hero .info {
     padding: 100px 50px 60px 50px;
@@ -971,7 +971,7 @@ section,
   margin: auto;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000x) {
   .hero .info h2 {
     font-size: 36px;
   }
@@ -1048,7 +1048,7 @@ section,
   justify-content: start;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 1000px) {
   .hero .carousel-control-prev {
     padding-left: 15px;
   }
@@ -1058,7 +1058,7 @@ section,
   justify-content: end;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 1000px) {
   .hero .carousel-control-next {
     padding-right: 15px;
   }
@@ -1164,7 +1164,7 @@ section,
   height: 100%;
 }
 
-@media (max-width: 575px) {
+@media (max-width: 1000px) {
   .get-started .php-email-form {
     padding: 20px;
   }
@@ -1471,7 +1471,7 @@ section,
   margin: 0;
 }
 
-@media (max-width: 575px) {
+@media (max-width: 1000px) {
   .features .nav-link h4 {
     font-size: 16px;
   }
@@ -1666,7 +1666,7 @@ body {
   background-color: var(--accent-color);
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1000px) {
   .testimonials .testimonial-wrap {
     padding-left: 0;
   }
@@ -1792,7 +1792,7 @@ body {
   margin: 30px 0;
 }
 
-@media (min-width: 991px) {
+@media (min-width: 1000px) {
   .about .inner-title {
     max-width: 65%;
     margin: 0 0 80px 0;
@@ -1806,7 +1806,7 @@ body {
   background-color: color-mix(in srgb, var(--default-color), transparent 96%);
 }
 
-@media (min-width: 991px) {
+@media (min-width: 1000px) {
   .about .our-story {
     padding-right: 35%;
   }
@@ -1870,7 +1870,7 @@ body {
   aspect-ratio: initial;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1000px) {
   .about .about-img {
     position: absolute;
     top: 0;
@@ -2174,7 +2174,7 @@ body {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-@media (max-width: 575px) {
+@media (max-width: 1000px) {
 
   .project-details .swiper-button-prev,
   .project-details .swiper-button-next {
@@ -2817,7 +2817,7 @@ body {
 }
 
 /* Styles applied only on desktop devices */
-@media (min-width: 992px) { /* Assuming 992px is the breakpoint for 'lg' in Bootstrap */
+@media (min-width: 1000px) { /* Assuming 992px is the breakpoint for 'lg' in Bootstrap */
   .contact .col-lg-6 {
     padding-left: 65%; /* Extended padding */
     margin-left: -55%; /* Negative margin */
@@ -2829,7 +2829,7 @@ body {
 }
 
 /* Mobile-specific styles for social links */
-@media (max-width: 991px) { /* Adjust for smaller screens */
+@media (max-width: 1000px) { /* Adjust for smaller screens */
   .col-lg-1 {
     flex-direction: row; /* Make icons horizontal */
     gap: 10px; /* Reduce spacing for smaller screens */
@@ -3063,7 +3063,7 @@ body {
 }
 
 /* Apply margin-top only for screens wider than 992px (desktops) */
-@media (min-width: 992px) {
+@media (min-width: 1000px) {
   .sistema-text {
     margin-top: 5%; /* Adjust as needed */
   }
@@ -3150,7 +3150,7 @@ body {
 }
 
 /* Responsive Adjustments for mobile */
-@media (max-width: 768px) {
+@media (max-width:1000px) {
   .sistema-content-wrapper {
     flex-direction: column;
   }
@@ -3175,7 +3175,7 @@ body {
   }
 
   /* Apply dark background only on mobile (screens smaller than 992px) */
-  @media (max-width: 991px) {
+  @media (max-width: 1000px) {
     .sistema-materials {
       background-color: #efeeee; /* Dark background */
       padding: 15px; /* Optional: Add some padding for spacing */
@@ -3208,7 +3208,7 @@ body {
   align-items: center;
   gap: 15px;
 }
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .downloads {
     align-items: center;
     justify-content: center;
@@ -3252,12 +3252,12 @@ body {
   margin-bottom: 5px;
 
 }
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .downloads2 img {
     width: 30px; /* Smaller size on mobile */
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .downloads img {
     width: 30px; /* Smaller size on mobile */
   }
@@ -3332,7 +3332,7 @@ body {
 }
 
 /* Apply darkened background only for screens wider than 992px (desktops) */
-@media (min-width: 992px) {
+@media (min-width: 1000px) {
   .darken-row {
     background-color: #efeeee; /* Light gray background */
   }
@@ -3437,7 +3437,7 @@ body {
 }
 
 /* Responsive Design */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 991px) {
   .gallery_container {
     grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
   }
@@ -3638,7 +3638,7 @@ body {
 }
 
 
-@media (max-width: 767px) { /* Hides the element on screens ≤767px (mobile) */
+@media (max-width: 1200px) { /* Hides the element on screens ≤767px (mobile) */
   .listing-dropdowns {
     display: none !important;
   }
@@ -3650,7 +3650,7 @@ body {
 }
 
 /* Show the br only on mobile (≤767px) */
-@media (max-width: 767px) {
+@media (max-width: 1000px) {
   .mobile-br {
     display: block !important;
   }
