@@ -567,18 +567,26 @@
       <div class="container">
         <div class="row gy-4 justify-content-center">
 
-          <div class="col-xl-5 col-md-6" style="margin-bottom: 2%; margin-top: 3%;  margin-left: 2%;  margin-right: 2%">
+          <div class="col-xl-5 col-md-6" style="margin-bottom: 2%; margin-top: 3%; margin-left: 2%; margin-right: 2%">
             <div id="carousel11" class="carousel slide post-item position-relative h-100" data-bs-ride="false" data-aos="fade-up" data-aos-delay="700">
               <div class="carousel-inner">
                 <div class="carousel-item active">
-                  <img src="assets/img/usi_exterior/11.jpg" loading="lazy" class="img-fluid" alt="">
+                  <!-- Image triggers the modal -->
+                  <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal11">
+                    <img src="assets/img/usi_exterior/11.jpg" loading="lazy" class="img-fluid" alt="">
+                  </a>
                 </div>
               </div>
               <div class="post-content d-flex flex-column">
-                <a href="" class="readmore stretched-link"><span><b>USA</b> LEMN - ALUMINIU <b>11</b></span><i class="bi bi-chevron-compact-right"></i></a>
+                <!-- Lower div also triggers the modal -->
+                <a href="#" class="readmore stretched-link" data-bs-toggle="modal" data-bs-target="#imageModal11">
+                  <span><b>USA</b> LEMN - ALUMINIU <b>11</b></span><i class="bi bi-chevron-compact-right"></i>
+                </a>
               </div>
             </div>
           </div>
+
+
 
           <div class="col-xl-5 col-md-6" style="margin-bottom: 2%; margin-top: 3%;  margin-left: 2%;  margin-right: 2%">
             <div id="carousel12" class="carousel slide post-item position-relative h-100" data-bs-ride="false" data-aos="fade-up" data-aos-delay="800">
@@ -596,7 +604,19 @@
         </div>
       </div>
     </div>
-
+    <!-- Modal for full-screen image -->
+    <div class="modal fade" id="imageModal11" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img src="assets/img/usi_exterior/11.jpg" class="img-fluid" alt="Full screen image"   >
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- Row 7: Normal -->
     <div class="container">
       <div class="row gy-4 justify-content-center">
