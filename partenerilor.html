@@ -24,7 +24,69 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <style>
+    /* CSS */
+    .php-email-form {
+      width: 100%;
+      background: rgba(255, 255, 255, 0);
+      padding: 30px;
 
+
+    }
+
+    .php-email-form .form-control {
+      border-radius: 0px;
+      border: 1px solid #ced4da;
+      padding: 10px 15px;
+      font-size: 14px;
+    }
+
+    .php-email-form .form-control:focus {
+      border-color: #c58c5d;
+      box-shadow: 0 0 5px rgb(145, 102, 69);
+      outline: none;
+    }
+
+    .php-email-form textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .php-email-form button {
+      background: #c58c5d;
+      border: 0;
+      padding: 12px 35px;
+      color: #fff;
+      transition: 0.4s;
+      font-size: 16px;
+    }
+
+    .php-email-form button:hover {
+      background: #916645;
+    }
+
+    .php-email-form .loading {
+      color: #c58c5d;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .php-email-form .error-message {
+      color: #dc3545;
+      font-size: 14px;
+      margin-bottom: 10px;
+      background: #fff3f3;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .php-email-form .sent-message {
+      color: #28a745;
+      font-size: 14px;
+      margin-bottom: 10px;
+      background: rgba(240, 255, 244, 0.13);
+      padding: 10px;
+      border-radius: 5px;
+    }
     @media (min-width: 768px) {
       .languages {
         transform: translateX(-80%)!important;
@@ -529,7 +591,104 @@
         </div>
       </div>
   </section>
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <div class="container">
+      <!-- Contact Form -->
+      <div class="contact-form-container">
+        <h1 style="font-weight: normal;
+               background: linear-gradient(to bottom right, rgba(205,140,93,0.79), #3E3F41);
+               -webkit-background-clip: text;
+               -webkit-text-fill-color: transparent;">Contactează-ne</h1>
+        <form id="contactForm" class="php-email-form" data-aos="fade-up" data-aos-delay="400">
+          <div class="row gy-4">
+            <div class="col-md-6">
+              <input type="text" name="name" class="form-control" placeholder="Numele" required>
+            </div>
+            <div class="col-md-6">
+              <input type="email" name="email" class="form-control" placeholder="Email-ul" required>
+            </div>
+            <div class="col-md-12">
+              <input type="tel" name="phone" class="form-control" placeholder="Numarul de telefon" required pattern="[0-9]{10}">
+            </div>
+            <div class="col-md-12">
+              <input type="text" name="subject" class="form-control" placeholder="Subiectul" required>
+            </div>
+            <div class="col-md-12">
+              <textarea class="form-control" name="message" rows="6" placeholder="Mesajul" required></textarea>
+            </div>
+            <div class="col-md-12 text-center">
+              <div class="loading" style="display: none;">Loading</div>
+              <div class="error-message" style="display: none;"></div>
+              <div class="sent-message" style="display: none;">Mesajul tau a fost trimis. Revenim cat mai curand!</div>
+              <button type="submit" >Trimite un Mesaj</button>
+            </div>
+          </div>
+        </form>
+      </div>
 
+    </div>
+
+    <!-- EmailJS Script -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Initialize EmailJS with your public key
+        emailjs.init('gjUtd8ZdmHtet-grT'); // Replace with your EmailJS public key
+
+        const form = document.getElementById('contactForm');
+        const loading = form.querySelector('.loading');
+        const errorMessage = form.querySelector('.error-message');
+        const sentMessage = form.querySelector('.sent-message');
+
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+
+          // Reset messages
+          loading.style.display = 'none';
+          errorMessage.style.display = 'none';
+          sentMessage.style.display = 'none';
+
+          // Show loading
+          loading.style.display = 'block';
+
+          // Collect form data
+          const formData = new FormData(form);
+          const templateParams = {
+            from_name: formData.get('name'),
+            from_email: formData.get('email'),
+            phone: formData.get('phone'),
+            subject: formData.get('subject'),
+            message: formData.get('message'),
+            company: 'Nobilwood'
+          };
+
+          // Send email using EmailJS
+          emailjs.send('service_6275ut6', 'template_doelp0c', templateParams)
+                  .then(function(response) {
+                    loading.style.display = 'none';
+                    sentMessage.style.display = 'block';
+                    form.reset();
+
+                    // Hide success message after 5 seconds
+                    setTimeout(() => {
+                      sentMessage.style.display = 'none';
+                    }, 5000);
+                  }, function(error) {
+                    loading.style.display = 'none';
+                    errorMessage.textContent = 'Failed to send message. Please try again later.';
+                    errorMessage.style.display = 'block';
+
+                    // Hide error message after 5 seconds
+                    setTimeout(() => {
+                      errorMessage.style.display = 'none';
+                    }, 5000);
+                  });
+        });
+      });
+    </script>
+  </section>
+  <!-- /Contact Section -->
 </main>
 
 <footer id="footer" class="footer dark-background">
