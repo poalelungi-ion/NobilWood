@@ -25,6 +25,98 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <style>
+
+    /* CSS */
+    .php-email-form {
+      width: 100%;
+      background: rgba(255, 255, 255, 0);
+      padding: 30px;
+
+
+    }
+
+    .php-email-form .form-control {
+      border-radius: 0px;
+      border: 1px solid #ced4da;
+      padding: 10px 15px;
+      font-size: 14px;
+    }
+
+    .php-email-form .form-control:focus {
+      border-color: #c58c5d;
+      box-shadow: 0 0 5px rgb(145, 102, 69);
+      outline: none;
+    }
+
+    .php-email-form textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .php-email-form button {
+      background: #c58c5d;
+      border: 0;
+      padding: 12px 35px;
+      color: #fff;
+      transition: 0.4s;
+      font-size: 16px;
+    }
+
+    .php-email-form button:hover {
+      background: #916645;
+    }
+
+    .php-email-form .loading {
+      color: #c58c5d;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .php-email-form .error-message {
+      color: #dc3545;
+      font-size: 14px;
+      margin-bottom: 10px;
+      background: #fff3f3;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .php-email-form .sent-message {
+      color: #28a745;
+      font-size: 14px;
+      margin-bottom: 10px;
+      background: rgba(240, 255, 244, 0.13);
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .php-email-form {
+        padding: 20px;
+      }
+
+      .php-email-form .form-control {
+        font-size: 13px;
+        padding: 8px 12px;
+      }
+
+      .php-email-form button {
+        padding: 10px 25px;
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .php-email-form {
+        padding: 15px;
+      }
+
+      .col-md-6 {
+        width: 100%;
+      }
+    }
+
     @media (min-width: 768px) {
       .languages {
         transform: translateX(-80%)!important;
@@ -99,17 +191,18 @@ margin-left: -15%;
 <body class="contact-page">
 
 <header id="header" class="header d-flex align-items-center fixed-top">
+  <div class="container">
 
 
-  <div class="container-fluid  position-relative d-flex align-items-center justify-content-between d-flex ">
-    <a href="index.html" class="logo d-flex align-items-center" >
+    <div class="container-fluid  position-relative d-flex align-items-center justify-content-between d-flex ">
+      <a href="index.html" class="logo d-flex align-items-center" >
 
-      <img src="assets/img/logo.png"  >
-    </a>
+        <img class="headerlogo" src="assets/img/logo.png"  >
+      </a>
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="index.html"><i class="bi bi-house-door listing-dropdowns" style="font-size: 20px; width: 25px; height: 25px"></i></a>  </li>
-          <li class=" listing-dropdown dropdown " dropdown><a href="#"><span>PRODUSE</span>  <i class="bi bi-chevron-down toggle-dropdown mobile-br"></i> </a>
+          <li><a href="index.html"  class="active"><i class="bi bi-house-door listing-dropdowns" style="font-size: 20px; width: 25px; height: 25px"></i></a>  </li>
+          <li class=" listing-dropdown dropdown " dropdown><a href="#"><span>PRODUSE</span>  <i class="bi bi-chevron-down toggle-dropdown mobile-br chevrontogle" style=""></i> </a>
             <ul class="productdrop" >
               <li class="listing-dropdowns">
                 <a style="font-weight: bold; font-size: 20px">‎ </a>
@@ -136,7 +229,7 @@ margin-left: -15%;
               </li>
               <img src="assets/img/ficon.svg" class="listing-dropdowns" style="height: 70px; margin-bottom: -5%; margin-top: -5%">
               <li>
-                <a  class="listing-dropdowns"; style="font-weight: bold; font-size: 12px ; margin-bottom: -3%; margin-top: -3%">FERSTRE</a>
+                <a  class="listing-dropdowns"; style="font-weight: bold; font-size: 12px ; margin-bottom: -3%; margin-top: -3%">FERESTRE</a>
                 <a class="mobile-br" ; href="#" style=" font-size: 10px">‎ </a>
                 <a href="lemn_aluminiu.html" style=" font-size: 12px ; margin-bottom: -5%; margin-top: -5%">LEMN - ALUMINIU</a>
                 <a href="sisteme_glisante.html" style=" font-size: 12px ; margin-bottom: -5%; margin-top: -5%">SISTEME CULISANTE</a>
@@ -146,8 +239,8 @@ margin-left: -15%;
               <li>
                 <a  class="listing-dropdowns"; style="font-weight: bold;  font-size: 12px; margin-bottom: 1px; margin-top: 1px">USI</a>
                 <a class="mobile-br";  href="#" style=" font-size: 10px">‎ </a>
-                <a href="usi_exterior.html" style=" font-size: 12px ;  margin-bottom: -5%; margin-top: -5%">Usi Exterior</a>
-                <a href="usi_interior.html" style=" font-size: 12px;  margin-bottom: -5%; margin-top: -5%">Usi Interior</a>
+                <a href="usi_exterior.html" style=" font-size: 12px ;  margin-bottom: -5%; margin-top: -5%">USI EXTERIOR</a>
+                <a href="usi_interior.html" style=" font-size: 12px;  margin-bottom: -5%; margin-top: -5%">USI INTERIOR</a>
                 <a href="#" style=" font-size: 12px;  margin-bottom: -5%; margin-top: -5%" class="listing-dropdowns">‎ </a>
               </li>
               <img src="assets/img/picon.svg" class="listing-dropdowns" style="height: 70px; margin-bottom: -5%; margin-top: -5%">
@@ -172,9 +265,9 @@ margin-left: -15%;
             </ul>
           </li>
 
-          <li><a href="portfolio.html">PORTOFOLIO</a></li>
+          <li><a href="portfolio.html">PORTFOLIO</a></li>
           <li><a href="partenerilor.html">PARTENERILOR</a></li>
-          <li class="listing-dropdown dropdown "><a href="#" ><span>INFO</span> <i class="bi bi-chevron-down toggle-dropdown mobile-br"></i> </a>
+          <li class="listing-dropdown dropdown "><a href="#"><span>INFO</span> <i class="bi bi-chevron-down toggle-dropdown mobile-br"></i> </a>
             <ul class="infodrop">
 
               <li class="listing-dropdowns">
@@ -201,7 +294,7 @@ margin-left: -15%;
             </ul>
           </li>
 
-          <li><a href="contact.html" class="active">CONTACT</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
           <li class="language-option listing-dropdown dropdown"><a href="#">RO <i class="bi bi-chevron-down toggle-dropdown mobile-br"></i></a>
             <ul class="languages">
 
@@ -275,7 +368,7 @@ margin-left: -15%;
             </ul>
           </li>
         </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list" ></i>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list" style=" margin-top: "></i>
       </nav>
 
     </div>
@@ -371,10 +464,94 @@ padding-left: 9%">
           <i class="bi bi-whatsapp" style="margin-bottom: 20%; margin-top: 10%"></i>
           <i class="bi bi-telephone" style="margin-bottom: -20%; margin-top:10%"></i>
         </div>
-        <!-- Contact Image -->
-        <div class="col-lg-5 listing-dropdowns">
-          <img src="assets/img/contacte/1.jpg" class="img-fluid" alt="Contact Image" style="width: 70%;">
+        <!-- Contact Form -->
+        <!-- HTML -->
+        <div class="col-lg-5">
+          <form id="contactForm" class="php-email-form" data-aos="fade-up" data-aos-delay="400">
+            <div class="row gy-4">
+              <div class="col-md-6">
+                <input type="text" name="name" class="form-control" placeholder="Numele" required>
+              </div>
+              <div class="col-md-6">
+                <input type="email" name="email" class="form-control" placeholder="Email-ul" required>
+              </div>
+              <div class="col-md-12">
+                <input type="tel" name="phone" class="form-control" placeholder="Numarul de telefon " required pattern="[0-9]{10}">
+              </div>
+              <div class="col-md-12">
+                <input type="text" name="subject" class="form-control" placeholder="Subiectul" required>
+              </div>
+              <div class="col-md-12">
+                <textarea class="form-control" name="message" rows="6" placeholder="Mesajul" required></textarea>
+              </div>
+              <div class="col-md-12 text-center">
+                <div class="loading" style="display: none;">Loading</div>
+                <div class="error-message" style="display: none;"></div>
+                <div class="sent-message" style="display: none;">Mesajul tau a fost trimis. Revenim cat mai curand!</div>
+                <button type="submit">Trimite un Mesaj </button>
+              </div>
+            </div>
+          </form>
         </div>
+
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+        <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            // Initialize EmailJS with your public key
+            emailjs.init('gjUtd8ZdmHtet-grT'); // Replace with your EmailJS public key
+
+            const form = document.getElementById('contactForm');
+            const loading = form.querySelector('.loading');
+            const errorMessage = form.querySelector('.error-message');
+            const sentMessage = form.querySelector('.sent-message');
+
+            form.addEventListener('submit', function(e) {
+              e.preventDefault();
+
+              // Reset messages
+              loading.style.display = 'none';
+              errorMessage.style.display = 'none';
+              sentMessage.style.display = 'none';
+
+              // Show loading
+              loading.style.display = 'block';
+
+              // Collect form data
+              const formData = new FormData(form);
+              const templateParams = {
+                from_name: formData.get('name'),
+                from_email: formData.get('email'),
+                phone: formData.get('phone'),
+                subject: formData.get('subject'),
+                message: formData.get('message'),
+                company: 'Nobilwood'
+              };
+
+              // Send email using EmailJS
+              emailjs.send('service_6275ut6', 'template_doelp0c', templateParams)
+                      .then(function(response) {
+                        loading.style.display = 'none';
+                        sentMessage.style.display = 'block';
+                        form.reset();
+
+                        // Hide success message after 5 seconds
+                        setTimeout(() => {
+                          sentMessage.style.display = 'none';
+                        }, 5000);
+                      }, function(error) {
+                        loading.style.display = 'none';
+                        errorMessage.textContent = 'Failed to send message. Please try again later.';
+                        errorMessage.style.display = 'block';
+
+                        // Hide error message after 5 seconds
+                        setTimeout(() => {
+                          errorMessage.style.display = 'none';
+                        }, 5000);
+                      });
+            });
+          });
+        </script>
       </div>
       <div class="row" style="padding-left: 9.5%; width: 84.5%; margin-top: 10%;">
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3247.02684686338!2d29.004142300000005!3d46.915041200000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c976575a83ab1d%3A0x1d17a7aa5c158536!2sStr.%20Industrial%C4%83!5e1!3m2!1sen!2s!4v1740236365875!5m2!1sen!2s" width="100%"; height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
