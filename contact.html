@@ -421,7 +421,7 @@ margin-left: -15%;
                 font-weight: bold;
 padding-left: 9%">
 
-            CONTACTE
+            CONTACTEAZA-NE
           </h3>
         </div>
       </div>
@@ -470,9 +470,9 @@ padding-left: 9%">
 
           <form id="contactForm" class="php-email-form" data-aos="fade-up" data-aos-delay="400">
             <h1 style="font-weight: normal;
-               background: linear-gradient(to bottom right, rgba(205,140,93,0.79), #3E3F41);
-               -webkit-background-clip: text;
-               -webkit-text-fill-color: transparent;">Lasa un mesaj</h1>
+        background: linear-gradient(to bottom right, rgba(205,140,93,0.79), #3E3F41);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;">Lasa un mesaj</h1>
             <div class="row gy-4">
               <div class="col-md-6">
                 <input type="text" name="name" class="form-control" placeholder="Numele" required>
@@ -481,7 +481,11 @@ padding-left: 9%">
                 <input type="email" name="email" class="form-control" placeholder="Email-ul" required>
               </div>
               <div class="col-md-12">
-                <input type="tel" name="phone" class="form-control" placeholder="Numarul de telefon " required pattern="[0-9]{10}">
+                <input type="tel" name="phone" class="form-control"
+                       placeholder="Numarul de telefon (ex: +40712345678)"
+                       required
+                       pattern="^\+[1-9]\d{1,14}$"
+                       title="Please enter a valid phone number with country code (e.g., +37360319112)">
               </div>
               <div class="col-md-12">
                 <input type="text" name="subject" class="form-control" placeholder="Subiectul" required>
@@ -491,9 +495,9 @@ padding-left: 9%">
               </div>
               <div class="col-md-12 text-center">
                 <div class="loading" style="display: none;">Loading</div>
-                <div class="error-message" style="display: none;"></div>
+                <div class="error-message" style="display: none; color: rgba(255,0,0,0); background: rgba(255,230,230,0); padding: 10px; border-radius: 5px;"></div>
                 <div class="sent-message" style="display: none;">Mesajul tau a fost trimis. Revenim cat mai curand!</div>
-                <button type="submit">Trimite Mesajul </button>
+                <button type="submit">Trimite Mesajul</button>
               </div>
             </div>
           </form>
@@ -503,56 +507,87 @@ padding-left: 9%">
 
         <script>
           document.addEventListener('DOMContentLoaded', function() {
-            // Initialize EmailJS with your public key
-            emailjs.init('gjUtd8ZdmHtet-grT'); // Replace with your EmailJS public key
+            emailjs.init('gjUtd8ZdmHtet-grT'); // Verify this is your correct public key
 
             const form = document.getElementById('contactForm');
             const loading = form.querySelector('.loading');
             const errorMessage = form.querySelector('.error-message');
             const sentMessage = form.querySelector('.sent-message');
 
+            function isValidEmail(email) {
+              const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+              return emailRegex.test(email);
+            }
+
+            function isValidPhone(phone) {
+              const phoneRegex = /^\+[1-9]\d{1,14}$/;
+              return phoneRegex.test(phone);
+            }
+
+            // Function to hide error message
+            function hideError() {
+              errorMessage.style.display = 'none';
+              errorMessage.textContent = '';
+            }
+
             form.addEventListener('submit', function(e) {
               e.preventDefault();
 
-              // Reset messages
+              // Reset all states
               loading.style.display = 'none';
-              errorMessage.style.display = 'none';
+              hideError(); // Explicitly hide error
               sentMessage.style.display = 'none';
+
+              const formData = new FormData(form);
+              const email = formData.get('email');
+              const phone = formData.get('phone');
+
+              // Validation
+              if (!isValidEmail(email)) {
+                errorMessage.textContent = 'Please enter a valid email address';
+                errorMessage.style.display = 'block';
+                setTimeout(hideError, 5000);
+                return;
+              }
+
+              if (!isValidPhone(phone)) {
+                errorMessage.textContent = 'Please enter a valid phone number with country code (e.g., +37360319112)';
+                errorMessage.style.display = 'block';
+                setTimeout(hideError, 5000);
+                return;
+              }
 
               // Show loading
               loading.style.display = 'block';
 
-              // Collect form data
-              const formData = new FormData(form);
               const templateParams = {
                 from_name: formData.get('name'),
-                from_email: formData.get('email'),
-                phone: formData.get('phone'),
+                from_email: email,
+                phone: phone,
                 subject: formData.get('subject'),
                 message: formData.get('message'),
-                company: 'Nobilwood'
+                company: 'Contact',
+                time: new Date().toLocaleString()
               };
 
-              // Send email using EmailJS
+              console.log('Sending email with params:', templateParams);
+
               emailjs.send('service_6275ut6', 'template_doelp0c', templateParams)
                       .then(function(response) {
+                        console.log('Email sent successfully:', response);
                         loading.style.display = 'none';
                         sentMessage.style.display = 'block';
                         form.reset();
-
-                        // Hide success message after 5 seconds
                         setTimeout(() => {
                           sentMessage.style.display = 'none';
                         }, 5000);
-                      }, function(error) {
+                      })
+                      .catch(function(error) {
+                        console.error('Email sending failed:', error);
                         loading.style.display = 'none';
-                        errorMessage.textContent = 'Failed to send message. Please try again later.';
+                        errorMessage.textContent = 'Failed to send message: ' + (error.text || 'Unknown error');
                         errorMessage.style.display = 'block';
-
-                        // Hide error message after 5 seconds
-                        setTimeout(() => {
-                          errorMessage.style.display = 'none';
-                        }, 5000);
+                        setTimeout(hideError, 5000);
                       });
             });
           });
