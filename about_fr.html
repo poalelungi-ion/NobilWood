@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>NobilWood</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/logo.png" rel="icon">
+  <link href="assets/img/logo.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+    }
+    .about {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .about h3 {
+      background: linear-gradient(to bottom right, rgba(205,140,93,0.79), #3E3F41);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 2em;
+      font-weight: normal;
+      conent-aliign: right!important;
+    }
+    .about .text-content {
+      flex: 1;
+      padding: 20px;
+    }
+    .about img {
+      width: 45%;
+      max-width: 600px;
+      height: auto;
+    }
+    .gallery_container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 10px;
+      padding: 20px 0;
+    }
+    .gallery_container img {
+      width: 100%;
+      height: auto;
+      cursor: pointer;
+    }
+    @media (max-width: 768px) {
+      .about {
+        flex-direction: column;
+        text-align: center;
+      }
+      .about img {
+        width: 100%;
+
+      }
+    }
+
+    @media (min-width: 768px) {
+      .languages {
+        transform: translateX(-80%)!important;
+      }
+      .infodrop{
+        margin-left: -15% !important;
+      }
+      .productdrop{
+        margin-left: -15% !important;
+
+      }
+    }
+    @media (min-width: 768px) {
+
+
+    }
+    /* Base styles for carousel items */
+    .carousel-item {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 100vh;
+    }
+
+    /* Use the data-bg attribute to set the background image for desktop */
+    [data-bg] {
+      background-image: url(attr(data-bg));
+    }
+
+    /* Responsive design for smaller screens (max-width: 768px) */
+    @media (max-width: 768px) {
+      [data-bg="assets/img/despre_noi/C1.jpg"] {
+        background-image: url('assets/img/despre_noi/m1.jpg'); /* Mobile version of C1 */
+      }
+      [data-bg="assets/img/despre_noi/C2.jpg"] {
+        background-image: url('assets/img/despre_noi/m1.jpg'); /* Mobile version of C2 */
+      }
+
+    }
+
+  </style>
+</head>
+
+<body class="about-page">
+
+<header id="header" class="header d-flex align-items-center fixed-top">
+  <div class="container">
+
+
+    <div class="container-fluid  position-relative d-flex align-items-center justify-content-between d-flex ">
+      <a href="index.html" class="logo d-flex align-items-center" >
+
+        <img class="headerlogo" src="assets/img/logo.png"  >
+      </a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html"  class="active"><i class="bi bi-house-door listing-dropdowns" style="font-size: 20px; width: 25px; height: 25px"></i></a>  </li>
+          <li class=" listing-dropdown dropdown " dropdown><a href="#"><span>PRODUSE</span>  <i class="bi bi-chevron-down toggle-dropdown mobile-br chevrontogle" style=""></i> </a>
+            <ul class="productdrop" >
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px">‎ </a>
+                <a href="#" style=" font-size: 10px">‎ </a>
+                <a href="#" style=" font-size: 10px">‎ </a>
+              </li>
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px">‎ </a>
+                <a href="#" style=" font-size: 10px">‎ </a>
+                <a href="#" style=" font-size: 10px">‎ </a>
+              </li>
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px">‎ </a>
+
+              </li>
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px">‎ </a>
+
+              </li>
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px">‎ </a>
+                <a href="#" style=" font-size: 10px">‎ </a>
+                <a href="#" style=" font-size: 10px">‎ </a>
+              </li>
+              <img src="assets/img/ficon.svg" class="listing-dropdowns" style="height: 70px; margin-bottom: -5%; margin-top: -5%">
+              <li>
+                <a  class="listing-dropdowns"; style="font-weight: bold; font-size: 12px ; margin-bottom: -3%; margin-top: -3%">FERESTRE</a>
+                <a class="mobile-br" ; href="#" style=" font-size: 10px">‎ </a>
+                <a href="lemn_aluminiu.html" style=" font-size: 12px ; margin-bottom: -5%; margin-top: -5%">LEMN - ALUMINIU</a>
+                <a href="sisteme_glisante.html" style=" font-size: 12px ; margin-bottom: -5%; margin-top: -5%">SISTEME CULISANTE</a>
+                <a href="vitralii.html" style=" font-size: 12px ; margin-bottom: -5%; margin-top: -5%">PERETI CORTINA</a>
+              </li>
+              <img src="assets/img/uicon.svg" class="listing-dropdowns" style="height: 70px; margin-bottom: -5%; margin-top: -5%">
+              <li>
+                <a  class="listing-dropdowns"; style="font-weight: bold;  font-size: 12px; margin-bottom: 1px; margin-top: 1px">USI</a>
+                <a class="mobile-br";  href="#" style=" font-size: 10px">‎ </a>
+                <a href="usi_exterior.html" style=" font-size: 12px ;  margin-bottom: -5%; margin-top: -5%">USI EXTERIOR</a>
+                <a href="usi_interior.html" style=" font-size: 12px;  margin-bottom: -5%; margin-top: -5%">USI INTERIOR</a>
+                <a href="#" style=" font-size: 12px;  margin-bottom: -5%; margin-top: -5%" class="listing-dropdowns">‎ </a>
+              </li>
+              <img src="assets/img/picon.svg" class="listing-dropdowns" style="height: 70px; margin-bottom: -5%; margin-top: -5%">
+              <li>
+                <a class="listing-dropdowns" style="font-weight: bold;  font-size: 12px; margin-bottom: 1px; margin-top: 1px">PARCHET</a>
+                <a class="mobile-br"; href="#" style=" font-size: 10px">‎ </a>
+                <a href="parket.html" style=" font-size: 12px;  margin-bottom: -5%; margin-top: -5%">PARCHET STRATIFICAT</a>
+                <a href="plinte.html" style=" font-size: 12px;  margin-bottom: -5%; margin-top: -5%">PLINTE</a>
+                <a href="#" style=" font-size: 10px; margin-bottom: 1px; margin-top: 1px" class="listing-dropdowns">‎ </a>
+                <a class="mobile-br"   href="#" style=" font-size: 10px">‎ </a>
+              </li>
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px">‎ </a>
+                <a href="#" style=" font-size: 10px">‎ </a>
+                <a href="#" style=" font-size: 10px">‎ </a>
+              </li>
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px">‎ </a>
+                <a href="#" style=" font-size: 10px">‎ </a>
+                <a href="#" style=" font-size: 10px">‎ </a>
+              </li>
+            </ul>
+          </li>
+
+          <li><a href="portfolio.html">PORTFOLIO</a></li>
+          <li><a href="partenerilor.html">PARTENERILOR</a></li>
+          <li class="listing-dropdown dropdown "><a href="#"><span>INFO</span> <i class="bi bi-chevron-down toggle-dropdown mobile-br"></i> </a>
+            <ul class="infodrop">
+
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px"></a>
+                <a href="#"></a>
+                <a href="#" style="color: white">_</a>
+              </li>
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px"></a>
+                <a href="#"></a>
+                <a href="#" style="color: white">_</a>
+              </li>
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#" style="color: white">_</a>
+              </li>
+              <li>
+                <a class="listing-dropdowns" style="font-weight: bold; font-size: 12px; margin-bottom: -1%; ">INFO</a>
+                <a href="about.html" style=" font-size: 12px ; margin-bottom: -1%; margin-top: -1%">DESPRE NOI</a>
+                <a href="downloads.html" style=" font-size: 12px ;  margin-top: -1%">DOWNLOAD</a>
+              </li>
+            </ul>
+          </li>
+
+          <li><a href="contact.html">CONTACT</a></li>
+          <li class="language-option listing-dropdown dropdown"><a href="#">RO <i class="bi bi-chevron-down toggle-dropdown mobile-br"></i></a>
+            <ul class="languages">
+
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#" style="color: white">_</a>
+              </li>
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#" style="color: white">_</a>
+              </li>
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#" style="color: white">_</a>
+              </li>
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#" style="color: white">_</a>
+              </li>
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#" style="color: white">_</a>
+              </li>
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#" style="color: white">_</a>
+              </li>
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#" style="color: white">_</a>
+              </li>
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px">‎ </a>
+                <a href="#" style=" font-size: 10px">‎ </a>
+                <a href="#" style=" font-size: 10px">‎ </a>
+              </li>
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px">‎ </a>
+                <a href="#" style=" font-size: 10px">‎ </a>
+                <a href="#" style=" font-size: 10px">‎ </a>
+              </li>
+              <li>
+                <a style="font-weight: bold; font-size: 12px; color: rgba(205,140,93,0.79); margin-bottom: -2%; margin-top: -1%">RO</a>
+                <a href="#" style=" font-size: 12px; margin-bottom: -3%; margin-top: -3%">RU</a>
+                <a href="#" style=" font-size: 12px; margin-bottom: -3%; margin-top: -3%">IT</a>
+                <a href="#" style=" font-size: 12px; margin-bottom: -3%; margin-top: -3%;">EN</a>
+                <a href="#" style=" font-size: 12px;  margin-top: -3%;">FR</a>
+              </li>
+              <a style="font-weight: bold; font-size: 20px">‎ </a>
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#" style="color: white">_</a>
+              </li>
+
+            </ul>
+          </li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list" style=" margin-top: "></i>
+      </nav>
+
+    </div>
+  </div>
+</header>
+
+<main class="main">
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero section dark-background">
+    <div class="info d-flex align-items-center">
+      <div class="container">
+        <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
+          <!-- Add any content here -->
+        </div>
+      </div>
+    </div>
+
+    <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="999999999">
+      <div class="carousel-item active" data-bg="assets/img/despre_noi/C1.jpg"></div> <!-- First image -->
+      <div class="carousel-item" data-bg="assets/img/despre_noi/C1.jpg"></div>         <!-- Second image -->
+
+
+      <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+      </a>
+      <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <!-- Slide Down Button -->
+    <div class="slide-down-button">
+      <a href="#get-started" class="scroll-down-link">
+        <i class="bi bi-chevron-down"></i>
+      </a>
+    </div>
+  </section><!-- /Hero Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about projects section listing listing-dropdowns">
+
+      <div class="container">
+
+        <div class="row position-relative">
+
+
+
+          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
+            <div class="content ">
+              <h3 style="background: linear-gradient(to bottom right, rgba(205,140,93,0.79), #3E3F41);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 2em;
+      font-weight: normal;
+      margin-top: 20%">
+
+                 <b>NOBIL</b>WOOD
+                <br>
+                <small>CALITATE SUPERIOARA IN TOTUL</small>
+              </h3>
+            </div>
+            <div class="our-story" style="margin-left: -100%; margin-right: -150%">
+
+            <div class="" style="margin-left: 31%; margin-right: 50% ">
+
+              <h5><b>NOBIL</b>WOOD<b> este o fabrică ce produce
+                tâmplărie exterioara şi interioară din lemn
+                stratificat </b></h5>
+              <h5><b>Compania a fost înfiintata in anul 2005</b></h5>
+              <p> Pe parcursul anilor, pozitionindu-se printre companiile de top in
+                producerea tâmplăriei din lemn nobil.
+                În procesul de producere folosim cele mai moderne solutii
+                tehnologice.</p>
+              <p>Acordăm o mare importantă utilizării componentelor de înaltă
+                calitate, a materiilor prime si a echipamentelor moderne.</p>
+
+              <p> Îmbinând traditia prelucrării lemnului cu inovatia tehnologică,
+                <b>obninem un produs NOBIL de cea mai înaltă calitate.</b></p>
+              <br>
+
+            </div>
+
+              <img class="col-lg-6 about-img" data-aos="zoom-out" data-aos-delay="200"  style="aspect-ratio: initial; margin-top:-20%; width: 45%" src="assets/img/despre_noi/1.jpg">
+            </div>
+            <div class="our-story" style="margin-left: -100%; margin-right: -150%">
+
+            <div class="" style="margin-left: 56%; margin-right: 20%; text-align: right">
+
+              <h2> SOLUTII <br>
+                <b>NOBIL</b>WOOD </h2>
+
+
+            </div>
+
+
+          </div>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+
+
+    <div class="gallery_container">
+      <div class="image_container  image-wide original-ratio" style=" margin-top:-30%; width: 110% ">
+        <img src="assets/img/despre_noi/2.jpg"  alt="Image 1" loading="lazy" onclick="openLightbox(this)"/>
+      </div>
+      <div class="image_container image-wide row " style="margin-top:-90%; width: 90%; margin-left: 10% ">
+        <p style=" "> Oferim ferestre lemn-aluminiu, usi exterior & interior, parchet
+          stratificat si diverse solutii pentru proiectul dumneavoastră,
+          atât pentru utilizatorii finali, cât si pentru profesionisti:
+          designeri, arhitecti si constructori,<br>
+          <b>cărora le oferim conditii favorabile de cooperare.</b></p>
+        <br/>
+
+
+      </div>
+      <div class="image_container image-wide original-ratio" >
+
+      </div>
+      <div class="image_container  image-wide " style=" margin-top:-150%; margin-left:5%;  margin-bottom: -15%">
+        <img src="assets/img/despre_noi/3.jpg" style="  width: 80%;" alt="Image 4" loading="lazy" onclick="openLightbox(this)"/>
+      </div>
+      <div class="image_container image-wide original-ratio">
+        <img src="assets/img/despre_noi/5.jpg" alt="Image 5" loading="lazy" onclick="openLightbox(this)"/>
+      </div>
+      <div class="image_container image-wide" style=" margin-top:-45%;margin-left: 10%;  width: 95%">
+        <img src="assets/img/despre_noi/6.jpg" alt="Image 6" loading="lazy" onclick="openLightbox(this)"/>
+      </div>
+      <div class="image_container image-wide original-ratio">
+        <img src="assets/img/despre_noi/7.jpg" alt="Image 7" loading="lazy" onclick="openLightbox(this)"/>
+      </div>
+      <div class="image_container image-wide ">
+        <img src="assets/img/despre_noi/8.jpg" alt="Image 8" loading="lazy"  onclick="openLightbox(this)"/>
+      </div>
+      <div class="image_container image-wide">
+        <img src="assets/img/despre_noi/4.png" alt="Image 9" loading="lazy"  onclick="openLightbox(this)"/>
+      </div>
+      <div class="image_container image-wide original-ratio">
+        <img src="assets/img/despre_noi/10.jpg" alt="Image 10" loading="lazy"  onclick="openLightbox(this)"/>
+      </div>
+
+    </div>
+
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+      <img src="" alt="Full-size image" id="lightbox-image" />
+    </div>
+
+
+    <script>
+      function openLightbox(image) {
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImage = document.getElementById('lightbox-image');
+        lightboxImage.src = image.src;
+        lightbox.classList.add('active');
+      }
+
+      function closeLightbox() {
+        const lightbox = document.getElementById('lightbox');
+        lightbox.classList.remove('active');
+      }
+    </script>
+
+
+
+
+  </section><!-- /Projects Section -->
+  <!-- About Section  Mobile-->
+  <section id="about_mobile" class="about projects section listing mobile-br">
+
+    <div class="container" >
+
+      <div class="row position-relative">
+
+
+
+        <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
+          <div class="content " style="text-align:left; margin-left: -4%">
+            <h3 style="background: linear-gradient(to bottom right, rgba(205,140,93,0.79), #3E3F41);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      font-size: 2em;
+      font-weight: 200;">
+
+              <b>NOBIL</b>WOOD
+              <br>
+              <small>CALITATE SUPERIOARA IN TOTUL</small>
+            </h3>
+          </div>
+          <div class="our-story" style="margin-left: -100%; margin-right: -150% ">
+
+            <div class="" style="margin-left: 26%; margin-right: 41% ; margin-bottom: -15%; text-align:left;">
+
+              <h5><b>NOBIL</b>WOOD<b> este o fabrică ce produce
+                tâmplărie exterioara şi interioară din lemn
+                stratificat </b></h5>
+              <h5><b>Compania a fost înfiintata in anul 2005</b></h5>
+              <p> Pe parcursul anilor, pozitionindu-se printre companiile de top in
+                producerea tâmplăriei din lemn nobil.
+                În procesul de producere folosim cele mai moderne solutii
+                tehnologice.</p>
+              <p>Acordăm o mare importantă utilizării componentelor de înaltă
+                calitate, a materiilor prime si a echipamentelor moderne.</p>
+
+              <p> Îmbinând traditia prelucrării lemnului cu inovatia tehnologică,
+                <b>obninem un produs NOBIL de cea mai înaltă calitate.</b></p>
+              <br>
+
+            </div>
+
+             </div>
+          <div class="our-story" style="margin-left: -100%; margin-right: -150%">
+
+            <div class="" style="margin-left: 56%; margin-right: 20%; text-align: right">
+
+              <h2> SOLUTII <br>
+                <b>NOBIL</b>WOOD </h2>
+
+
+            </div>
+
+
+          </div>
+
+        </div>
+
+      </div>
+      <div class="image_container  image-wide "  style=" margin-left: -5%; width: 110%">
+        <img class="col-lg-6 about-img" data-aos="zoom-out" data-aos-delay="200" src="assets/img/despre_noi/1.jpg">
+
+      </div>
+      <div class="image_container  image-wide " style=" margin-left: -5%; width: 110%" >
+        <img src="assets/img/despre_noi/2.jpg"  alt="Image 1" loading="lazy" onclick="openLightbox(this)"/>
+      </div>
+      <div class="content" style="text-align: right; margin-right: -4% ">
+        <h3 style="background: linear-gradient(to bottom right, rgba(205,140,93,0.79), #3E3F41);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 2em;
+      font-weight: 200;
+      display: inline-block; /* Ensures gradient applies correctly */
+      text-align: right;
+      ">
+          <small>SOLUTII</small>
+          <br>
+          <b>NOBIL</b>WOOD
+
+
+        </h3>
+      </div>
+    </div>
+
+
+
+    <div class="gallery_container">
+
+
+
+      <div class="image_container image-wide  "  style="text-align:left; margin-left: 0%; margin-right: 15%; margin-top: 2%" >
+
+        <p > Oferim ferestre lemn-aluminiu, usi exterior & interior, parchet
+          stratificat si diverse solutii<br> pentru proiectul dumneavoastră,
+          atât pentru utilizatorii finali, cât si pentru profesionisti:
+          designeri,<br> arhitecti si constructori,<br>
+          <b>cărora le oferim conditii favorabile de cooperare.</b></p>
+        <br/>
+
+
+      </div>
+
+      <div class="image_container  image-wide " >
+        <img src="assets/img/despre_noi/3.jpg"  alt="Image 4" loading="lazy" onclick="openLightbox(this)"/>
+      </div>
+      <div class="image_container image-wide ">
+        <img src="assets/img/despre_noi/5.jpg" alt="Image 5" loading="lazy" onclick="openLightbox(this)"/>
+      </div>
+      <div class="image_container image-wide ">
+        <img src="assets/img/despre_noi/6.jpg" alt="Image 5" loading="lazy" onclick="openLightbox(this)"/>
+      </div>
+      <div class="image_container image-wide ">
+        <img src="assets/img/despre_noi/7.jpg" alt="Image 7" loading="lazy" onclick="openLightbox(this)"/>
+      </div>
+      <div class="image_container image-wide ">
+        <img src="assets/img/despre_noi/8.jpg" alt="Image 8" loading="lazy"  onclick="openLightbox(this)"/>
+      </div>
+      <div class="image_container image-wide">
+        <img src="assets/img/despre_noi/4.png" alt="Image 9" loading="lazy"  onclick="openLightbox(this)"/>
+      </div>
+      <div class="image_container image-wide " >
+        <img src="assets/img/despre_noi/9.png"  alt="Image 4" loading="lazy" onclick="openLightbox(this)"/>
+      </div>
+      <div class="image_container image-wide ">
+        <img src="assets/img/despre_noi/10.jpg" alt="Image 10" loading="lazy"  onclick="openLightbox(this)"/>
+      </div>
+
+    </div>
+    <div class="lightbox" id="lightboxmobile" onclick="closeLightbox()">
+      <img src="" alt="Full-size image" id="lightbox-imagemobile" />
+    </div>
+
+
+    <script>
+      function openLightbox(image) {
+        const lightbox = document.getElementById('lightboxmovile');
+        const lightboxImage = document.getElementById('lightbox-imagemobile');
+        lightboxImage.src = image.src;
+        lightbox.classList.add('active');
+      }
+
+      function closeLightbox() {
+        const lightbox = document.getElementById('lightbox');
+        lightbox.classList.remove('active');
+      }
+    </script>
+
+  </section><!-- /Projects Section -->
+  </main>
+
+<footer id="footer" class="footer dark-background">
+  <div class="container footer-top">
+    <div class="row gy-6">
+      <div class="col-lg-2 col-md-3 footer-about listing-dropdowns ">
+        <a href="index.html" class="logo d-flex align-items-center">
+          <span class="sitename"> <img src="assets/img/logo.png" width="120px" alt="NobilWood Logo"></span>
+        </a>
+
+      </div>
+
+      <div class="col-lg-1 col-md-3 footer-links listing-dropdowns">
+        <h4>‎‎‎‎‎‎‎‎‎‎‎‎‎‎</h4>
+
+      </div>
+
+      <div class="col-lg-2 col-md-3 footer-links" style="margin-left: 20%; width: 80%; padding-bottom: -10%">
+        <div class="footer-details">
+          <a href="partenerilor.html">PARTENERILOR</a><br/>
+          <a href="contact.html">CONTACTE</a><br>
+
+        </div>
+
+        <div class="contact-info" style=" flex-wrap: nowrap; /* Prevents wrapping */">
+          <a href="mailto:info@nobilwood.com">info@nobilwood.com</a>
+          <span class="separator">|</span>
+          <a href="tel:+37360000077">+37 360 000 077</a>
+          <span class="separator">|</span>
+          <a href="https://maps.app.goo.gl/6YCYrgXC6iDxHGKP6">mun. Chisinau, sat. Singera, str. Industriala 5</a>
+        </div>
+
+
+        <div class="social-links">
+          <a href=""><i class="bi bi-twitter-x"></i></a>
+          <a href=""><i class="bi bi-facebook"></i></a>
+          <a href=""><i class="bi bi-instagram"></i></a>
+          <a href=""><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="copyright">
+    <p>© | 2025 <strong>NOBIL</strong>WOOD</p>
+  </div>
+</footer>
+
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
