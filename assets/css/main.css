@@ -3332,8 +3332,8 @@ body {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-  margin-top: 1%;
-  margin-bottom: 1%;
+  margin-top: 2%;
+  margin-bottom: 2%;
 }
 
 /* Apply darkened background only for screens wider than 992px (desktops) */
