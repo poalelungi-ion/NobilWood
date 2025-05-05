@@ -3173,7 +3173,7 @@ body {
   }
 
   /* Apply dark background only on mobile (screens smaller than 992px) */
-  @media (max-width: 1000px) {
+  @media (max-width: 1200px) {
     .sistema-materials {
       background-color: #efeeee; /* Dark background */
       padding: 15px; /* Optional: Add some padding for spacing */
@@ -3435,7 +3435,7 @@ body {
 }
 
 /* Responsive Design */
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 900px) {
   .gallery_container {
     grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
   }
