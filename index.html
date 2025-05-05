@@ -32,25 +32,39 @@
   @media (max-width: 1000px) and (orientation: landscape) {
     .navmenu .listing-dropdown ul {
       transform: translateX(0) !important; /* Reset horizontal transform */
-      height: 100vh;
       width: 100vw; /* Full viewport width */
       left: 0; /* Align to the left edge */
       top: 100%; /* Position below the header */
-      flex-direction: column; /* Stack items vertically */
+      flex-direction: row; /* Display items side by side */
+      flex-wrap: wrap; /* Allow wrapping if needed */
       padding: 10px 0; /* Add padding for better spacing */
+      overflow-x: auto; /* Allow horizontal scrolling if content overflows */
     }
 
     .navmenu .listing-dropdown ul li {
-      flex: 0 0 100%; /* Each item takes full width */
-
+      flex: 0 0 auto; /* Allow items to take their natural width */
+      text-align: center; /* Center-align text */
+      min-width: 150px; /* Ensure each item has a minimum width for readability */
     }
 
     .navmenu .listing-dropdown ul li a,
     .navmenu .listing-dropdown ul li:hover > a {
-      padding: 10px 20px; /* Increase padding for better touch targets */
+      padding: 10px 15px; /* Adjust padding for better touch targets */
       font-size: 14px; /* Adjust font size for readability */
       color: var(--nav-dropdown-color);
       background-color: var(--nav-dropdown-background-color);
+    }
+
+    /* Nested submenus (sub-submenus) within listing-dropdown */
+    .navmenu .listing-dropdown ul ul {
+      position: static; /* Ensure nested submenus behave like normal elements */
+      display: none; /* Hidden by default */
+      flex-direction: row; /* Side by side for nested items */
+      flex-wrap: wrap; /* Allow wrapping if needed */
+      background-color: rgba(33, 37, 41, 0.1); /* Match your mobile submenu background */
+      padding: 5px 0; /* Adjust padding */
+      margin: 0; /* Remove margin to align properly */
+      box-shadow: none; /* Remove shadow for nested submenus */
     }
 
     .navmenu .listing-dropdown ul li.listing-dropdowns {
@@ -59,8 +73,14 @@
 
     .navmenu .listing-dropdown ul li.listing-dropdowns img {
       display: block;
-      margin: 10px auto;
-      max-width: 50px; /* Limit image size for landscape */
+      margin: 5px auto;
+      max-width: 40px; /* Smaller image size for landscape */
+    }
+
+    /* Show nested submenu when parent is active */
+    .navmenu .listing-dropdown .dropdown-active {
+      display: flex; /* Display nested submenu as flex to align side by side */
+      background-color: rgba(33, 37, 41, 0.03); /* Match your active background */
     }
 
     .navmenu .listing-dropdown:hover > ul {
