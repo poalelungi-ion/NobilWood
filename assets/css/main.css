@@ -208,7 +208,7 @@ h6 {
 }
 
 /* Desktop Navigation */
-@media (min-width: 1299px) {
+@media (min-width: 1200px) {
   .navmenu {
     margin-right: -9%;
     padding: 0;
@@ -320,7 +320,7 @@ h6 {
 
 
 /* Listing Dropdown - Desktop */
-@media (min-width: 1301px) {
+@media (min-width: 1200px) {
   .navmenu .listing-dropdown {
     position: static;
   }
@@ -371,7 +371,7 @@ h6 {
 }
 
 /* Mobile Navigation */
-@media (max-width: 1300px) {
+@media (max-width: 1200px) {
   .mobile-nav-toggle {
     color: var(--nav-color);
     font-size: 28px;
@@ -3361,7 +3361,7 @@ body {
 .gallery_container {
   display: grid;
   gap: 0; /* Remove any unnecessary gaps between items */
-  max-width: 1300px;
+  max-width: 1100px;
   margin: 0 auto;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Flexible grid with auto-fill */
   grid-auto-rows: minmax(250px, auto); /* Auto height rows to fit content */
