@@ -499,7 +499,7 @@ h6 {
 
 }
 /* Landscape Mode Adjustments */
-@media  (max-width: 1000px) and (orientation: landscape) {
+@media  (max-width: 1200px) and (orientation: landscape) {
   .headerlogo {
     display: none; /* Hide logo in landscape mode between 800px and 1299px */
   }
@@ -549,7 +549,7 @@ h6 {
 }
 
 /* Listing Dropdown - Desktop */
-@media (min-width: 1000px) {
+@media (min-width: 1200px) {
   .navmenu .listing-dropdown {
     position: static;
   }
@@ -711,7 +711,7 @@ h6 {
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
   /* Applies only on mobile (≤767px) */
   .footer-links {
     margin-left: 0 !important; /* Removes margin */
@@ -813,14 +813,7 @@ h6 {
   opacity: 1;
 }
 
-/*--------------------------------------------------------------
-# Disable aos animation delay on mobile devices
---------------------------------------------------------------*/
-@media screen and (max-width:1000px) {
-  [data-aos-delay] {
 
-  }
-}
 
 /*--------------------------------------------------------------
 # Global Page Titles & Breadcrumbs
@@ -3442,7 +3435,7 @@ body {
 }
 
 /* Responsive Design */
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1000px) {
   .gallery_container {
     grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
   }

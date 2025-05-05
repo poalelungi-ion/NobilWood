@@ -26,13 +26,71 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <style>
-    .recent-blog-posts{
-      margin-top: -5% !important;
-    }
-    @media(max-width: 992px) {
-      .recent-blog-posts{
-        margin-top: -15% !important;
+
+    /* Mobile Navigation Landscape Mode Adjustments */
+    @media (max-width: 1000px) and (orientation: landscape) {
+      .navmenu .listing-dropdown ul {
+        transform: translateX(0) !important; /* Reset horizontal transform */
+        width: 100vw; /* Full viewport width */
+        left: 0; /* Align to the left edge */
+        top: 100%; /* Position below the header */
+        flex-direction: row; /* Display items side by side */
+        flex-wrap: wrap; /* Allow wrapping if needed */
+        padding: 10px 0; /* Add padding for better spacing */
+        overflow-x: auto; /* Allow horizontal scrolling if content overflows */
       }
+
+      .navmenu .listing-dropdown ul li {
+        flex: 0 0 auto; /* Allow items to take their natural width */
+        text-align: center; /* Center-align text */
+        min-width: 150px; /* Ensure each item has a minimum width for readability */
+      }
+
+      .navmenu .listing-dropdown ul li a,
+      .navmenu .listing-dropdown ul li:hover > a {
+        padding: 10px 15px; /* Adjust padding for better touch targets */
+        font-size: 14px; /* Adjust font size for readability */
+        color: var(--nav-dropdown-color);
+        background-color: var(--nav-dropdown-background-color);
+      }
+
+      /* Nested submenus (sub-submenus) within listing-dropdown */
+      .navmenu .listing-dropdown ul ul {
+        position: static; /* Ensure nested submenus behave like normal elements */
+        display: none; /* Hidden by default */
+        flex-direction: row; /* Side by side for nested items */
+        flex-wrap: wrap; /* Allow wrapping if needed */
+        background-color: rgba(33, 37, 41, 0.1); /* Match your mobile submenu background */
+        padding: 5px 0; /* Adjust padding */
+        margin: 0; /* Remove margin to align properly */
+        box-shadow: none; /* Remove shadow for nested submenus */
+      }
+
+      .navmenu .listing-dropdown ul li.listing-dropdowns {
+        padding: 5px 10px;
+      }
+
+      .navmenu .listing-dropdown ul li.listing-dropdowns img {
+        display: block;
+        margin: 5px auto;
+        max-width: 40px; /* Smaller image size for landscape */
+      }
+
+      /* Show nested submenu when parent is active */
+      .navmenu .listing-dropdown .dropdown-active {
+        display: flex; /* Display nested submenu as flex to align side by side */
+        background-color: rgba(33, 37, 41, 0.03); /* Match your active background */
+      }
+
+      .navmenu .listing-dropdown:hover > ul {
+        opacity: 1;
+        top: 100%; /* Ensure dropdown appears below header */
+        visibility: visible;
+        z-index: 1000; /* Ensure it stays on top */
+      }
+    }
+
+
     @media (min-width: 768px) {
       .languages {
         transform: translateX(-80%)!important;
@@ -42,8 +100,21 @@
       }
       .productdrop{
         margin-left: -15% !important;
+
       }
     }
+    .recent-blog-posts{
+      margin-top: -5% !important;
+    }
+    @media(max-width: 992px) {
+      .recent-blog-posts{
+        margin-top: -15% !important;
+      }
+      .hero.h3{font-size: 2em!important;}
+      .hero.h2{margin-top: -10%; }
+    }
+
+
 
     /* Base styles for carousel items */
     .carousel-item {
@@ -53,6 +124,8 @@
       width: 100%;
       height: 100vh;
     }
+
+
 
     /* Responsive design for smaller screens (max-width: 768px) */
     @media (max-width: 768px) {
@@ -72,6 +145,7 @@
         background-image: url('assets/img/prima_pagina/m5.jpg'); /* Mobile version of C5 */
       }
     }
+
   </style>
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
