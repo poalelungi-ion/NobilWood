@@ -27,14 +27,12 @@
 
 
 <style>
-  @media (hover: none) and (pointer: coarse) {
-    a.readmore,
-    .post-content {
-      -webkit-tap-highlight-color: transparent; /* Optional: Remove tap highlight */
-      touch-action: manipulation; /* Allow direct activation */
+  @media (hover: none) {
+    a:hover, .your-element:hover {
+      all: unset !important;
     }
-
   }
+
 
 
   @media (min-width: 768px) {
