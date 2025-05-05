@@ -27,6 +27,20 @@
 
 
 <style>
+  @media (pointer: coarse) {
+    a.readmore:hover,
+    .post-item:hover,
+    .post-img:hover,
+    .post-content:hover {
+      pointer-events: none !important;
+      background: none !important;
+      color: inherit !important;
+      transform: none !important;
+      transition: none !important;
+      box-shadow: none !important;
+    }
+  }
+
   @media (min-width: 768px) {
     .languages {
       transform: translateX(-80%)!important;
