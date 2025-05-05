@@ -27,19 +27,7 @@
 
 
 <style>
-  @media (pointer: coarse) {
-    a.readmore:hover,
-    .post-item:hover,
-    .post-img:hover,
-    .post-content:hover {
-      pointer-events: none !important;
-      background: none !important;
-      color: inherit !important;
-      transform: none !important;
-      transition: none !important;
-      box-shadow: none !important;
-    }
-  }
+
 
   @media (min-width: 768px) {
     .languages {
@@ -350,6 +338,17 @@
     </section><!-- /Get Started Section -->
 
 
+  <script>
+    AOS.init({
+      disable: function () {
+        AOS.init({
+          disable: 'mobile' // built-in option to disable on touch devices
+        });
+
+        return window.innerWidth < 768;
+      }
+    });
+  </script>
 
 
   <!-- Recent Blog Posts Section -->
