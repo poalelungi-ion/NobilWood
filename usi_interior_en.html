@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>NobilWood Usi Interior</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/logo.png" rel="icon">
+  <link href="assets/img/logo.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <style>
+    @media (min-width: 768px) {
+      .languages {
+        transform: translateX(-80%) !important;
+      }
+      .infodrop {
+        margin-left: -15% !important;
+      }
+      .productdrop {
+        margin-left: -15% !important;
+      }
+    }
+
+    /* Base styles for carousel items */
+    .carousel-item {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 100%;
+    }
+
+    /* Responsive design for smaller screens (max-width: 768px) */
+    @media (max-width: 768px) {
+      [data-bg="assets/img/usi_interior/C1.jpg"] {
+        background-image: url('assets/img/usi_interior/m1.jpg'); /* Mobile version of C1 */
+      }
+      [data-bg="assets/img/usi_interior/C2.jpg"] {
+        background-image: url('assets/img/usi_interior/m2.jpg'); /* Mobile version of C2 */
+      }
+    }
+
+    /* Fullscreen Modal Styles */
+    #fullscreenModal .modal-dialog {
+      max-width: 100vw; /* Use full viewport width */
+      width: 100%; /* Ensure it takes full width */
+      height: 100vh; /* Use full viewport height */
+      margin: 0; /* Remove default margins for fullscreen */
+    }
+
+    #fullscreenModal .modal-content {
+      height: 100%; /* Full height of modal dialog */
+      background: transparent; /* Transparent background */
+      border: none; /* Remove default border */
+    }
+
+    #fullscreenModal .carousel-inner img {
+      object-fit: contain; /* Maintain aspect ratio */
+      max-height: 100vh; /* Ensure image fits within viewport height */
+      width: 100%; /* Full width */
+      margin: auto; /* Center image */
+    }
+
+    #fullscreenModal .btn-close {
+      background: rgba(255, 255, 255, 0.7); /* Slightly more opaque for visibility */
+      border-radius: 50%;
+      padding: 12px; /* Larger padding for touch targets */
+      position: absolute;
+      top: 15px; /* Adjust position for mobile */
+      right: 15px;
+      z-index: 1000;
+      opacity: 1; /* Ensure visibility */
+      font-size: 1.2rem; /* Larger close button for mobile */
+    }
+
+    #fullscreenModal .carousel-control-prev,
+    #fullscreenModal .carousel-control-next {
+      width: 15%; /* Wider touch area for mobile */
+      opacity: 0.7; /* Slightly visible for usability */
+    }
+
+    #fullscreenModal .carousel-control-prev-icon,
+    #fullscreenModal .carousel-control-next-icon {
+      background-size: 100%, 100%; /* Ensure icons scale properly */
+      width: 40px; /* Larger icons for touch */
+      height: 40px;
+    }
+
+    .carousel-item img {
+      cursor: pointer; /* Maintain pointer cursor for interactivity */
+    }
+
+    .post-content a {
+      cursor: pointer; /* Maintain pointer cursor for links */
+    }
+
+    /* Ensure modal is fully responsive on smaller screens */
+    @media (max-width: 768px) {
+      #fullscreenModal .modal-dialog {
+        margin-top: 50%;
+        max-width: 100vw;
+        height: 100vh;
+      }
+
+      #fullscreenModal .carousel-inner img {
+
+        max-height: 100vh; /* Ensure image fits mobile viewport */
+        width: 100%;
+      }
+
+      #fullscreenModal .btn-close {
+        top: 10px;
+        right: 10px;
+        padding: 10px; /* Adjust padding for smaller screens */
+        font-size: 1rem; /* Slightly smaller for mobile */
+      }
+
+      #fullscreenModal .carousel-control-prev,
+      #fullscreenModal .carousel-control-next {
+        width: 20%; /* Even wider touch area for smaller screens */
+      }
+    }
+  </style>
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+</head>
+
+<body class="index-page">
+
+<header id="header" class="header d-flex align-items-center fixed-top">
+  <div class="container">
+    <div class="container-fluid position-relative d-flex align-items-center justify-content-between d-flex">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img class="headerlogo" src="assets/img/logo.png">
+      </a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html" class="active"><i class="bi bi-house-door listing-dropdowns" style="font-size: 20px; width: 25px; height: 25px"></i></a></li>
+          <li class="listing-dropdown dropdown"><a href="#"><span>PRODUSE</span> <i class="bi bi-chevron-down toggle-dropdown mobile-br chevrontogle"></i></a>
+            <ul class="productdrop">
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px">‎ </a>
+                <a href="#" style="font-size: 10px">‎ </a>
+                <a href="#" style="font-size: 10px">‎ </a>
+              </li>
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px">‎ </a>
+                <a href="#" style="font-size: 10px">‎ </a>
+                <a href="#" style="font-size: 10px">‎ </a>
+              </li>
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px">‎ </a>
+              </li>
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px">‎ </a>
+              </li>
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px">‎ </a>
+                <a href="#" style="font-size: 10px">‎ </a>
+                <a href="#" style="font-size: 10px">‎ </a>
+              </li>
+              <img src="assets/img/ficon.svg" class="listing-dropdowns" style="height: 70px; margin-bottom: -5%; margin-top: -5%">
+              <li>
+                <a class="listing-dropdowns" style="font-weight: bold; font-size: 12px; margin-bottom: -3%; margin-top: -3%">FERESTRE</a>
+                <a class="mobile-br" href="#" style="font-size: 10px">‎ </a>
+                <a href="lemn_aluminiu.html" style="font-size: 12px; margin-bottom: -5%; margin-top: -5%">LEMN - ALUMINIU</a>
+                <a href="sisteme_glisante.html" style="font-size: 12px; margin-bottom: -5%; margin-top: -5%">SISTEME CULISANTE</a>
+                <a href="vitralii.html" style="font-size: 12px; margin-bottom: -5%; margin-top: -5%">PERETI CORTINA</a>
+              </li>
+              <img src="assets/img/uicon.svg" class="listing-dropdowns" style="height: 70px; margin-bottom: -5%; margin-top: -5%">
+              <li>
+                <a class="listing-dropdowns" style="font-weight: bold; font-size: 12px; margin-bottom: 1px; margin-top: 1px">USI</a>
+                <a class="mobile-br" href="#" style="font-size: 10px">‎ </a>
+                <a href="usi_exterior.html" style="font-size: 12px; margin-bottom: -5%; margin-top: -5%">USI EXTERIOR</a>
+                <a href="usi_interior.html" style="font-size: 12px; margin-bottom: -5%; margin-top: -5%">USI INTERIOR</a>
+                <a href="#" style="font-size: 12px; margin-bottom: -5%; margin-top: -5%" class="listing-dropdowns">‎ </a>
+              </li>
+              <img src="assets/img/picon.svg" class="listing-dropdowns" style="height: 70px; margin-bottom: -5%; margin-top: -5%">
+              <li>
+                <a class="listing-dropdowns" style="font-weight: bold; font-size: 12px; margin-bottom: 1px; margin-top: 1px">PARCHET</a>
+                <a class="mobile-br" href="#" style="font-size: 10px">‎ </a>
+                <a href="parket.html" style="font-size: 12px; margin-bottom: -5%; margin-top: -5%">PARCHET STRATIFICAT</a>
+                <a href="plinte.html" style="font-size: 12px; margin-bottom: -5%; margin-top: -5%">PLINTE</a>
+                <a href="#" style="font-size: 10px; margin-bottom: 1px; margin-top: 1px" class="listing-dropdowns">‎ </a>
+                <a class="mobile-br" href="#" style="font-size: 10px">‎ </a>
+              </li>
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px">‎ </a>
+                <a href="#" style="font-size: 10px">‎ </a>
+                <a href="#" style="font-size: 10px">‎ </a>
+              </li>
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px">‎ </a>
+                <a href="#" style="font-size: 10px">‎ </a>
+                <a href="#" style="font-size: 10px">‎ </a>
+              </li>
+            </ul>
+          </li>
+          <li><a href="portfolio.html">PORTFOLIO</a></li>
+          <li><a href="partenerilor.html">PARTENERILOR</a></li>
+          <li class="listing-dropdown dropdown"><a href="#"><span>INFO</span> <i class="bi bi-chevron-down toggle-dropdown mobile-br"></i></a>
+            <ul class="infodrop">
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px"></a>
+                <a href="#"></a>
+                <a href="#" style="color: white">_</a>
+              </li>
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px"></a>
+                <a href="#"></a>
+                <a href="#" style="color: white">_</a>
+              </li>
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#" style="color: white">_</a>
+              </li>
+              <li>
+                <a class="listing-dropdowns" style="font-weight: bold; font-size: 12px; margin-bottom: -1%;">INFO</a>
+                <a href="about.html" style="font-size: 12px; margin-bottom: -1%; margin-top: -1%">DESPRE NOI</a>
+                <a href="downloads.html" style="font-size: 12px; margin-top: -1%">DOWNLOAD</a>
+              </li>
+            </ul>
+          </li>
+          <li><a href="contact.html">CONTACT</a></li>
+          <li class="language-option listing-dropdown dropdown"><a href="#">RO <i class="bi bi-chevron-down toggle-dropdown mobile-br"></i></a>
+            <ul class="languages">
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#" style="color: white">_</a>
+              </li>
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#" style="color: white">_</a>
+              </li>
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#" style="color: white">_</a>
+              </li>
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#" style="color: white">_</a>
+              </li>
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#" style="color: white">_</a>
+              </li>
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#" style="color: white">_</a>
+              </li>
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#" style="color: white">_</a>
+              </li>
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px">‎ </a>
+                <a href="#" style="font-size: 10px">‎ </a>
+                <a href="#" style="font-size: 10px">‎ </a>
+              </li>
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px">‎ </a>
+                <a href="#" style="font-size: 10px">‎ </a>
+                <a href="#" style="font-size: 10px">‎ </a>
+              </li>
+              <li>
+                <a style="font-weight: bold; font-size: 12px; color: rgba(205,140,93,0.79); margin-bottom: -2%; margin-top: -1%">RO</a>
+                <a href="#" style="font-size: 12px; margin-bottom: -3%; margin-top: -3%">RU</a>
+                <a href="#" style="font-size: 12px; margin-bottom: -3%; margin-top: -3%">IT</a>
+                <a href="#" style="font-size: 12px; margin-bottom: -3%; margin-top: -3%;">EN</a>
+                <a href="#" style="font-size: 12px; margin-top: -3%;">FR</a>
+              </li>
+              <a style="font-weight: bold; font-size: 20px">‎ </a>
+              <li class="listing-dropdowns">
+                <a style="font-weight: bold; font-size: 20px"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#" style="color: white">_</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main class="main">
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero section dark-background">
+    <div class="info d-flex align-items-center">
+      <div class="container">
+        <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
+          <!-- Add any content here -->
+        </div>
+      </div>
+    </div>
+
+    <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+      <div class="carousel-item active" data-bg="assets/img/usi_interior/C1.jpg"></div>
+      <div class="carousel-item" data-bg="assets/img/usi_interior/C2.jpg"></div>
+
+      <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+      </a>
+      <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <!-- Slide Down Button -->
+    <div class="slide-down-button">
+      <a href="#get-started" class="scroll-down-link">
+        <i class="bi bi-chevron-down" style="font-size: 80px; color: rgba(205, 140, 93, 0.79);"></i>
+      </a>
+    </div>
+  </section><!-- /Hero Section -->
+
+  <!-- Get Started Section -->
+  <section id="get-started" class="get-started section">
+    <div class="container">
+      <div class="row justify-content-between gy-4">
+        <div class="d-flex align-items-center" data-aos="zoom-out" data-aos-delay="100">
+          <div class="content">
+            <h3 style="background: linear-gradient(to bottom right, rgba(205,140,93,0.79), #3E3F41);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          font-size: 2em;
+          font-weight: normal;">
+              DESCOPERA <b>USILE PREMIUM</b> de la <b>NOBIL</b>WOOD <br/>
+            </h3>
+            <br/>
+            <h4>
+              <b>Usile de interior reprezintă una dintre cele mai importante achizitii pentru locuinte, clădiri comerciale si birouri,
+                combinând valoarea care poate fi identificată cu traditia, măiestria, priceperea si frumusetea naturală.
+                Rolul usilor in amenajările interioare este acela de a completa stilul decorativ sau acela de a crea un contrast
+                puternic cu design-ul interior, acest lucru putandu-se realiza din varietatea de culori si modele.</b><br/>
+              <br/><br/>
+              Proiectăm și realizăm cele mai <b>performante</b> uși de interior de pe piață, axându-ne pe <b>calitatea materialelor</b> și <b>inovația tehnologică</b>. Oferim o gamă amplă de opțiuni în <b>personalizarea</b> produsului dorit.
+              <br/><br/>
+            </h4>
+            <h4 style="color: #cd8c5d"> Explorează <b>eleganța și inovația</b> ușilor moderne de la<b> NOBIL WOOD!</b>
+            </h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!-- /Get Started Section -->
+
+  <section id="" class="get-started section" style="background-color: #efeeee;">
+    <div class="container" style="margin-top: -3%; margin-bottom: -3%">
+      <div class="content">
+        <div class="sistema-materials" style="display: flex; gap: 1px; flex-wrap: wrap; margin-top: -2%; margin-bottom: -2%;">
+          <div class="materials-list">
+            <ul>
+              <li style="font-size: 16px; margin-bottom: 2px; display: flex; align-items: center;">
+                <img src="assets/img/romb.svg" style="width: 10px; height: auto; margin-right: 8px; margin-left: -49%;">
+                <span>Tipuri uși: Moderne, Clasice, Neoclasice</span>
+              </li>
+              <li style="font-size: 16px; margin-bottom: 2px; display: flex; align-items: center;">
+                <img src="assets/img/romb.svg" style="width: 10px; height: auto; margin-right: 8px; margin-left: -49%;">
+                <span>Placare: Lemn, Sticlă, HPL, Piatră, Ceramică</span>
+              </li>
+              <li style="font-size: 16px; margin-bottom: 2px; display: flex; align-items: center;">
+                <img src="assets/img/romb.svg" style="width: 10px; height: auto; margin-right: 8px; margin-left: -49%;">
+                <span>Structura: Lemn stratificat stejar + Profil armare + Substrat izolare fonică</span>
+              </li>
+              <li style="font-size: 16px; margin-bottom: 2px; display: flex; align-items: center;">
+                <img src="assets/img/romb.svg" style="width: 10px; height: auto; margin-right: 8px; margin-left: -49%;">
+                <span>Feroneria: AGB Italia</span>
+              </li>
+              <li style="font-size: 16px; margin-bottom: 2px; display: flex; align-items: center;">
+                <img src="assets/img/romb.svg" style="width: 10px; height: auto; margin-right: 8px; margin-left: -49%;">
+                <span>Finisaj lemn: opac sau transparent, Renner, Italia</span>
+              </li>
+              <li style="font-size: 16px; margin-bottom: 2px; display: flex; align-items: center;">
+                <img src="assets/img/romb.svg" style="width: 10px; height: auto; margin-right: 8px; margin-left: -49%;">
+                <span>Dimensiuni: H max. 3000</span>
+              </li>
+            </ul>
+          </div>
+          <div class="materials-list listing-dropdowns" style="flex: 1; margin-top: 20px;">
+            <p>‎‎‎‎‎‎ ‎‎‎‎‎‎‎‎‎‎</p>
+          </div>
+          <div class="downloads2" style="flex: 1; display: flex; gap: 30px; flex-wrap: wrap; align-content: center; padding-left: 15%">
+            <a href="culori-materiale.pdf" class="pdf-link" target="_blank">
+              <img src="assets/img/pdf_icon.svg" alt="PDF Icon" class="pdf-link_img">
+              <span>CULORI </br>ȘI MATERIALE</span>
+            </a>
+            <a href="fisa-tehnica.pdf" class="pdf-link" target="_blank" style="font-size: 18px; font-weight: bold; display: inline-flex; align-items: center; gap: 10px;">
+              <img src="assets/img/pdf_icon.svg" alt="PDF Icon" class="pdf-link_img">
+              <span>FIȘA </br> TEHNICĂ</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!-- /Get Started Section -->
+
+  <!-- Recent Blog Posts Section -->
+  <section id="recent-blog-posts" class="recent-blog-posts section">
+    <div class="container">
+      <p style="font-size: 25px"><b>Descopera cele mai populare produse NOBIL</b>WOOD</p>
+      <div class="row gy-4 justify-content-center">
+
+        <!-- Row 1 - Carousel 1 -->
+        <div class="col-xl-6 col-md-6">
+          <div id="carousel1" class="carousel slide post-item position-relative h-100" data-bs-ride="false" data-aos="fade-up" data-aos-delay="100">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="assets/img/usi_interior/clasica_c/1.jpg" class="img-fluid" alt="" loading="lazy">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/usi_interior/clasica_c/2.jpg" class="img-fluid" alt="" loading="lazy">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/usi_interior/clasica_c/3.jpg" class="img-fluid" alt="" loading="lazy">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/usi_interior/clasica_c/4.jpg" class="img-fluid" alt="" loading="lazy">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel1" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel1" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+            <div class="post-content d-flex flex-column">
+              <a class="readmore stretched-link"><span><b>CLASICA</b> C</span><i class="bi bi-chevron-compact-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 1 - Carousel 2 -->
+        <div class="col-xl-6 col-md-6">
+          <div id="carousel2" class="carousel slide post-item position-relative h-100" data-bs-ride="false" data-aos="fade-up" data-aos-delay="200">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="assets/img/usi_interior/clasica_cs/1.jpg" class="img-fluid" alt="" loading="lazy">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/usi_interior/clasica_cs/2.jpg" class="img-fluid" alt="" loading="lazy">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/usi_interior/clasica_cs/3.jpg" class="img-fluid" alt="" loading="lazy">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/usi_interior/clasica_cs/4.jpg" class="img-fluid" alt="" loading="lazy">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/usi_interior/clasica_cs/5.jpg" class="img-fluid" alt="" loading="lazy">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/usi_interior/clasica_cs/6.jpg" class="img-fluid" alt="" loading="lazy">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel2" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel2" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+            <div class="post-content d-flex flex-column">
+              <a class="readmore stretched-link"><span><b>CLASICA</b> CS</span><i class="bi bi-chevron-compact-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 2 - Carousel 3 -->
+        <div class="col-xl-6 col-md-5">
+          <div id="carousel3" class="carousel slide post-item position-relative h-100" data-bs-ride="false" data-aos="fade-up" data-aos-delay="300">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="assets/img/usi_interior/clasica_line_1/1.jpg" class="img-fluid" alt="" loading="lazy">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/usi_interior/clasica_line_1/2.jpg" class="img-fluid" alt="" loading="lazy">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/usi_interior/clasica_line_1/3.jpg" class="img-fluid" alt="" loading="lazy">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/usi_interior/clasica_line_1/4.jpg" class="img-fluid" alt="" loading="lazy">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/usi_interior/clasica_line_1/5.jpg" class="img-fluid" alt="" loading="lazy">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/usi_interior/clasica_line_1/6.jpg" class="img-fluid" alt="" loading="lazy">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/usi_interior/clasica_line_1/7.jpg" class="img-fluid" alt="" loading="lazy">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel3" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel3" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+            <div class="post-content d-flex flex-column">
+              <a class="readmore stretched-link"><span><b>CLASICA</b> LINE 1</span><i class="bi bi-chevron-compact-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 2 - Carousel 4 -->
+        <div class="col-xl-6 col-md-5">
+          <div id="carousel4" class="carousel slide post-item position-relative h-100" data-bs-ride="false" data-aos="fade-up" data-aos-delay="400">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="assets/img/usi_interior/clasica_line_2/1.jpg" class="img-fluid" alt="" loading="lazy">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/usi_interior/clasica_line_2/2.jpg" class="img-fluid" alt="" loading="lazy">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/usi_interior/clasica_line_2/3.jpg" class="img-fluid" alt="" loading="lazy">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel4" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel4" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+            <div class="post-content d-flex flex-column">
+              <a class="readmore stretched-link"><span><b>CLASICA</b> LINE 2</span><i class="bi bi-chevron-compact-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 3 - Carousel 5 -->
+        <div class="col-xl-6 col-md-5">
+          <div id="carousel5" class="carousel slide post-item position-relative h-100" data-bs-ride="false" data-aos="fade-up" data-aos-delay="300">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="assets/img/usi_interior/clasica_v/1.jpg" class="img-fluid" alt="" loading="lazy">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/usi_interior/clasica_v/2.jpg" class="img-fluid" alt="" loading="lazy">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel5" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel5" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+            <div class="post-content d-flex flex-column">
+              <a class="readmore stretched-link"><span><b>CLASICA</b> V</span><i class="bi bi-chevron-compact-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 3 - Carousel 6 -->
+        <div class="col-xl-6 col-md-5">
+          <div id="carousel6" class="carousel slide post-item position-relative h-100" data-bs-ride="false" data-aos="fade-up" data-aos-delay="400">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="assets/img/usi_interior/invizibile_line_v/1.jpg" class="img-fluid" alt="" loading="lazy">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/usi_interior/invizibile_line_v/2.jpg" class="img-fluid" alt="" loading="lazy">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/usi_interior/invizibile_line_v/3.jpg" class="img-fluid" alt="" loading="lazy">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/usi_interior/invizibile_line_v/4.jpg" class="img-fluid" alt="" loading="lazy">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/usi_interior/invizibile_line_v/5.jpg" class="img-fluid" alt="" loading="lazy">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel6" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel6" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+            <div class="post-content d-flex flex-column">
+              <a class="readmore stretched-link"><span><b>INVIZIBIL</b> LINE V</span><i class="bi bi-chevron-compact-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 4 - Carousel 7 -->
+        <div class="col-xl-6 col-md-5">
+          <div id="carousel7" class="carousel slide post-item position-relative h-100" data-bs-ride="false" data-aos="fade-up" data-aos-delay="300">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="assets/img/usi_interior/invizibi_placate/1.jpg" class="img-fluid" alt="" loading="lazy">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/usi_interior/invizibi_placate/2.jpg" class="img-fluid" alt="" loading="lazy">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel7" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel7" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+            <div class="post-content d-flex flex-column">
+              <a class="readmore stretched-link"><span><b>INVIZIBIL</b> PLACATE</span><i class="bi bi-chevron-compact-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 4 - Carousel 8 -->
+        <div class="col-xl-6 col-md-5">
+          <div id="carousel8" class="carousel slide post-item position-relative h-100" data-bs-ride="false" data-aos="fade-up" data-aos-delay="400">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="assets/img/usi_interior/invizibie_line_o/1.jpg" class="img-fluid" alt="" loading="lazy">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/usi_interior/invizibie_line_o/2.jpg" class="img-fluid" alt="" loading="lazy">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/usi_interior/invizibie_line_o/3.jpg" class="img-fluid" alt="" loading="lazy">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/usi_interior/invizibie_line_o/4.jpg" class="img-fluid" alt="" loading="lazy">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel8" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel8" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+            <div class="post-content d-flex flex-column">
+              <a class="readmore stretched-link"><span><b>INVIZIBIL</b> LINE O</span><i class="bi bi-chevron-compact-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 5 - Carousel 9 -->
+        <div class="col-xl-6 col-md-5">
+          <div id="carousel9" class="carousel slide post-item position-relative h-100" data-bs-ride="false" data-aos="fade-up" data-aos-delay="300">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="assets/img/usi_interior/invizibie_vopsite/1.jpg" class="img-fluid" alt="" loading="lazy">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/usi_interior/invizibie_vopsite/2.jpg" class="img-fluid" alt="" loading="lazy">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel9" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel9" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+            <div class="post-content d-flex flex-column">
+              <a class="readmore stretched-link"><span><b>INVIZIBIL</b> VOPSITE</span><i class="bi bi-chevron-compact-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 5 - Carousel 10 -->
+        <div class="col-xl-6 col-md-5">
+          <div id="carousel10" class="carousel slide post-item position-relative h-100" data-bs-ride="false" data-aos="fade-up" data-aos-delay="400">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="assets/img/usi_interior/invizibila_pl/1.jpg" class="img-fluid" alt="" loading="lazy">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/usi_interior/invizibila_pl/2.jpg" class="img-fluid" alt="" loading="lazy">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/usi_interior/invizibila_pl/3.jpg" class="img-fluid" alt="" loading="lazy">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel10" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel10" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+            <div class="post-content d-flex flex-column">
+              <a class="readmore stretched-link"><span><b>INVIZIBIL</b> PL</span><i class="bi bi-chevron-compact-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 6 - Carousel 11 -->
+        <div class="col-xl-6 col-md-5">
+          <div id="carousel11" class="carousel slide post-item position-relative h-100" data-bs-ride="false" data-aos="fade-up" data-aos-delay="300">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="assets/img/usi_interior/invizibile_butterfly/1.jpg" class="img-fluid" alt="" loading="lazy">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/usi_interior/invizibile_butterfly/2.jpg" class="img-fluid" alt="" loading="lazy">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/usi_interior/invizibile_butterfly/3.jpg" class="img-fluid" alt="" loading="lazy">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel11" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel11" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+            <div class="post-content d-flex flex-column">
+              <a class="readmore stretched-link"><span><b>INVIZIBIL</b> BUTTERFLY</span><i class="bi bi-chevron-compact-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 6 - Carousel 12 -->
+        <div class="col-xl-6 col-md-5">
+          <div id="carousel12" class="carousel slide post-item position-relative h-100" data-bs-ride="false" data-aos="fade-up" data-aos-delay="400">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="assets/img/usi_interior/invizibile_lines/1.jpg" class="img-fluid" alt="" loading="lazy">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/usi_interior/invizibile_lines/2.jpg" class="img-fluid" alt="" loading="lazy">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel12" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel12" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+            <div class="post-content d-flex flex-column">
+              <a class="readmore stretched-link"><span><b>INVIZIBIL</b> LINES</span><i class="bi bi-chevron-compact-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 7 - Carousel 13 -->
+        <div class="col-xl-6 col-md-5">
+          <div id="carousel13" class="carousel slide post-item position-relative h-100" data-bs-ride="false" data-aos="fade-up" data-aos-delay="300">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="assets/img/usi_interior/invizibile_round _vs/1.jpg" class="img-fluid" alt="" loading="lazy">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/usi_interior/invizibile_round _vs/2.jpg" class="img-fluid" alt="" loading="lazy">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/usi_interior/invizibile_round _vs/3.jpg" class="img-fluid" alt="" loading="lazy">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel13" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel13" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+            <div class="post-content d-flex flex-column">
+              <a class="readmore stretched-link"><span><b>INVIZIBIL</b> ROUND VS</span><i class="bi bi-chevron-compact-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 7 - Carousel 14 -->
+        <div class="col-xl-6 col-md-5">
+          <div id="carousel14" class="carousel slide post-item position-relative h-100" data-bs-ride="false" data-aos="fade-up" data-aos-delay="400">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="assets/img/usi_interior/invizibile_round_c/1.jpg" class="img-fluid" alt="" loading="lazy">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/usi_interior/invizibile_round_c/2.jpg" class="img-fluid" alt="" loading="lazy">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/usi_interior/invizibile_round_c/3.jpg" class="img-fluid" alt="" loading="lazy">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel14" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel14" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+            <div class="post-content d-flex flex-column">
+              <a class="readmore stretched-link"><span><b>INVIZIBIL</b> ROUND C</span><i class="bi bi-chevron-compact-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 8 - Carousel 15 -->
+        <div class="col-xl-6 col-md-5">
+          <div id="carousel15" class="carousel slide post-item position-relative h-100" data-bs-ride="false" data-aos="fade-up" data-aos-delay="300">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="assets/img/usi_interior/invizibile_round_o/1.jpg" class="img-fluid" alt="" loading="lazy">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/usi_interior/invizibile_round_o/2.jpg" class="img-fluid" alt="" loading="lazy">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/usi_interior/invizibile_round_o/3.jpg" class="img-fluid" alt="" loading="lazy">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel15" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel15" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+            <div class="post-content d-flex flex-column">
+              <a class="readmore stretched-link"><span><b>INVIZIBIL</b> ROUND O</span><i class="bi bi-chevron-compact-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 8 - Carousel 16 -->
+        <div class="col-xl-6 col-md-5">
+          <div id="carousel16" class="carousel slide post-item position-relative h-100" data-bs-ride="false" data-aos="fade-up" data-aos-delay="400">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="assets/img/usi_interior/invizibile_round_vj/1.jpg" class="img-fluid" alt="" loading="lazy">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/usi_interior/invizibile_round_vj/2.jpg" class="img-fluid" alt="" loading="lazy">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/usi_interior/invizibile_round_vj/3.jpg" class="img-fluid" alt="" loading="lazy">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/usi_interior/invizibile_round_vj/4.jpg" class="img-fluid" alt="" loading="lazy">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel16" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel16" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+            <div class="post-content d-flex flex-column">
+              <a class="readmore stretched-link"><span><b>INVIZIBIL</b> ROUND VJ</span><i class="bi bi-chevron-compact-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 9 - Carousel 17 -->
+        <div class="col-xl-6 col-md-5">
+          <div id="carousel17" class="carousel slide post-item position-relative h-100" data-bs-ride="false" data-aos="fade-up" data-aos-delay="300">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="assets/img/usi_interior/lux/1.jpg" class="img-fluid" alt="" loading="lazy">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/usi_interior/lux/2.jpg" class="img-fluid" alt="" loading="lazy">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/usi_interior/lux/3.jpg" class="img-fluid" alt="" loading="lazy">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/usi_interior/lux/4.jpg" class="img-fluid" alt="" loading="lazy">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/usi_interior/lux/5.jpg" class="img-fluid" alt="" loading="lazy">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/usi_interior/lux/6.jpg" class="img-fluid" alt="" loading="lazy">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel17" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel17" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+            <div class="post-content d-flex flex-column">
+              <a class="readmore stretched-link"><span><b>LUXURY</b></span><i class="bi bi-chevron-compact-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 9 - Carousel 18 -->
+        <div class="col-xl-6 col-md-5">
+          <div id="carousel18" class="carousel slide post-item position-relative h-100" data-bs-ride="false" data-aos="fade-up" data-aos-delay="400">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="assets/img/usi_interior/neoclasic/1.jpg" class="img-fluid" alt="" loading="lazy">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/usi_interior/neoclasic/2.jpg" class="img-fluid" alt="" loading="lazy">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/usi_interior/neoclasic/3.jpg" class="img-fluid" alt="" loading="lazy">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/usi_interior/neoclasic/4.jpg" class="img-fluid" alt="" loading="lazy">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/usi_interior/neoclasic/5.jpg" class="img-fluid" alt="" loading="lazy">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/usi_interior/neoclasic/6.jpg" class="img-fluid" alt="" loading="lazy">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/usi_interior/neoclasic/7.jpg" class="img-fluid" alt="" loading="lazy">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/usi_interior/neoclasic/8.jpg" class="img-fluid" alt="" loading="lazy">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/usi_interior/neoclasic/9.jpg" class="img-fluid" alt="" loading="lazy">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel18" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel18" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+            <div class="post-content d-flex flex-column">
+              <a class="readmore stretched-link"><span><b>NEOCLASICA</b></span><i class="bi bi-chevron-compact-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 10 - Carousel 19 -->
+        <div class="col-xl-6 col-md-5">
+          <div id="carousel19" class="carousel slide post-item position-relative h-100" data-bs-ride="false" data-aos="fade-up" data-aos-delay="300">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="assets/img/usi_interior/provans/1.jpg" class="img-fluid" alt="" loading="lazy">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/usi_interior/provans/2.jpg" class="img-fluid" alt="" loading="lazy">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel19" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel19" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+            <div class="post-content d-flex flex-column">
+              <a class="readmore stretched-link"><span><b>PROVANCE</b></span><i class="bi bi-chevron-compact-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 10 - Carousel 20 -->
+        <div class="col-xl-6 col-md-5">
+          <div id="carousel20" class="carousel slide post-item position-relative h-100" data-bs-ride="false" data-aos="fade-up" data-aos-delay="400">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="assets/img/usi_interior/vintaj/1.jpg" class="img-fluid" alt="" loading="lazy">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/usi_interior/vintaj/2.jpg" class="img-fluid" alt="" loading="lazy">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel20" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel20" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+            <div class="post-content d-flex flex-column">
+              <a class="readmore stretched-link"><span><b>VINTAGE</b></span><i class="bi bi-chevron-compact-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- End Row -->
+    </div><!-- End Container -->
+
+    <!-- Fullscreen Modal -->
+    <div class="modal fade" id="fullscreenModal" tabindex="-1" aria-labelledby="fullscreenModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body p-0 position-relative">
+            <button type="button" class="btn-close position-absolute top-0 end-0 m-2" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div id="fullscreenCarousel" class="carousel slide">
+              <div class="carousel-inner" id="fullscreenCarouselInner">
+                <!-- Dynamically populated -->
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#fullscreenCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#fullscreenCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const carousels = {
+          'carousel1': [
+            'assets/img/usi_interior/clasica_c/1.jpg', 'assets/img/usi_interior/clasica_c/2.jpg',
+            'assets/img/usi_interior/clasica_c/3.jpg', 'assets/img/usi_interior/clasica_c/4.jpg'
+          ],
+          'carousel2': [
+            'assets/img/usi_interior/clasica_cs/1.jpg', 'assets/img/usi_interior/clasica_cs/2.jpg',
+            'assets/img/usi_interior/clasica_cs/3.jpg', 'assets/img/usi_interior/clasica_cs/4.jpg',
+            'assets/img/usi_interior/clasica_cs/5.jpg', 'assets/img/usi_interior/clasica_cs/6.jpg'
+          ],
+          'carousel3': [
+            'assets/img/usi_interior/clasica_line_1/1.jpg', 'assets/img/usi_interior/clasica_line_1/2.jpg',
+            'assets/img/usi_interior/clasica_line_1/3.jpg', 'assets/img/usi_interior/clasica_line_1/4.jpg',
+            'assets/img/usi_interior/clasica_line_1/5.jpg', 'assets/img/usi_interior/clasica_line_1/6.jpg',
+            'assets/img/usi_interior/clasica_line_1/7.jpg'
+          ],
+          'carousel4': [
+            'assets/img/usi_interior/clasica_line_2/1.jpg', 'assets/img/usi_interior/clasica_line_2/2.jpg',
+            'assets/img/usi_interior/clasica_line_2/3.jpg'
+          ],
+          'carousel5': [
+            'assets/img/usi_interior/clasica_v/1.jpg', 'assets/img/usi_interior/clasica_v/2.jpg'
+          ],
+          'carousel6': [
+            'assets/img/usi_interior/invizibile_line_v/1.jpg', 'assets/img/usi_interior/invizibile_line_v/2.jpg',
+            'assets/img/usi_interior/invizibile_line_v/3.jpg', 'assets/img/usi_interior/invizibile_line_v/4.jpg',
+            'assets/img/usi_interior/invizibile_line_v/5.jpg'
+          ],
+          'carousel7': [
+            'assets/img/usi_interior/invizibi_placate/1.jpg', 'assets/img/usi_interior/invizibi_placate/2.jpg'
+          ],
+          'carousel8': [
+            'assets/img/usi_interior/invizibie_line_o/1.jpg', 'assets/img/usi_interior/invizibie_line_o/2.jpg',
+            'assets/img/usi_interior/invizibie_line_o/3.jpg', 'assets/img/usi_interior/invizibie_line_o/4.jpg'
+          ],
+          'carousel9': [
+            'assets/img/usi_interior/invizibie_vopsite/1.jpg', 'assets/img/usi_interior/invizibie_vopsite/2.jpg'
+          ],
+          'carousel10': [
+            'assets/img/usi_interior/invizibila_pl/1.jpg', 'assets/img/usi_interior/invizibila_pl/2.jpg',
+            'assets/img/usi_interior/invizibila_pl/3.jpg'
+          ],
+          'carousel11': [
+            'assets/img/usi_interior/invizibile_butterfly/1.jpg', 'assets/img/usi_interior/invizibile_butterfly/2.jpg',
+            'assets/img/usi_interior/invizibile_butterfly/3.jpg'
+          ],
+          'carousel12': [
+            'assets/img/usi_interior/invizibile_lines/1.jpg', 'assets/img/usi_interior/invizibile_lines/2.jpg'
+          ],
+          'carousel13': [
+            'assets/img/usi_interior/invizibile_round _vs/1.jpg', 'assets/img/usi_interior/invizibile_round _vs/2.jpg',
+            'assets/img/usi_interior/invizibile_round _vs/3.jpg'
+          ],
+          'carousel14': [
+            'assets/img/usi_interior/invizibile_round_c/1.jpg', 'assets/img/usi_interior/invizibile_round_c/2.jpg',
+            'assets/img/usi_interior/invizibile_round_c/3.jpg'
+          ],
+          'carousel15': [
+            'assets/img/usi_interior/invizibile_round_o/1.jpg', 'assets/img/usi_interior/invizibile_round_o/2.jpg',
+            'assets/img/usi_interior/invizibile_round_o/3.jpg'
+          ],
+          'carousel16': [
+            'assets/img/usi_interior/invizibile_round_vj/1.jpg', 'assets/img/usi_interior/invizibile_round_vj/2.jpg',
+            'assets/img/usi_interior/invizibile_round_vj/3.jpg', 'assets/img/usi_interior/invizibile_round_vj/4.jpg'
+          ],
+          'carousel17': [
+            'assets/img/usi_interior/lux/1.jpg', 'assets/img/usi_interior/lux/2.jpg',
+            'assets/img/usi_interior/lux/3.jpg', 'assets/img/usi_interior/lux/4.jpg',
+            'assets/img/usi_interior/lux/5.jpg', 'assets/img/usi_interior/lux/6.jpg'
+          ],
+          'carousel18': [
+            'assets/img/usi_interior/neoclasic/1.jpg', 'assets/img/usi_interior/neoclasic/2.jpg',
+            'assets/img/usi_interior/neoclasic/3.jpg', 'assets/img/usi_interior/neoclasic/4.jpg',
+            'assets/img/usi_interior/neoclasic/5.jpg', 'assets/img/usi_interior/neoclasic/6.jpg',
+            'assets/img/usi_interior/neoclasic/7.jpg', 'assets/img/usi_interior/neoclasic/8.jpg',
+            'assets/img/usi_interior/neoclasic/9.jpg'
+          ],
+          'carousel19': [
+            'assets/img/usi_interior/provans/1.jpg', 'assets/img/usi_interior/provans/2.jpg'
+          ],
+          'carousel20': [
+            'assets/img/usi_interior/vintaj/1.jpg', 'assets/img/usi_interior/vintaj/2.jpg'
+          ]
+        };
+
+        const fullscreenCarouselInner = document.getElementById('fullscreenCarouselInner');
+        const modal = new bootstrap.Modal(document.getElementById('fullscreenModal'));
+
+        // Function to populate fullscreen carousel
+        function populateFullscreenCarousel(imageArray, activeIndex) {
+          fullscreenCarouselInner.innerHTML = '';
+          imageArray.forEach((src, index) => {
+            const item = document.createElement('div');
+            item.className = `carousel-item ${index === activeIndex ? 'active' : ''}`;
+            const img = document.createElement('img');
+            img.src = src;
+            img.className = 'd-block w-100';
+            img.alt = `Slide ${index + 1}`;
+            img.loading = 'lazy';
+            item.appendChild(img);
+            fullscreenCarouselInner.appendChild(item);
+          });
+          modal.show();
+        }
+
+        // Handle clicks for all carousels (images and text)
+        Object.keys(carousels).forEach(carouselId => {
+          const mainCarousel = document.getElementById(carouselId);
+
+          // Handle image clicks
+          mainCarousel.querySelectorAll('.carousel-item img').forEach((img, index) => {
+            img.addEventListener('click', function() {
+              populateFullscreenCarousel(carousels[carouselId], index);
+            });
+          });
+
+          // Handle text clicks
+          const textLink = mainCarousel.querySelector('.post-content a');
+          if (textLink) {
+            textLink.addEventListener('click', function(e) {
+              e.preventDefault();
+              populateFullscreenCarousel(carousels[carouselId], 0); // Open with first image active
+            });
+          }
+        });
+
+        // Sync back to main carousel when modal is closed
+        document.getElementById('fullscreenModal').addEventListener('hidden.bs.modal', function() {
+          const activeIndex = Array.from(fullscreenCarouselInner.querySelectorAll('.carousel-item')).findIndex(item => item.classList.contains('active'));
+          const activeCarouselId = Object.keys(carousels).find(id => {
+            const activeImg = fullscreenCarouselInner.querySelector('.carousel-item.active img');
+            return activeImg && carousels[id].includes(activeImg.src);
+          });
+          if (activeCarouselId) {
+            const mainCarousel = document.getElementById(activeCarouselId);
+            const mainItems = mainCarousel.querySelectorAll('.carousel-item');
+            mainItems.forEach(item => item.classList.remove('active'));
+            if (mainItems[activeIndex]) {
+              mainItems[activeIndex].classList.add('active');
+            }
+          }
+        });
+      });
+    </script>
+  </section><!-- /Recent Blog Posts Section -->
+
+</main>
+
+<footer id="footer" class="footer dark-background">
+  <div class="container footer-top">
+    <div class="row gy-6">
+      <div class="col-lg-2 col-md-3 footer-about listing-dropdowns">
+        <a href="index.html" class="logo d-flex align-items-center">
+          <span class="sitename"><img src="assets/img/logo.png" width="120px" alt="NobilWood Logo"></span>
+        </a>
+      </div>
+
+      <div class="col-lg-1 col-md-3 footer-links listing-dropdowns">
+        <h4>‎‎‎‎‎‎‎‎‎‎‎‎‎‎</h4>
+      </div>
+
+      <div class="col-lg-2 col-md-3 footer-links" style="margin-left: 20%; width: 80%; padding-bottom: -10%">
+        <div class="footer-details">
+          <a href="partenerilor.html">PARTENERILOR</a><br/>
+          <a href="contact.html">CONTACTE</a><br>
+        </div>
+
+        <div class="contact-info" style="flex-wrap: nowrap;">
+          <a href="/cdn-cgi/l/email-protection#d5fcfbf3fad5fbfaf7fcf9e2fafaf1bbf6faf8"><span class="__cf_email__" data-cfemail="537a7d757c537d7c717a7f647c7c773d707c7e">[email&#160;protected]</span></a>
+          <span class="separator">|</span>
+          <a href="tel:+37360000077">+37 360 000 077</a>
+          <span class="separator">|</span>
+          <a href="https://maps.app.goo.gl/6YCYrgXC6iDxHGKP6">mun. Chisinau, sat. Singera, str. Industriala 5</a>
+        </div>
+
+        <div class="social-links">
+          <a href=""><i class="bi bi-twitter-x"></i></a>
+          <a href=""><i class="bi bi-facebook"></i></a>
+          <a href=""><i class="bi bi-instagram"></i></a>
+          <a href=""><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="copyright">
+    <p>© | 2025 <strong>NOBIL</strong>WOOD</p>
+  </div>
+</footer>
+
+<!-- Scroll Top -->
+<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<!-- Preloader -->
+<div id="preloader"></div>
+
+<!-- Vendor JS Files -->
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+
+<!-- Main JS File -->
+<script src="assets/js/main.js"></script>
+
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'93876a9affefb0a6',t:'MTc0NjAyMDA2NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[
+
+</body>
+
+</html>
