@@ -689,7 +689,7 @@ h6 {
   margin-right: 5%;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1200px) {
   /* Apply only on desktops (≥992px) */
   .footer .row {
     display: flex;
@@ -704,7 +704,7 @@ h6 {
   }
 }
 
-@media (max-width:1299px) {
+@media (max-width:1200px) {
   /* For tablets and mobile (≤991px) */
   .footer .row {
     display: block; /* Default behavior for smaller screens */
