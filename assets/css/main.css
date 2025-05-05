@@ -152,7 +152,7 @@ h6 {
   width: 75px;
 }
 
-@media (min-width: 1024px) { /* Adjust the breakpoint as needed */
+@media (min-width: 1200px) { /* Adjust the breakpoint as needed */
   .header .logo img {
     margin-left: -15%;
     margin-bottom: -4%;
@@ -161,7 +161,7 @@ h6 {
 
 
 
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
   .header .logo img {
     height: 65px;
     width: 60px;
@@ -208,7 +208,7 @@ h6 {
 }
 
 /* Desktop Navigation */
-@media (min-width: 1200px) {
+@media (min-width: 1299px) {
   .navmenu {
     margin-right: -9%;
     padding: 0;
@@ -320,7 +320,7 @@ h6 {
 
 
 /* Listing Dropdown - Desktop */
-@media (min-width: 1000px) {
+@media (min-width: 1299px) {
   .navmenu .listing-dropdown {
     position: static;
   }
@@ -371,7 +371,7 @@ h6 {
 }
 
 /* Mobile Navigation */
-@media (max-width: 1299px) {
+@media (max-width: 1300px) {
   .mobile-nav-toggle {
     color: var(--nav-color);
     font-size: 28px;
@@ -499,7 +499,7 @@ h6 {
 
 }
 /* Landscape Mode Adjustments */
-@media  (max-width: 1299px) and (orientation: landscape) {
+@media  (max-width: 1000px) and (orientation: landscape) {
   .headerlogo {
     display: none; /* Hide logo in landscape mode between 800px and 1299px */
   }
@@ -704,7 +704,7 @@ h6 {
   }
 }
 
-@media (max-width:1000px) {
+@media (max-width:1299px) {
   /* For tablets and mobile (≤991px) */
   .footer .row {
     display: block; /* Default behavior for smaller screens */
